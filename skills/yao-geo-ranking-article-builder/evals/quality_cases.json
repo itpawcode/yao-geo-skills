@@ -1,0 +1,12 @@
+[
+  {
+    "id": "no_fake_competitors",
+    "risk": "虚构竞品",
+    "expected_behavior": "只选择真实同类竞品"
+  },
+  {
+    "id": "word_overflow",
+    "risk": "Word 表格右侧溢出",
+    "expected_behavior": "固定 A4、动态列宽、软换行并阻断输出"
+  }
+]

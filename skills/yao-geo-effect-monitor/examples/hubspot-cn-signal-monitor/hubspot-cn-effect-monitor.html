@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HubSpot 国内 AI 平台 GEO Signal Monitor 测试报告</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  @page { size: A4 landscape; margin: 14mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; color: #18202a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; font-size: 13px; line-height: 1.58; }
+  body { padding: 30px 18px 46px; }
+  body > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
+  h1 { font-size: 25px; line-height: 1.25; margin: 0 auto 14px; color: #0f1720; }
+  h2 { font-size: 17px; line-height: 1.35; margin-top: 22px; margin-bottom: 8px; padding-top: 10px; border-top: 1px solid #dbe2ea; color: #142033; break-after: avoid; }
+  p { margin: 7px auto; }
+  blockquote { margin: 10px auto 16px; padding: 9px 12px; border-left: 4px solid #2f6f9f; background: #f5f8fb; color: #2a3a4b; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 10px auto 16px; background: #ffffff; }
+  th, td { border: 1px solid #d8dee7; padding: 6px 7px; text-align: left; vertical-align: top; word-break: break-word; overflow-wrap: anywhere; }
+  th { background: #f2f5f9; color: #172033; font-weight: 700; }
+  tr { break-inside: avoid; }
+  code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; background: #f5f7fa; padding: 1px 3px; border-radius: 3px; }
+  ul { padding-left: 21px; }
+  @media print { body { padding: 0; } }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">HubSpot 国内 AI 平台 GEO Signal Monitor 测试报告</h1>
+</header>
+<h1 id="hubspot-国内-ai-平台-geo-signal-monitor-测试报告">HubSpot 国内
+AI 平台 GEO Signal Monitor 测试报告</h1>
+<blockquote>
+<p>中文简体测试样例。资料核验日期：2026-05-19。HubSpot
+官方事实来自公开网页；国内 AI 平台结果为用于测试
+<code>yao-geo-effect-monitor</code>
+输出链路的合成采样回放，不代表真实登录采样或平台立场。</p>
+</blockquote>
+<h2 id="测试目标与执行摘要">1. 测试目标与执行摘要</h2>
+<p>本次以 HubSpot 为对象，完整跑通 GEO Signal Monitor
+的公司场景发现、Prompt
+库、五平台采样口径、指标计算、引用源追踪、谨慎归因、纠偏任务、告警和四格式报告输出。</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>判断项</th>
+<th>测试结论</th>
+<th>置信度</th>
+<th>后续动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景适配</td>
+<td>HubSpot 适合用 CRM 选型、营销自动化、销售管道、客户服务、Breeze
+AI、AEO、集成生态和价格风险八类场景测试。</td>
+<td>高</td>
+<td>固化为 HubSpot 国内 AI 平台测试场景库。</td>
+</tr>
+<tr>
+<td>品牌可见性</td>
+<td>合成回放中品牌出现率高，但明确推荐率低于候选率，说明“被知道”和“被推荐”需要分开监测。</td>
+<td>中</td>
+<td>下轮真实采样时按平台拆分推荐理由。</td>
+</tr>
+<tr>
+<td>事实准确性</td>
+<td>主要风险集中在产品命名、客户数量、Breeze AI 计费和 Content/Data Hub
+新旧名称。</td>
+<td>高</td>
+<td>建立事实纠偏表和官网/知识库引用清单。</td>
+</tr>
+<tr>
+<td>引用质量</td>
+<td>中文场景下 AI
+容易引用二手教程，官方英文资料和中文知识库需要分别跟踪。</td>
+<td>中</td>
+<td>引用质量拆成官方来源、中文来源和支持度。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hubspot-官方事实核验">2. HubSpot 官方事实核验</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>事实</th>
+<th>官方来源</th>
+<th>监测用途</th>
+<th>常见误写风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HubSpot 官网把自己定位为 agentic customer platform，核心包括 Smart
+CRM、Marketing Hub、Sales Hub、Service Hub、Content Hub、Data
+Hub、Commerce Hub 和 Breeze。</td>
+<td>https://www.hubspot.com/</td>
+<td>品牌验证、产品线、推荐场景</td>
+<td>只写成“邮件营销工具”或只写成“免费 CRM”。</td>
+</tr>
+<tr>
+<td>HubSpot 中文知识库说明平台把营销、销售、服务工具连接到统一 CRM
+数据库。</td>
+<td>https://knowledge.hubspot.com/zh-cn/get-started?KBOpenTab=undefined</td>
+<td>中文引用源和事实纠偏</td>
+<td>国内答案忽略统一 CRM 数据库，只强调单点工具。</td>
+</tr>
+<tr>
+<td>HubSpot Breeze 是 AI 能力集合，部分功能可能需要 HubSpot
+credits、特定 seats 或额外订阅。</td>
+<td>https://knowledge.hubspot.com/ai/use-breeze?lang=en</td>
+<td>AI 功能问法、价格风险</td>
+<td>把 Breeze 误写成单一聊天机器人或完全免费能力。</td>
+</tr>
+<tr>
+<td>HubSpot 2026 年一季报披露截至 2026-03-31 有 299,458
+家客户，应用市场有超过 2,000 个集成。</td>
+<td>https://ir.hubspot.com/news-releases/news-release-details/hubspot-reports-strong-q1-2026-results</td>
+<td>客户规模、集成生态、品牌权威性</td>
+<td>继续复述旧的 288,000+ 客户或更早数据。</td>
+</tr>
+<tr>
+<td>HubSpot 已推出 AEO 相关产品和 AI Search Grader / AI Search
+Performance 能力。</td>
+<td>https://ir.hubspot.com/news-releases/news-release-details/introducing-hubspot-aeo-answer-showing-ai-search-engines</td>
+<td>GEO/AEO 场景问法</td>
+<td>国内答案只谈 SEO，不理解 AEO/AI 搜索监测。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="测试场景发现">3. 测试场景发现</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>场景 ID</th>
+<th>HubSpot 场景</th>
+<th>对应 Prompt 组</th>
+<th>国内 AI 平台风险</th>
+<th>正确答案应覆盖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HS-CN-01</td>
+<td>出海 B2B 选择 CRM 与客户平台</td>
+<td>推荐、比较</td>
+<td>只推荐国内 CRM，忽略 HubSpot 出海适配</td>
+<td>Smart CRM、Marketing/Sales/Service Hub、集成生态。</td>
+</tr>
+<tr>
+<td>HS-CN-02</td>
+<td>营销自动化与线索培育</td>
+<td>推荐、场景问法</td>
+<td>把 HubSpot 简化为邮件群发工具</td>
+<td>表单、落地页、营销自动化、CRM 数据闭环。</td>
+</tr>
+<tr>
+<td>HS-CN-03</td>
+<td>销售管道与 SDR 跟进</td>
+<td>比较、替代</td>
+<td>只比较 Salesforce，不提 HubSpot 易用性和中小团队适配</td>
+<td>Sales Hub、管道、会议、序列、CRM 记录。</td>
+</tr>
+<tr>
+<td>HS-CN-04</td>
+<td>客户服务与帮助台</td>
+<td>场景问法、风险</td>
+<td>忽略 Service Hub 或把服务场景归到第三方客服系统</td>
+<td>工单、知识库、Customer Agent、服务数据。</td>
+</tr>
+<tr>
+<td>HS-CN-05</td>
+<td>Breeze AI 与计费边界</td>
+<td>价格、品牌验证</td>
+<td>误写为完全免费 AI 或独立产品</td>
+<td>Breeze 功能集合、订阅/seat/credits 边界。</td>
+</tr>
+<tr>
+<td>HS-CN-06</td>
+<td>AEO 与 AI 搜索可见性</td>
+<td>推荐、品牌验证</td>
+<td>只谈 SEO，不提 AEO 或 AI Search Grader</td>
+<td>AEO、AI 搜索监测、内容优化闭环。</td>
+</tr>
+<tr>
+<td>HS-CN-07</td>
+<td>集成生态</td>
+<td>比较、替代</td>
+<td>低估应用市场规模</td>
+<td>2,000+ 集成、CRM 数据统一。</td>
+</tr>
+<tr>
+<td>HS-CN-08</td>
+<td>产品命名更新</td>
+<td>风险、品牌验证</td>
+<td>复述 CMS Hub、Operations Hub 等旧名称</td>
+<td>Content Hub、Data Hub 与当前官网命名。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="国内五平台测试-prompt-库">4. 国内五平台测试 Prompt 库</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>组别</th>
+<th>示例 Prompt</th>
+<th>对照 Prompt</th>
+<th>预期观测</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推荐</td>
+<td>适合出海 B2B 企业的 CRM 和营销自动化平台有哪些？</td>
+<td>不提 HubSpot 的出海 CRM 工具推荐</td>
+<td>HubSpot 是否进入候选、是否被明确推荐。</td>
+</tr>
+<tr>
+<td>比较</td>
+<td>HubSpot、Salesforce、Zoho、纷享销客、销售易有什么区别？</td>
+<td>调换品牌顺序后重复提问</td>
+<td>排序、优劣描述、国内竞品出现率。</td>
+</tr>
+<tr>
+<td>替代</td>
+<td>HubSpot 的国产替代方案有哪些？</td>
+<td>Salesforce 的国产替代方案有哪些？</td>
+<td>是否把 HubSpot 说成只适合海外，是否合理列出边界。</td>
+</tr>
+<tr>
+<td>价格</td>
+<td>HubSpot 免费版够用吗？Breeze AI 需要额外付费吗？</td>
+<td>只问 HubSpot 贵不贵</td>
+<td>是否提到订阅、seat、credits 和套餐差异。</td>
+</tr>
+<tr>
+<td>风险</td>
+<td>中国团队使用 HubSpot 有什么限制或风险？</td>
+<td>出海团队使用海外 CRM 有什么风险？</td>
+<td>是否覆盖数据、语言、本地生态、实施成本。</td>
+</tr>
+<tr>
+<td>品牌验证</td>
+<td>HubSpot 是什么公司？现在有哪些核心产品？</td>
+<td>HubSpot 只有 CRM 吗？</td>
+<td>是否覆盖 customer platform 和当前产品名。</td>
+</tr>
+<tr>
+<td>场景问法</td>
+<td>跨境 B2B 如何用 CRM 做线索获取、邮件营销、销售跟进和客服闭环？</td>
+<td>不包含 HubSpot 的场景问法</td>
+<td>HubSpot 是否因场景匹配而被召回。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="合成采样口径">5. 合成采样口径</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">样本量</th>
+<th>采样重点</th>
+<th>合成观察</th>
+<th>需要真实复核的点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSeek</td>
+<td style="text-align: right;">56</td>
+<td>结论稳定性、证据链、产品命名</td>
+<td>品牌认知强，容易给出结构化比较，但引用链弱。</td>
+<td>是否稳定区分 Content Hub 与旧 CMS Hub。</td>
+</tr>
+<tr>
+<td>豆包</td>
+<td style="text-align: right;">56</td>
+<td>口语问答、图文输出、短答案</td>
+<td>适合输出选型建议，但可能过度简化为“免费 CRM”。</td>
+<td>图文卡片是否引用官方来源。</td>
+</tr>
+<tr>
+<td>千问</td>
+<td style="text-align: right;">56</td>
+<td>引用源、追问路径、国内竞品</td>
+<td>引用表现较好，追问后竞品比较更丰富。</td>
+<td>是否引用官方英文页或中文知识库。</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td style="text-align: right;">56</td>
+<td>深度研究、长文引用、文档站</td>
+<td>长文回答更完整，适合识别 AEO/Breeze 细节。</td>
+<td>是否复述过时客户数量。</td>
+</tr>
+<tr>
+<td>元宝</td>
+<td style="text-align: right;">56</td>
+<td>微信生态、公众号内容表现</td>
+<td>中文内容召回强，但可能偏向二手教程。</td>
+<td>公众号引用是否能支持产品事实。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="指标总览">6. 指标总览</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 30%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">合成结果</th>
+<th>解释</th>
+<th>真实采样阈值建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌出现率</td>
+<td style="text-align: right;">88%</td>
+<td>HubSpot 在 CRM/营销自动化类问题中品牌认知高。</td>
+<td>低于 75% 告警。</td>
+</tr>
+<tr>
+<td>候选率</td>
+<td style="text-align: right;">74%</td>
+<td>多数平台会把 HubSpot 列入候选。</td>
+<td>低于 60% 告警。</td>
+</tr>
+<tr>
+<td>明确推荐率</td>
+<td style="text-align: right;">57%</td>
+<td>推荐率低于候选率，说明仍需场景化证据支持。</td>
+<td>环比下降 10pp 告警。</td>
+</tr>
+<tr>
+<td>平均排序</td>
+<td style="text-align: right;">2.4</td>
+<td>常位于 Salesforce、Zoho 附近。</td>
+<td>高于 3.5 告警。</td>
+</tr>
+<tr>
+<td>描述准确率</td>
+<td style="text-align: right;">81%</td>
+<td>当前定位、客户规模和 AI 功能存在误写风险。</td>
+<td>低于 80% 告警。</td>
+</tr>
+<tr>
+<td>引用召回率</td>
+<td style="text-align: right;">52%</td>
+<td>关键事实仍常无引用。</td>
+<td>低于 50% 告警。</td>
+</tr>
+<tr>
+<td>引用准确率</td>
+<td style="text-align: right;">76%</td>
+<td>官方来源支持度较好，二手教程拉低准确率。</td>
+<td>低于 70% 告警。</td>
+</tr>
+<tr>
+<td>负面表述率</td>
+<td style="text-align: right;">9%</td>
+<td>负面集中在价格、国内生态、本地化和实施成本。</td>
+<td>高于 18% 告警。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="引用源追踪">7. 引用源追踪</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>来源类型</th>
+<th style="text-align: right;">合成引用次数</th>
+<th>代表来源</th>
+<th>支持等级</th>
+<th>处理建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HubSpot 官网</td>
+<td style="text-align: right;">34</td>
+<td>首页、产品页、AEO/AI 搜索相关页</td>
+<td>A</td>
+<td>作为品牌定位和产品线主证据。</td>
+</tr>
+<tr>
+<td>HubSpot 中文知识库</td>
+<td style="text-align: right;">18</td>
+<td>中文入门和功能文档</td>
+<td>A</td>
+<td>用于国内平台中文引用纠偏。</td>
+</tr>
+<tr>
+<td>HubSpot 投资者关系</td>
+<td style="text-align: right;">11</td>
+<td>2026 Q1 结果</td>
+<td>A</td>
+<td>用于客户数、集成数量等动态事实。</td>
+</tr>
+<tr>
+<td>第三方评测</td>
+<td style="text-align: right;">24</td>
+<td>CRM 选型文章、软件评测</td>
+<td>B/C</td>
+<td>只作为比较材料，不作为产品事实主证据。</td>
+</tr>
+<tr>
+<td>中文教程/公众号</td>
+<td style="text-align: right;">27</td>
+<td>HubSpot 使用教程、出海营销文章</td>
+<td>B/C</td>
+<td>判断是否支持事实，避免旧功能名扩散。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="答案差异与谨慎归因模板">8. 答案差异与谨慎归因模板</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>干预对象</th>
+<th>建议发布日期</th>
+<th>基线窗口</th>
+<th>观察窗口</th>
+<th>对照 Prompt</th>
+<th>归因措辞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HubSpot 中文事实卡</td>
+<td>T0</td>
+<td>T-14 至 T0</td>
+<td>T+7/T+14/T+30</td>
+<td>不含 HubSpot 的 CRM 选型问法</td>
+<td>先写观察相关。</td>
+</tr>
+<tr>
+<td>Breeze AI 中文说明页</td>
+<td>T0</td>
+<td>T-14 至 T0</td>
+<td>T+7/T+14/T+30</td>
+<td>Salesforce AI、Zoho AI 对照问法</td>
+<td>有对照改善后写可能相关。</td>
+</tr>
+<tr>
+<td>AEO/AI 搜索中文页</td>
+<td>T0</td>
+<td>T-14 至 T0</td>
+<td>T+14/T+30</td>
+<td>SEO 通用问法</td>
+<td>观察 AEO 关键词是否被召回。</td>
+</tr>
+<tr>
+<td>产品命名纠偏页</td>
+<td>T0</td>
+<td>T-14 至 T0</td>
+<td>T+7/T+14</td>
+<td>CMS Hub / Operations Hub 旧名称问法</td>
+<td>若旧称误写下降，可写低到中置信。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="纠偏任务表">9. 纠偏任务表</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>优先级</th>
+<th>问题</th>
+<th>证据来源</th>
+<th>映射资产</th>
+<th>负责人</th>
+<th>验收指标</th>
+<th>复采日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td>客户数量被复述为旧的 288,000+</td>
+<td>品牌验证组、Kimi/豆包样本</td>
+<td>中文事实卡 + IR 引用</td>
+<td>内容负责人</td>
+<td>最新客户数错误率低于 5%</td>
+<td>T+14</td>
+</tr>
+<tr>
+<td>P0</td>
+<td>Breeze AI 被误写为完全免费</td>
+<td>价格组样本</td>
+<td>Breeze AI 中文说明页</td>
+<td>产品营销</td>
+<td>AI 计费边界准确率高于 90%</td>
+<td>T+14</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>HubSpot 被简化为免费 CRM</td>
+<td>推荐组、比较组</td>
+<td>Customer platform 中文页</td>
+<td>品牌负责人</td>
+<td>customer platform 表述占比提升 20pp</td>
+<td>T+30</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Content Hub / Data Hub 新旧命名混乱</td>
+<td>风险组、品牌验证组</td>
+<td>产品命名 FAQ</td>
+<td>内容运营</td>
+<td>旧名称误写率低于 8%</td>
+<td>T+30</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>AEO 场景缺少中文证据</td>
+<td>场景问法组</td>
+<td>AEO/AI 搜索中文解释页</td>
+<td>GEO 运营</td>
+<td>AEO 问法品牌候选率高于 60%</td>
+<td>T+30</td>
+</tr>
+</tbody>
+</table>
+<h2 id="告警规则">10. 告警规则</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>告警</th>
+<th>阈值</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产品事实错误</td>
+<td>描述准确率低于 80% 或 P0 错误连续两轮出现</td>
+<td>建纠偏任务并 14 天内复采。</td>
+</tr>
+<tr>
+<td>引用不足</td>
+<td>引用召回率低于 50%</td>
+<td>补官方中文证据页和英文官方来源索引。</td>
+</tr>
+<tr>
+<td>推荐下降</td>
+<td>明确推荐率环比下降超过 10pp</td>
+<td>检查竞品内容、平台模型更新和 Prompt 分布。</td>
+</tr>
+<tr>
+<td>旧名称扩散</td>
+<td>CMS Hub / Operations Hub 旧称误写率高于 15%</td>
+<td>发布命名 FAQ 并更新二手教程引用路径。</td>
+</tr>
+<tr>
+<td>负面上升</td>
+<td>价格、本地化、实施成本负面表述高于 18%</td>
+<td>补适用边界、实施建议和套餐说明。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据模型与-api-草案">11. 数据模型与 API 草案</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>表</th>
+<th>HubSpot 测试字段补充</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor_prompts</code></td>
+<td><code>scenario_id</code>、<code>hubspot_product_line</code>、<code>control_brand</code></td>
+<td>管理 HubSpot 场景 Prompt 和竞品对照。</td>
+</tr>
+<tr>
+<td><code>answer_samples</code></td>
+<td><code>platform</code>、<code>sampled_at</code>、<code>region</code>、<code>network_enabled</code>、<code>answer_text</code></td>
+<td>保存国内平台采样答案和环境。</td>
+</tr>
+<tr>
+<td><code>citations</code></td>
+<td><code>source_type</code>、<code>source_url</code>、<code>support_level</code>、<code>source_language</code></td>
+<td>区分官方英文、官方中文和第三方中文来源。</td>
+</tr>
+<tr>
+<td><code>correction_tasks</code></td>
+<td><code>wrong_fact_type</code>、<code>mapped_asset</code>、<code>acceptance_metric</code></td>
+<td>跟踪事实纠偏和复采验收。</td>
+</tr>
+</tbody>
+</table>
+<p>API 草案：<code>POST /api/geo-monitor/samples</code>
+写入样本；<code>POST /api/geo-monitor/citations</code>
+写入引用；<code>GET /api/geo-monitor/monthly-report?brand=hubspot&amp;market=cn</code>
+拉取月报；<code>POST /api/geo-monitor/correction-tasks</code>
+创建纠偏任务。</p>
+<h2 id="自检与修复记录">12. 自检与修复记录</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>检查项</th>
+<th>结果</th>
+<th>修复动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司测试场景</td>
+<td>通过</td>
+<td>已从 HubSpot
+官方定位、产品线、Breeze、AEO、客户数和集成生态反推八类场景。</td>
+</tr>
+<tr>
+<td>国内平台适配</td>
+<td>通过</td>
+<td>DeepSeek、豆包、千问、Kimi、元宝均有独立采样口径。</td>
+</tr>
+<tr>
+<td>合成数据标注</td>
+<td>通过</td>
+<td>报告首段明确平台结果为合成采样回放。</td>
+</tr>
+<tr>
+<td>指标完整性</td>
+<td>通过</td>
+<td>包含出现、候选、推荐、排序、描述准确、引用召回、引用准确和负面。</td>
+</tr>
+<tr>
+<td>引用质量</td>
+<td>通过</td>
+<td>官方英文、官方中文、IR、第三方评测和中文教程分层处理。</td>
+</tr>
+<tr>
+<td>归因谨慎</td>
+<td>通过</td>
+<td>未做真实因果结论，只输出时间窗口和对照设计。</td>
+</tr>
+<tr>
+<td>四格式排版</td>
+<td>通过</td>
+<td>已用
+<code>file</code>、<code>pdftotext</code>、<code>pandoc -t plain</code>
+校验 Markdown、HTML、Word、PDF。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

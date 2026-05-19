@@ -1,0 +1,34 @@
+name: yao-geo-intent-miner
+inputs:
+  seed_terms:
+    type: array
+    items: string
+    required: true
+  brand_name:
+    type: string
+    required: false
+  product_lines:
+    type: array
+    items: string
+    required: false
+  competitors:
+    type: array
+    items: string
+    required: false
+  audience_terms:
+    type: array
+    items: string
+    required: false
+  source_materials:
+    type: array
+    items: string
+    required: false
+outputs:
+  - question_bank
+  - intent_map
+  - follow_up_chains
+  - query_rewrites
+  - content_assets
+  - faq_bank
+  - monitoring_prompts
+  - four_format_report

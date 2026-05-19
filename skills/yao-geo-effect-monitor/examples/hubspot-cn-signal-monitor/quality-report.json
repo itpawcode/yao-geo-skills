@@ -1,0 +1,29 @@
+{
+  "artifact_set": "hubspot-cn-effect-monitor",
+  "language": "zh-Hans",
+  "company": "HubSpot",
+  "domestic_ai_platforms": [
+    "DeepSeek",
+    "豆包",
+    "千问",
+    "Kimi",
+    "元宝"
+  ],
+  "sample_mode": "synthetic replay for skill test",
+  "checks": {
+    "company_scenario_discovery_present": true,
+    "official_fact_sources_present": true,
+    "five_platform_sampling_present": true,
+    "citation_recall_precision_present": true,
+    "cautious_attribution_present": true,
+    "four_files_required": true,
+    "single_markdown_source": true,
+    "white_background_required": true,
+    "table_borders_required": true,
+    "docx_text_extractable": true,
+    "pdf_text_extractable": true,
+    "html_key_sections_present": true,
+    "no_pending_review_marker": true
+  },
+  "review_status": "file_checks_passed"
+}

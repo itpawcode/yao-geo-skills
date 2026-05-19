@@ -1,0 +1,20 @@
+{
+  "required_files": [
+    "SKILL.md",
+    "agents/interface.yaml",
+    "manifest.json",
+    "references/artifact-layout.md",
+    "references/quality-gates.md",
+    "templates/brief-template.md",
+    "scripts/render_ranking_article_pack.py",
+    "evals/trigger_cases.json",
+    "evals/expected_artifacts.json",
+    "evals/quality_cases.json"
+  ],
+  "required_example_outputs": [
+    "examples/synthetic-demo/demo-geo-ranking-article.md",
+    "examples/synthetic-demo/demo-geo-ranking-article.html",
+    "examples/synthetic-demo/demo-geo-ranking-article.pdf",
+    "examples/synthetic-demo/demo-geo-ranking-article.docx"
+  ]
+}

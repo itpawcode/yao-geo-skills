@@ -1,0 +1,33 @@
+{
+  "id": "yao-geo-execution-roadmap",
+  "name": "yao-geo-execution-roadmap",
+  "version": "0.1.0",
+  "family": "geo-strategy",
+  "maturity": "beta",
+  "owner": "Yao Team",
+  "status": "active",
+  "stage": "published",
+  "language": "zh-CN",
+  "path": "skills/yao-geo-execution-roadmap",
+  "public_repo_path": "skills/yao-geo-execution-roadmap",
+  "summary": "把 GEO 全景诊断、机会地图和平台采样结论转成 30/60/90 天执行路线图，覆盖页面技术、内容矩阵、标题体系、知识库、外部证据、监测闭环和四格式交付。",
+  "primary_outputs": [
+    "geo-execution-roadmap-report",
+    "90-day-roadmap",
+    "role-acceptance-metrics-table",
+    "six-project-package-plan",
+    "cn-platform-action-map",
+    "risk-compliance-plan",
+    "four-format-report-delivery"
+  ],
+  "tags": [
+    "geo",
+    "execution-roadmap",
+    "strategy-plan",
+    "90-day-roadmap",
+    "china-ai-platforms",
+    "four-format-report"
+  ],
+  "requires_web": false,
+  "last_updated": "2026-05-19"
+}

@@ -1,0 +1,42 @@
+{
+  "skill_id": "yao-geo-page-audit",
+  "example_id": "example-site-demo",
+  "checked_at": "2026-05-19",
+  "artifact_schema_version": 2,
+  "artifacts": [
+    {
+      "format": "markdown",
+      "file": "example-site-geo-page-audit.md",
+      "exists": true,
+      "bytes": 3604
+    },
+    {
+      "format": "html",
+      "file": "example-site-geo-page-audit.html",
+      "exists": true,
+      "bytes": 11709
+    },
+    {
+      "format": "word",
+      "file": "example-site-geo-page-audit.docx",
+      "exists": true,
+      "bytes": 13833
+    },
+    {
+      "format": "pdf",
+      "file": "example-site-geo-page-audit.pdf",
+      "exists": true,
+      "bytes": 295964
+    }
+  ],
+  "layout_checks": {
+    "markdown_wide_table_lines_gt5": [],
+    "docx_max_table_columns": 5,
+    "docx_visible_url_tokens_gt40": [],
+    "docx_zip_ok": true,
+    "pdf_rendered_png_pages_checked": true,
+    "pdf_rendered_pages": 3,
+    "pdf_right_edge_issues": []
+  },
+  "open_issues": []
+}

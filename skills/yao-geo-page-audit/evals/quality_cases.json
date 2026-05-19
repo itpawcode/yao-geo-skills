@@ -1,0 +1,25 @@
+{
+  "skill_id": "yao-geo-page-audit",
+  "must_include": [
+    "page_type_and_scope",
+    "crawlability",
+    "renderability",
+    "semantic_structure",
+    "content_evidence",
+    "ai_extractability",
+    "schema_consistency",
+    "code_layer_fix_list",
+    "content_structure_plan",
+    "priority_and_cost",
+    "four_format_delivery",
+    "layout_quality_report"
+  ],
+  "must_not_include": [
+    "log_level_claim_without_logs",
+    "schema_fact_not_supported_by_page_body",
+    "seo_only_recommendations_without_ai_extractability",
+    "all_recommendations_marked_p0",
+    "word_table_with_more_than_five_columns",
+    "visible_long_url_that_overflows_word"
+  ]
+}

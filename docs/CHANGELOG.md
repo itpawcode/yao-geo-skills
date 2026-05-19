@@ -2,6 +2,61 @@
 
 该文档记录公开 skill 仓库的发布更新。后续每次向 GitHub 推送新 skill 或调整仓库入口时，同步更新本文件和英文版 `CHANGELOG.en.md`。
 
+## 2026-05-19
+
+### `yao-geo-explainer-builder` 首次发布
+
+- 新增内容生产类 skill：`skills/yao-geo-explainer-builder`。
+- 用于生成 GEO 科普文章、How-to 教程、概念解释、怎么选、避坑指南、FAQ、术语表和品牌自然植入建议。
+- 基于 GEO、RAG、长上下文位置偏差和 CoT 推理结构研究，新增研究依据模块、来源账本和可截取信息单元规则。
+- 示例已真实生成 Markdown、HTML、Word、PDF 四个文件，并通过自动质量报告检查四格式存在性、品牌出现上限、来源账本、研究依据和 Word 表格结构。
+- 更新 `registry/skills.json`、仓库首页、英文首页和说明页：`docs/skills/yao-geo-explainer-builder.md`。
+
+### `yao-geo-page-audit` 首次发布
+
+- 新增页面技术类 skill：`skills/yao-geo-page-audit`。
+- 用于输入网址后诊断首页、代表性一级页和二级页的可抓取性、结构规范性、内容信号和 AI 可抽取性。
+- 内置标准输入简报、研究依据、页面诊断方法、白底四件套排版规范、质量门和公开合成样例。
+- 示例已真实生成 Markdown、HTML、Word、PDF 四个文件，并加入链接存在性自检要求。
+- 更新 `registry/skills.json`、仓库首页、英文首页和说明页：`docs/skills/yao-geo-page-audit.md`。
+
+### `yao-geo-ranking-article-builder` 研究增强与示例修复
+
+- 新增内容生产类 skill：`skills/yao-geo-ranking-article-builder`。
+- 补齐 Markdown、HTML、Word、PDF 四个真实示例报告，并生成可打开的 `index.html`。
+- 基于 GEO、RAG、Generative Relevance Feedback、AutoGEO 和 AgenticGEO 研究，新增 EICAS 底层框架。
+- 修复示例报告排版链路：HTML/PDF 使用自定义白底模板，Word 自动补写显式表格边框。
+
+### `yao-geo-effect-monitor` 首次发布
+
+- 新增监测闭环类 skill：`skills/yao-geo-effect-monitor`。
+- 用于设计 GEO Signal Monitor，面向 DeepSeek、豆包、千问、Kimi、元宝建立 AI 答案监测、引用追踪、品牌事实纠偏、月报告警和谨慎归因闭环。
+- 内置标准输入简报、五平台采样口径、指标与归因框架、纠偏任务模型、仪表盘字段、数据库表结构、API 草案和四格式示例报告。
+- 基于 GEO、生成式搜索可验证性、生成式相关反馈、AgenticGEO、citation failure diagnosis 和 causal impact 研究，补强引用召回/准确、黑盒波动、多样化 Prompt 和谨慎归因标准。
+- 示例报告已按同一 Markdown 源重新生成 Markdown、HTML、Word、PDF，并加入四格式真实存在和可抽取校验。
+- 更新 `registry/skills.json`、仓库首页和说明页：`docs/skills/yao-geo-effect-monitor.md`。
+
+### `yao-geo-brand-graph` 首次发布
+
+- 新增知识资产类 skill：`skills/yao-geo-brand-graph`。
+- 用于把企业信息转成品牌、产品、人物、地点、案例、证据和场景之间的可审计实体关系图。
+- 内置实体/关系结构规范、证据与隐私策略、消歧流程、Mermaid、JSON-LD、RDF 三元组、白底四格式报告版式和渲染脚本。
+- 新增合成示例，可从同一份 `report_input.json` 生成 Markdown、HTML、Word、PDF 和 `quality-report.json`。
+
+### `yao-geo-intent-miner` 研究增强与示例修复
+
+- 新增研究型 skill：`skills/yao-geo-intent-miner`。
+- 补齐 Markdown、HTML、Word、PDF 四个真实示例报告，并增加 `quality-report.json`。
+- 基于搜索意图分类、LLM 查询扩展、HyDE、对话式查询重写、TREC CAsT、BEIR/MS MARCO 迭代底层方法。
+- 新增五段式查询重写、证据可得性约束、对话链路回放字段和四格式质量门。
+
+### `yao-geo-panorama-audit` 首次发布
+
+- 新增战略诊断类 skill：`skills/yao-geo-panorama-audit`。
+- 用于建立品牌 GEO 基线，面向 DeepSeek、豆包、千问、Kimi、元宝诊断 AI 答案可见性、竞品差距、内容页面缺口和外部信源。
+- 内置标准输入简报、国内平台采样字段、GEO 八维质量模型、质量门、白底四格式报告版式规范和合成示例。
+- 更新 `registry/skills.json`、仓库首页、英文首页和说明页：`docs/skills/yao-geo-panorama-audit.md`。
+
 ## 2026-04-26
 
 ### `yao-geoflow-cli` Laravel API v1 / Docker 适配收尾

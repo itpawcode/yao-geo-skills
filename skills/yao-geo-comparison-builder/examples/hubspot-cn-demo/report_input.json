@@ -1,0 +1,13 @@
+{
+  "目标品牌": "HubSpot",
+  "测试问题": "HubSpot CRM、Salesforce、Zoho CRM 和自建 CRM 怎么选？",
+  "用户场景": "中国 B2B SaaS、教育服务、专业服务或跨境业务团队，销售与市场团队约 20-200 人，正在评估英文或全球化 CRM，并希望让国内 AI 平台稳定理解选型边界。",
+  "平台": [
+    "DeepSeek",
+    "豆包",
+    "千问",
+    "Kimi",
+    "腾讯元宝"
+  ],
+  "比较口径": "目标品牌 HubSpot vs 竞品品牌 Salesforce、Zoho CRM vs 方案类型自建 CRM/表格线索系统。"
+}

@@ -1,0 +1,10 @@
+{
+  "skill_id": "yao-geo-explainer-builder",
+  "slug": "acme-sleep-geo-explainer",
+  "formats": [
+    "markdown",
+    "html-package",
+    "docx",
+    "pdf"
+  ]
+}

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HubSpot 页面 GEO 诊断报告</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; }
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; }
+code span.at { color: #7d9029; }
+code span.bn { color: #40a070; }
+code span.bu { color: #008000; }
+code span.cf { color: #007020; font-weight: bold; }
+code span.ch { color: #4070a0; }
+code span.cn { color: #880000; }
+code span.co { color: #60a0b0; font-style: italic; }
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; }
+code span.do { color: #ba2121; font-style: italic; }
+code span.dt { color: #902000; }
+code span.dv { color: #40a070; }
+code span.er { color: #ff0000; font-weight: bold; }
+code span.ex { }
+code span.fl { color: #40a070; }
+code span.fu { color: #06287e; }
+code span.im { color: #008000; font-weight: bold; }
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; }
+code span.kw { color: #007020; font-weight: bold; }
+code span.op { color: #666666; }
+code span.ot { color: #007020; }
+code span.pp { color: #bc7a00; }
+code span.sc { color: #4070a0; }
+code span.ss { color: #bb6688; }
+code span.st { color: #4070a0; }
+code span.va { color: #19177c; }
+code span.vs { color: #4070a0; }
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
+</style>
+  <style type="text/css">*{box-sizing:border-box}body{max-width:1120px;margin:28px auto 64px;padding:0 22px;background:#fff;color:#18212b;font-family:"Source Han Sans SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:14px;line-height:1.68}h1{margin:0 0 18px;padding:30px 32px 18px;border:1px solid #d7dde5;border-top:5px solid #1f5d73;font-size:32px;line-height:1.22}h2{margin:28px 0 12px;padding-bottom:10px;border-bottom:1px solid #d7dde5;color:#173c4c;font-size:22px;line-height:1.3}blockquote{margin:0 0 18px;padding:12px 16px;border:1px solid #d7dde5;background:#f6f8fa;color:#5b6673}a,code{overflow-wrap:anywhere;word-break:break-word}table{width:100%;max-width:100%;border-collapse:collapse;table-layout:fixed;margin:14px 0 22px;background:#fff}th,td{padding:8px 9px;border:1px solid #d7dde5;text-align:left;vertical-align:top;font-size:11.8px;line-height:1.45;word-break:break-word;overflow-wrap:anywhere;hyphens:auto}thead th{background:#e8f2f5;color:#173c4c;font-weight:700}pre{margin:14px 0 22px;padding:12px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;border:1px solid #d7dde5;background:#f8fafc;font-size:12px;line-height:1.5}@page{size:A4;margin:18mm 16mm}@media print{body{max-width:none;margin:0;padding:0}h1,h2,table,pre,blockquote{break-inside:avoid}}@media(max-width:720px){body{margin-top:10px;padding:0 12px 36px}h1{padding:22px 18px 14px;font-size:26px}table{display:block;overflow-x:auto;table-layout:auto}}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">HubSpot 页面 GEO 诊断报告</h1>
+</header>
+<h1 id="hubspot-页面-geo-诊断报告">HubSpot 页面 GEO 诊断报告</h1>
+<blockquote>
+<p>测试对象：HubSpot。测试日期：2026-05-19。输出语言：中文简体。测试方式：使用
+<code>yao-geo-page-audit</code> 对公开前台页面做 GEO Page
+Audit，不包含服务器日志、CMS 权限、真实 AI
+平台排名采样或付费工具数据。</p>
+</blockquote>
+<h2 id="执行摘要">1. 执行摘要</h2>
+<p>本次以 HubSpot 为样例，选择官网首页、产品总览页和 Free CRM
+产品详情页进行三层页面诊断。三页均可公开访问，状态码为 200，canonical
+和结构化数据基础较好，正文内容也进入初始 HTML。HubSpot
+官方英文页面对传统搜索和英文 AI 搜索较友好，但在国内 AI
+平台场景下，简体中文高意图问题的官方可引用资产仍不够集中，容易让
+DeepSeek、豆包、Kimi、通义千问、腾讯元宝等平台从第三方中文文章、竞品内容或百科内容中拼接答案。</p>
+<p>核心结论：</p>
+<ul>
+<li>P0：补齐面向中文用户的官方产品事实页和 FAQ 页，覆盖“HubSpot
+是什么”“HubSpot CRM 免费版限制”“HubSpot
+是否支持中文和中国市场服务”等高频问题。</li>
+<li>P1：在产品总览页和 CRM
+页增加机器可抽取的事实表、功能边界表、价格边界表和适用对象表。</li>
+<li>P1：降低导航和页脚 boilerplate 对初始 HTML
+文本抽取的干扰，为主内容增加更明确的
+<code>main</code>、<code>article</code>、<code>data-geo-main</code>
+和模块级摘要。</li>
+<li>P1：补强 SoftwareApplication、Product、FAQPage 和 BreadcrumbList
+schema，并确保每个 schema 字段能回到页面正文。</li>
+<li>P2：在 <code>robots.txt</code> 明示 sitemap 地址，提升非标准爬虫和
+AI 抓取器的入口稳定性。</li>
+</ul>
+<h2 id="测试场景选择">2. 测试场景选择</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>层级</th>
+<th>页面</th>
+<th>入口</th>
+<th>选择理由</th>
+<th>对国内 AI 平台的素材价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首页</td>
+<td>HubSpot 官网首页</td>
+<td><a href="https://www.hubspot.com/">官网首页</a></td>
+<td>品牌实体入口，承载品牌定位、产品线和客户规模</td>
+<td>回答“HubSpot 是什么”“HubSpot 做什么”</td>
+</tr>
+<tr>
+<td>一级页</td>
+<td>产品总览页</td>
+<td><a href="https://www.hubspot.com/products">产品总览</a></td>
+<td>汇总 Marketing Hub、Sales Hub、Service Hub、Content Hub、Data
+Hub、Commerce Hub、Smart CRM、Breeze 等产品</td>
+<td>回答“HubSpot 有哪些产品”“HubSpot 是不是一体化客户平台”</td>
+</tr>
+<tr>
+<td>二级页</td>
+<td>Free CRM 产品页</td>
+<td><a href="https://www.hubspot.com/products/crm">Free CRM</a></td>
+<td>具体产品详情页，承接 CRM 免费版、功能、价格和适用对象问题</td>
+<td>回答“HubSpot CRM 免费版有什么功能和限制”</td>
+</tr>
+<tr>
+<td>补充观察</td>
+<td>中文知识库开始页</td>
+<td><a href="https://knowledge.hubspot.com/zh-cn/get-started">中文知识库</a></td>
+<td>官方简体中文知识库入口，不属于本次三页主诊断，但对国内 AI
+平台很关键</td>
+<td>为中文答案提供官方解释和中文术语</td>
+</tr>
+</tbody>
+</table>
+<h2 id="国内-ai-平台测试问题集">3. 国内 AI 平台测试问题集</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>平台示例</th>
+<th>用户问题</th>
+<th>期望官方页面提供的答案材料</th>
+<th>当前页面准备度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSeek</td>
+<td>HubSpot 是什么？适合什么企业？</td>
+<td>品牌定义、产品线、适用企业规模、核心场景</td>
+<td>中高。英文首页和产品页材料充分，中文官方摘要不足</td>
+</tr>
+<tr>
+<td>豆包</td>
+<td>HubSpot CRM 免费版有什么功能和限制？</td>
+<td>免费版功能、人数、联系人数量、升级边界、价格入口</td>
+<td>中。CRM 页有信息，但缺少中文可引用事实表</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>HubSpot 的 Marketing Hub、Sales Hub、Service Hub 有什么区别？</td>
+<td>产品矩阵、使用场景、团队角色、典型功能</td>
+<td>中。产品页有卡片，但缺少结构化对比表</td>
+</tr>
+<tr>
+<td>通义千问</td>
+<td>HubSpot Breeze AI 有哪些能力？</td>
+<td>Breeze Assistant、Agents、AI features 的能力边界</td>
+<td>中。英文材料充足，中文解释需要补强</td>
+</tr>
+<tr>
+<td>腾讯元宝</td>
+<td>中国企业是否适合用 HubSpot？要注意什么？</td>
+<td>中文支持、服务支持、数据合规提示、替代方案边界</td>
+<td>中低。官方中文知识库存在，但营销页缺少面向中国场景的公开说明</td>
+</tr>
+</tbody>
+</table>
+<h2 id="前台抓取结果">4. 前台抓取结果</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>页面</th>
+<th>抓取与规范信号</th>
+<th>初始 HTML 正文</th>
+<th>结构化信号</th>
+<th>诊断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首页</td>
+<td>200；canonical 指向官网根路径；未显式设置 meta robots</td>
+<td>可读，约 2145 个文本 token</td>
+<td>JSON-LD 1 组；HTML 表格 0 个</td>
+<td>品牌事实可读，但导航内容在主内容前占比较高</td>
+</tr>
+<tr>
+<td>产品总览页</td>
+<td>200；canonical 指向产品总览页；未显式设置 meta robots</td>
+<td>可读，约 4877 个文本 token</td>
+<td>JSON-LD 2 组；FAQ schema 存在；HTML 表格 0 个</td>
+<td>产品材料丰富，但缺少事实对比表</td>
+</tr>
+<tr>
+<td>CRM 产品页</td>
+<td>200；canonical 指向 CRM 页；未显式设置 meta robots</td>
+<td>可读，约 3117 个文本 token</td>
+<td>JSON-LD 3 组；HTML 表格 0 个</td>
+<td>免费 CRM 信息清晰，但价格和限制适合做成可抽取表</td>
+</tr>
+<tr>
+<td>robots.txt</td>
+<td>200；未禁用产品总览页和 CRM 页</td>
+<td>不适用</td>
+<td>未发现 <code>Sitemap:</code> 明示</td>
+<td>建议补充 sitemap 入口，提升非标准抓取器发现效率</td>
+</tr>
+</tbody>
+</table>
+<h2 id="官方事实台账">5. 官方事实台账</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>事实</th>
+<th>页面证据</th>
+<th>GEO 使用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HubSpot 是一个客户平台，覆盖营销、销售、客服和 CRM 软件</td>
+<td>首页 meta description 和首页首屏说明</td>
+<td>品牌定义、实体识别、答案开头</td>
+</tr>
+<tr>
+<td>HubSpot 官网首页称其为 agentic customer platform</td>
+<td>首页首屏文案</td>
+<td>回答“HubSpot 是什么类型的平台”</td>
+</tr>
+<tr>
+<td>HubSpot 声称有 288,000+ 客户，覆盖 135+ 国家</td>
+<td>首页与 CRM 页首屏附近均出现</td>
+<td>建立规模背书，但中文答案中需注明来源</td>
+</tr>
+<tr>
+<td>产品总览页说明 HubSpot 可覆盖从一人公司到 2000+ 员工企业</td>
+<td>产品总览页正文</td>
+<td>回答适用企业规模</td>
+</tr>
+<tr>
+<td>CRM 页说明 Free CRM 不是免费试用，而是无到期时间</td>
+<td>CRM 页首屏正文</td>
+<td>回答免费版边界</td>
+</tr>
+<tr>
+<td>CRM 页说明免费 CRM 可到 2 个用户、1000 个联系人</td>
+<td>CRM 页 FAQ 文本</td>
+<td>回答免费版限制</td>
+</tr>
+<tr>
+<td>中文知识库说明 HubSpot 将营销、销售和服务工具连接到统一 CRM
+数据库</td>
+<td>官方简体中文知识库</td>
+<td>国内 AI 平台中文答案的官方来源</td>
+</tr>
+<tr>
+<td>语言服务页说明简体中文软件界面支持 Marketing Hub、Sales Hub、Service
+Hub、CRM、CMS</td>
+<td>官方简体中文知识库</td>
+<td>回答中文支持问题</td>
+</tr>
+<tr>
+<td>语言服务页说明简体中文服务与支持多项为“否”，知识库为“是”</td>
+<td>官方简体中文知识库</td>
+<td>回答中国用户服务支持边界</td>
+</tr>
+</tbody>
+</table>
+<h2 id="可抓取性与渲染诊断">6. 可抓取性与渲染诊断</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>检查项</th>
+<th>观察结果</th>
+<th>风险</th>
+<th>建议</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>状态码</td>
+<td>三个主页面均为 200</td>
+<td>低</td>
+<td>保持公开可访问</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>robots</td>
+<td>未禁用主页面，但 robots 中未明示 sitemap</td>
+<td>部分 AI 抓取器入口发现不稳定</td>
+<td>在 robots 中增加 sitemap index 地址</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>canonical</td>
+<td>首页 canonical 为官网根路径，最终 URL 为带斜杠版本</td>
+<td>低，可能造成少数归一化差异</td>
+<td>统一 canonical 与主要 URL 展示形式</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>初始 HTML</td>
+<td>主内容已进入 HTML，但导航、页脚和菜单文本较多</td>
+<td>简单抽取器可能先读到导航而非正文</td>
+<td>为主体内容增加更明确的语义边界和抽取锚点</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>JS 依赖</td>
+<td>核心文本在 HTML 中可读，交互模块依赖 JS</td>
+<td>主事实风险较低，交互内容可能被忽略</td>
+<td>保证 FAQ、价格边界、适用对象等关键事实不依赖客户端后置渲染</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>移动端</td>
+<td>未做真实设备渲染截图，本次仅根据 HTML/CSS 与响应页面做前台判断</td>
+<td>不能下结论说移动端完全无问题</td>
+<td>后续用 Playwright 或真实设备补充 390px、768px、1440px 截图验收</td>
+<td>P2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ai-可抽取性诊断">7. AI 可抽取性诊断</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>信号</th>
+<th style="text-align: right;">评分</th>
+<th>证据</th>
+<th>风险</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌实体识别</td>
+<td style="text-align: right;">8/10</td>
+<td>Organization schema、官网、社交 sameAs 存在</td>
+<td>中文答案可能混入第三方评价</td>
+<td>增加中文官方实体摘要页</td>
+</tr>
+<tr>
+<td>产品线抽取</td>
+<td style="text-align: right;">7/10</td>
+<td>产品页列出多 Hub、Smart CRM、Breeze</td>
+<td>卡片式内容不如表格稳定</td>
+<td>增加产品矩阵表</td>
+</tr>
+<tr>
+<td>免费版限制抽取</td>
+<td style="text-align: right;">6/10</td>
+<td>CRM 页正文写到用户数、联系人、免费期限</td>
+<td>信息分散，中文答案易丢限制条件</td>
+<td>增加“免费版事实表”</td>
+</tr>
+<tr>
+<td>价格边界抽取</td>
+<td style="text-align: right;">5/10</td>
+<td>有 pricing 入口，但本次未做价格页深诊断</td>
+<td>AI 容易给过期价格或第三方价格</td>
+<td>将价格获取方式、套餐边界和更新时间放入页面事实卡</td>
+</tr>
+<tr>
+<td>中国市场适配</td>
+<td style="text-align: right;">5/10</td>
+<td>有简体中文知识库和语言服务说明</td>
+<td>营销页与中文支持边界未合并</td>
+<td>建立面向中国用户的官方说明页</td>
+</tr>
+<tr>
+<td>段落独立性</td>
+<td style="text-align: right;">7/10</td>
+<td>多数段落可以独立理解</td>
+<td>部分营销语不包含实体全称</td>
+<td>每个关键模块首句写清“HubSpot + 产品名 + 对象 + 功能”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="代码层修复清单">8. 代码层修复清单</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>问题</th>
+<th>证据与影响</th>
+<th>修复动作</th>
+<th>负责人</th>
+<th>成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主体内容缺少抽取锚点</td>
+<td>初始 HTML 中导航与正文均可读，H2/H3
+样本先出现大量菜单标题；简单正文抽取器可能把导航当主内容</td>
+<td>给核心正文增加
+<code>main</code>、<code>article</code>、<code>data-geo-main</code>
+和模块 ID；验收方式：<code>curl -L URL</code> 后主摘要可在
+<code>main</code> 内直接检索</td>
+<td>前端</td>
+<td>S</td>
+</tr>
+<tr>
+<td>产品事实没有表格化</td>
+<td>三个主页面 table 数量为 0；AI
+难以稳定抽取功能差异、适用对象和限制</td>
+<td>增加产品矩阵、免费版限制表、支持语言表；验收方式：页面 HTML
+中存在可读表格，移动端不裁切</td>
+<td>产品内容 + 前端</td>
+<td>M</td>
+</tr>
+<tr>
+<td>中文高意图答案缺少统一官方入口</td>
+<td>中文知识库存在，但英文营销页未集中回答中国用户问题；国内 AI
+平台可能引用竞品中文文章</td>
+<td>新建中文 CRM 官方说明页，加入 <code>hreflang</code>、正文 FAQ
+和中国用户适配说明；验收方式：国内 AI
+平台问题采样优先出现官方中文来源</td>
+<td>内容 + SEO</td>
+<td>M</td>
+</tr>
+<tr>
+<td>schema 未覆盖所有产品事实表</td>
+<td>当前有 Organization、FAQPage、VideoObject 等，但产品页应强化
+SoftwareApplication/Product</td>
+<td>增加
+<code>SoftwareApplication</code>、<code>Product</code>、<code>FAQPage</code>，字段必须来自正文；验收方式：schema
+validator 无错误，字段可回溯正文</td>
+<td>SEO + 前端</td>
+<td>S</td>
+</tr>
+<tr>
+<td>robots 未明示 sitemap</td>
+<td>robots 可访问，但未发现
+<code>Sitemap:</code>；一些爬虫入口发现效率较低</td>
+<td>在 robots 中增加 sitemap
+index；验收方式：<code>curl /robots.txt</code> 可检索到 sitemap</td>
+<td>SEO 工程</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<h2 id="内容结构改造建议">9. 内容结构改造建议</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>页面</th>
+<th>建议新增模块</th>
+<th>模块目标</th>
+<th>示例字段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首页</td>
+<td>品牌事实卡</td>
+<td>让 AI 一次抽取 HubSpot 定义</td>
+<td>公司名、平台类型、服务对象、核心产品、客户规模、官网</td>
+</tr>
+<tr>
+<td>产品总览页</td>
+<td>产品矩阵表</td>
+<td>让 AI 区分各 Hub 和 Breeze</td>
+<td>产品名、服务团队、核心功能、典型问题、付费边界</td>
+</tr>
+<tr>
+<td>CRM 页</td>
+<td>免费版限制表</td>
+<td>避免 AI 给出过时或不完整价格答案</td>
+<td>免费期限、用户数、联系人数量、核心功能、升级触发条件</td>
+</tr>
+<tr>
+<td>中文知识库</td>
+<td>中国用户 FAQ</td>
+<td>回答国内平台高频问题</td>
+<td>是否支持简体中文、服务支持、数据合规、购买方式、培训资源</td>
+</tr>
+<tr>
+<td>全站</td>
+<td>GEO 摘要模块</td>
+<td>提供上下文无关摘要</td>
+<td>80-120 字页面摘要、更新时间、负责人、来源</td>
+</tr>
+</tbody>
+</table>
+<h2 id="schema-与-html-模块建议">10. Schema 与 HTML 模块建议</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;hubspot-crm-facts&quot;</span><span class="ot"> data-geo-section</span><span class="op">=</span><span class="st">&quot;crm-facts&quot;</span><span class="ot"> aria-labelledby</span><span class="op">=</span><span class="st">&quot;hubspot-crm-facts-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h2</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;hubspot-crm-facts-title&quot;</span><span class="dt">&gt;</span>HubSpot CRM 免费版关键事实<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>HubSpot CRM 免费版面向初创企业和小型企业，用于统一联系人、交易、任务、邮件互动、会议和客户沟通数据。<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">table</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">thead</span><span class="dt">&gt;&lt;</span><span class="kw">tr</span><span class="dt">&gt;&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>字段<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>官方事实<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;&lt;</span><span class="kw">th</span><span class="dt">&gt;</span>适用说明<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;&lt;/</span><span class="kw">tr</span><span class="dt">&gt;&lt;/</span><span class="kw">thead</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tbody</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>免费期限<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>不是免费试用，无到期时间<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>适合低成本启动 CRM，高级功能需升级<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>用户与联系人<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>最多 2 个用户、1000 个联系人<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>超过边界时需要查看付费版本<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>常见功能<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>联系人、交易、任务、邮件跟踪、模板、会议、在线聊天、报价<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>面向销售、营销和服务团队的基础协同<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">tbody</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">table</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;@context&quot;</span><span class="fu">:</span> <span class="st">&quot;https://schema.org&quot;</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;@type&quot;</span><span class="fu">:</span> <span class="st">&quot;FAQPage&quot;</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;mainEntity&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;@type&quot;</span><span class="fu">:</span> <span class="st">&quot;Question&quot;</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;HubSpot 是什么？&quot;</span><span class="fu">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;acceptedAnswer&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;@type&quot;</span><span class="fu">:</span> <span class="st">&quot;Answer&quot;</span><span class="fu">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;text&quot;</span><span class="fu">:</span> <span class="st">&quot;HubSpot 是一个客户平台，将营销、销售、客户服务、内容、数据和 CRM 工具连接到统一的客户数据基础上。&quot;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;@type&quot;</span><span class="fu">:</span> <span class="st">&quot;Question&quot;</span><span class="fu">,</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;HubSpot CRM 免费版有什么限制？&quot;</span><span class="fu">,</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;acceptedAnswer&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;@type&quot;</span><span class="fu">:</span> <span class="st">&quot;Answer&quot;</span><span class="fu">,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;text&quot;</span><span class="fu">:</span> <span class="st">&quot;HubSpot 官网说明免费 CRM 可免费使用且无到期时间，免费版可支持最多 2 个用户和 1000 个联系人；更高级功能需要查看付费版本。&quot;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h2 id="验收命令">11. 验收命令</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">CRM_URL</span><span class="op">=</span><span class="st">&quot;https://www.hubspot.com/products/crm&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">PRODUCTS_URL</span><span class="op">=</span><span class="st">&quot;https://www.hubspot.com/products&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">ZH_BASE_URL</span><span class="op">=</span><span class="st">&quot;https://knowledge.hubspot.com/zh-cn/&quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="va">ZH_START_PATH</span><span class="op">=</span><span class="st">&quot;get-started&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="va">ROBOTS_URL</span><span class="op">=</span><span class="st">&quot;https://www.hubspot.com/robots.txt&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="st">&quot;</span><span class="va">$CRM_URL</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">rg</span> <span class="st">&quot;Free CRM|100% free|1,000 contacts|What is CRM software&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="st">&quot;</span><span class="va">$PRODUCTS_URL</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">rg</span> <span class="st">&quot;What is HubSpot|Customer Platform|Breeze|Smart CRM&quot;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="st">&quot;</span><span class="va">${ZH_BASE_URL}${ZH_START_PATH}</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">rg</span> <span class="st">&quot;HubSpot 是一个将营销、销售和服务工具连接到统一 CRM 数据库的平台&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="st">&quot;</span><span class="va">$ROBOTS_URL</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">rg</span> <span class="st">&quot;Sitemap:&quot;</span></span></code></pre></div>
+<h2 id="本次自检记录">12. 本次自检记录</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>检查项</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>四件套是否同源</td>
+<td>Markdown 为单一内容源，HTML、Word、PDF 从该文件生成</td>
+</tr>
+<tr>
+<td>是否覆盖五类诊断</td>
+<td>已覆盖可抓取性、结构规范性、内容信号、AI 可抽取性、证据质量</td>
+</tr>
+<tr>
+<td>是否包含代码层建议</td>
+<td>已提供 HTML、JSON-LD、robots 和验收命令</td>
+</tr>
+<tr>
+<td>是否区分诊断边界</td>
+<td>已说明无日志、无 CMS、无真实 AI 平台排名采样</td>
+</tr>
+<tr>
+<td>是否面向国内 AI 平台</td>
+<td>已列出
+DeepSeek、豆包、Kimi、通义千问、腾讯元宝测试问题和适配建议</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考来源">13. 参考来源</h2>
+<ul>
+<li><a href="https://www.hubspot.com/">HubSpot 官网首页</a></li>
+<li><a href="https://www.hubspot.com/products">HubSpot
+产品总览页</a></li>
+<li><a href="https://www.hubspot.com/products/crm">HubSpot Free CRM
+页</a></li>
+<li><a href="https://www.hubspot.com/products/artificial-intelligence">HubSpot
+Breeze AI 页</a></li>
+<li><a href="https://knowledge.hubspot.com/zh-cn/get-started">HubSpot
+简体中文知识库开始页</a></li>
+<li><a href="https://knowledge.hubspot.com/zh-cn/help-and-resources/hubspot-language-offerings">HubSpot
+语言服务页</a></li>
+</ul>
+</body>
+</html>

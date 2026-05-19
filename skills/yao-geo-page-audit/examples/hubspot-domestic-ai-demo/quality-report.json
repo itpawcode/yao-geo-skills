@@ -1,0 +1,42 @@
+{
+  "skill_id": "yao-geo-page-audit",
+  "example_id": "hubspot-domestic-ai-demo",
+  "checked_at": "2026-05-19",
+  "artifact_schema_version": 2,
+  "artifacts": [
+    {
+      "format": "markdown",
+      "file": "hubspot-geo-page-audit.md",
+      "exists": true,
+      "bytes": 14482
+    },
+    {
+      "format": "html",
+      "file": "hubspot-geo-page-audit.html",
+      "exists": true,
+      "bytes": 34229
+    },
+    {
+      "format": "word",
+      "file": "hubspot-geo-page-audit.docx",
+      "exists": true,
+      "bytes": 20332
+    },
+    {
+      "format": "pdf",
+      "file": "hubspot-geo-page-audit.pdf",
+      "exists": true,
+      "bytes": 403701
+    }
+  ],
+  "layout_checks": {
+    "markdown_wide_table_lines_gt5": [],
+    "docx_max_table_columns": 5,
+    "docx_visible_url_tokens_gt40": [],
+    "docx_zip_ok": true,
+    "pdf_rendered_png_pages_checked": true,
+    "pdf_rendered_pages": 9,
+    "pdf_right_edge_issues": []
+  },
+  "open_issues": []
+}

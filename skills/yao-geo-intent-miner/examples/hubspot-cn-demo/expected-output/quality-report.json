@@ -1,0 +1,38 @@
+{
+  "skill_id": "yao-geo-intent-miner",
+  "test_case": "hubspot-cn-demo",
+  "generated_at": "2026-05-19T04:28:50.552076+00:00",
+  "overall_score": 100.0,
+  "files": {
+    "markdown": "skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.md",
+    "html": "skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.html",
+    "docx": "skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.docx",
+    "pdf": "skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.pdf"
+  },
+  "file_sizes": {
+    "markdown": 13723,
+    "html": 22151,
+    "docx": 9839,
+    "pdf": 241631
+  },
+  "layout_limits": {
+    "docx_page_width_dxa": 16838,
+    "docx_content_width_dxa": 15138,
+    "max_table_width_dxa": 15138,
+    "max_grid_width_dxa": 15138,
+    "pdf_page_size": "Page size:       841.89 x 595.276 pts (A4)"
+  },
+  "checks": {
+    "four_reports_exist": true,
+    "docx_tables_fit_page_width": true,
+    "docx_has_fixed_table_layout": true,
+    "docx_is_readable_zip": true,
+    "pdf_has_header": true,
+    "pdf_is_landscape": true,
+    "pdf_rows_avoid_page_break_inside": true,
+    "html_wraps_long_text": true,
+    "simplified_chinese_output": true
+  },
+  "failed_checks": [],
+  "issues": []
+}

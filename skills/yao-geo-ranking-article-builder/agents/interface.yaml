@@ -1,0 +1,8 @@
+name: yao-geo-ranking-article-builder
+version: 0.1.0
+summary: Generate evidence-backed GEO ranking review articles and four-format report packs.
+outputs:
+  - markdown_report
+  - html_report
+  - pdf_report
+  - docx_report

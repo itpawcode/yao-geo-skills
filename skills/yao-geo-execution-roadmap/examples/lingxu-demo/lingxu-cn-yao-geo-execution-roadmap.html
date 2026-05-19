@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>灵序智能 GEO 综合实施方案</title>
+<style>
+    :root {
+      --paper: #ffffff;
+      --ink: #172033;
+      --muted: #647084;
+      --line: #d9dee8;
+      --soft: #f6f8fb;
+      --accent: #1d4f91;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    body {
+      font-family: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "PingFang SC", "Microsoft YaHei", serif;
+      font-size: 15px;
+      line-height: 1.72;
+    }
+    .page { max-width: 1120px; margin: 0 auto; padding: 42px 42px 64px; background: #ffffff; }
+    h1 { margin: 0 0 18px; padding-bottom: 16px; border-bottom: 2px solid var(--ink); font-size: 30px; line-height: 1.22; letter-spacing: 0; }
+    h2 { margin: 34px 0 14px; padding-top: 4px; border-top: 1px solid var(--line); font-size: 21px; line-height: 1.35; letter-spacing: 0; }
+    h3 { margin: 24px 0 10px; font-size: 17px; line-height: 1.42; letter-spacing: 0; }
+    p { margin: 0 0 10px; }
+    ul { margin: 8px 0 16px 1.2em; padding: 0; }
+    li { margin: 4px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin: 10px 0 22px;
+      break-inside: avoid;
+      background: #ffffff;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 9px;
+      vertical-align: top;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    th { background: var(--soft); color: var(--ink); font-weight: 700; text-align: left; }
+    code { white-space: pre-wrap; word-break: break-word; }
+    @page { size: A4; margin: 16mm 14mm; }
+    @media print {
+      body { font-size: 11px; background: #ffffff; }
+      .page { max-width: none; padding: 0; }
+      h1 { font-size: 23px; }
+      h2 { font-size: 16px; margin-top: 22px; }
+      h3 { font-size: 13px; }
+      th, td { padding: 5px 6px; }
+      table { page-break-inside: avoid; }
+    }
+    </style>
+</head>
+<body><main class="page"><h1 id="geo">灵序智能 GEO 综合实施方案</h1>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>测试对象</td>
+<td>灵序智能</td>
+</tr>
+<tr>
+<td>官网</td>
+<td>https://example.com/</td>
+</tr>
+<tr>
+<td>测试场景</td>
+<td>匿名化 B2B SaaS 示例，用于验证 GEO 综合实施方案 skill 的标准输出结构和四格式报告。</td>
+</tr>
+<tr>
+<td>目标平台</td>
+<td>DeepSeek；豆包；千问；Kimi；元宝</td>
+</tr>
+<tr>
+<td>生成日期</td>
+<td>2026-05-19</td>
+</tr>
+<tr>
+<td>输出语言</td>
+<td>中文简体</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">执行摘要</h2>
+<ul>
+<li>灵序智能示例用于验证报告结构、项目包拆解、国内平台适配和四格式生成能力。</li>
+<li>90 天计划围绕页面技术、内容矩阵、标题体系、知识库、外部证据和监测闭环展开。</li>
+<li>该示例不代表真实客户数据，所有指标均为匿名化测试口径。</li>
+</ul>
+<h2 id="_2">诊断承接</h2>
+<table>
+<thead>
+<tr>
+<th>诊断发现</th>
+<th>实施转译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 答案能识别品牌名称，但缺少产品边界和证据来源。</td>
+<td>先建设品牌事实页、产品线事实卡和来源台账。</td>
+</tr>
+<tr>
+<td>高频购买问题缺少中文场景化答案。</td>
+<td>围绕选型、价格、实施、案例和风险建立内容矩阵。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">北极星指标</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>基线</th>
+<th>30 天目标</th>
+<th>60 天目标</th>
+<th>90 天目标</th>
+<th>负责人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌推荐率</td>
+<td>待采样</td>
+<td>完成基线</td>
+<td>提升 15%</td>
+<td>提升 25%</td>
+<td>增长负责人</td>
+</tr>
+<tr>
+<td>被引用率</td>
+<td>可引用来源不足</td>
+<td>来源台账上线</td>
+<td>核心断言 80% 有来源</td>
+<td>核心断言 95% 有来源</td>
+<td>内容负责人</td>
+</tr>
+<tr>
+<td>答案准确率</td>
+<td>待采样</td>
+<td>建立事实卡</td>
+<td>错误率低于 15%</td>
+<td>错误率低于 8%</td>
+<td>客户交付负责人</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">六个项目包</h2>
+<h3 id="_5">页面技术</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>提升核心页面可抓取、可理解和可抽取能力。</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>官网页面；产品资料</td>
+</tr>
+<tr>
+<td>负责人</td>
+<td>技术负责人</td>
+</tr>
+<tr>
+<td>交付物</td>
+<td>事实页；FAQ Schema</td>
+</tr>
+<tr>
+<td>验收指标</td>
+<td>核心断言有来源；页面无排版溢出</td>
+</tr>
+<tr>
+<td>依赖关系</td>
+<td>知识库</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>步骤</th>
+<th>负责人</th>
+<th>交付物</th>
+<th>验收指标</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上线品牌事实页</td>
+<td>整理事实卡；添加来源链接</td>
+<td>技术负责人</td>
+<td>品牌事实页</td>
+<td>事实卡不少于 10 条</td>
+<td>来源台账</td>
+</tr>
+<tr>
+<td>补充 FAQ 结构化数据</td>
+<td>抽取高频问题；发布 FAQ</td>
+<td>技术负责人</td>
+<td>FAQ Schema</td>
+<td>20 个 FAQ 上线</td>
+<td>内容矩阵</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">内容矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>覆盖核心购买问题和场景答案。</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>问题库；销售记录</td>
+</tr>
+<tr>
+<td>负责人</td>
+<td>内容负责人</td>
+</tr>
+<tr>
+<td>交付物</td>
+<td>场景页；对比页</td>
+</tr>
+<tr>
+<td>验收指标</td>
+<td>核心问题覆盖率 80%</td>
+</tr>
+<tr>
+<td>依赖关系</td>
+<td>标题体系</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>步骤</th>
+<th>负责人</th>
+<th>交付物</th>
+<th>验收指标</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建立问题库</td>
+<td>聚类问题；标记优先级</td>
+<td>内容负责人</td>
+<td>问题库</td>
+<td>不少于 60 题</td>
+<td>诊断摘要</td>
+</tr>
+<tr>
+<td>生产场景页</td>
+<td>撰写答案；绑定来源</td>
+<td>内容负责人</td>
+<td>场景页</td>
+<td>上线 12 篇</td>
+<td>知识库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">标题体系</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>提升标题与自然问法的匹配度。</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>问题库</td>
+</tr>
+<tr>
+<td>负责人</td>
+<td>编辑负责人</td>
+</tr>
+<tr>
+<td>交付物</td>
+<td>标题库；H1/H2 规范</td>
+</tr>
+<tr>
+<td>验收指标</td>
+<td>每个核心问题至少 2 个标题候选</td>
+</tr>
+<tr>
+<td>依赖关系</td>
+<td>内容矩阵</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>步骤</th>
+<th>负责人</th>
+<th>交付物</th>
+<th>验收指标</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>制定标题规范</td>
+<td>提取问法；生成标题候选</td>
+<td>编辑负责人</td>
+<td>标题规范</td>
+<td>100 条标题候选</td>
+<td>问题库</td>
+</tr>
+<tr>
+<td>改写核心页面标题</td>
+<td>改写 H1/H2；移动端检查</td>
+<td>编辑负责人</td>
+<td>标题改造清单</td>
+<td>20 个页面完成</td>
+<td>页面排期</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">知识库</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>建立品牌事实底座。</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>产品资料；客户案例</td>
+</tr>
+<tr>
+<td>负责人</td>
+<td>产品市场负责人</td>
+</tr>
+<tr>
+<td>交付物</td>
+<td>事实卡；术语表</td>
+</tr>
+<tr>
+<td>验收指标</td>
+<td>事实卡 100% 标注来源</td>
+</tr>
+<tr>
+<td>依赖关系</td>
+<td>法务审核</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>步骤</th>
+<th>负责人</th>
+<th>交付物</th>
+<th>验收指标</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建设事实卡</td>
+<td>整理事实；标注来源</td>
+<td>产品市场负责人</td>
+<td>事实卡</td>
+<td>不少于 30 条</td>
+<td>来源确认</td>
+</tr>
+<tr>
+<td>建设术语表</td>
+<td>统一产品词；统一行业词</td>
+<td>产品市场负责人</td>
+<td>术语表</td>
+<td>不少于 50 个术语</td>
+<td>内容审核</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">外部证据</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>补充第三方可信信号。</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>媒体稿；合作伙伴</td>
+</tr>
+<tr>
+<td>负责人</td>
+<td>PR 负责人</td>
+</tr>
+<tr>
+<td>交付物</td>
+<td>信源清单；证据型内容</td>
+</tr>
+<tr>
+<td>验收指标</td>
+<td>新增 10 个可信信源</td>
+</tr>
+<tr>
+<td>依赖关系</td>
+<td>客户授权</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>步骤</th>
+<th>负责人</th>
+<th>交付物</th>
+<th>验收指标</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建立信源清单</td>
+<td>筛选来源；标记断言</td>
+<td>PR 负责人</td>
+<td>信源清单</td>
+<td>10 个来源</td>
+<td>审核</td>
+</tr>
+<tr>
+<td>发布证据型内容</td>
+<td>撰写稿件；回链官网</td>
+<td>PR 负责人</td>
+<td>证据内容</td>
+<td>6 篇内容上线</td>
+<td>内容矩阵</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_10">监测闭环</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标</td>
+<td>建立基线、复测和修复机制。</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>问题库；采样表</td>
+</tr>
+<tr>
+<td>负责人</td>
+<td>数据负责人</td>
+</tr>
+<tr>
+<td>交付物</td>
+<td>采样表；复盘报告</td>
+</tr>
+<tr>
+<td>验收指标</td>
+<td>90 天形成闭环复盘</td>
+</tr>
+<tr>
+<td>依赖关系</td>
+<td>平台账号</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>步骤</th>
+<th>负责人</th>
+<th>交付物</th>
+<th>验收指标</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建立采样机制</td>
+<td>同题采样；记录字段</td>
+<td>数据负责人</td>
+<td>采样表</td>
+<td>50 题三轮采样</td>
+<td>问题库</td>
+</tr>
+<tr>
+<td>建立复盘机制</td>
+<td>归因错误；回流 Backlog</td>
+<td>客户交付负责人</td>
+<td>复盘报告</td>
+<td>每月复盘一次</td>
+<td>采样基线</td>
+</tr>
+</tbody>
+</table>
+<h2 id="90">90 天执行路线图</h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>目标</th>
+<th>关键动作</th>
+<th>交付物</th>
+<th>验收口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-30 天快赢</td>
+<td>建立基线和事实底座。</td>
+<td>完成采样；上线事实页；发布 FAQ</td>
+<td>基线报告；事实页</td>
+<td>50 题基线完成。</td>
+</tr>
+<tr>
+<td>31-60 天资产建设</td>
+<td>批量补齐内容和知识库。</td>
+<td>上线场景页；发布证据内容</td>
+<td>内容矩阵；知识库</td>
+<td>核心问题覆盖率 65%。</td>
+</tr>
+<tr>
+<td>61-90 天闭环优化</td>
+<td>复测和修复。</td>
+<td>二次复测；修复错误</td>
+<td>复盘报告；下一轮计划</td>
+<td>形成可复用闭环。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_11">国内平台差异化动作</h2>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>执行重点</th>
+<th>目标问题簇</th>
+<th>具体动作</th>
+<th>资产要求</th>
+<th>验收指标</th>
+<th>风险提示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSeek</td>
+<td>逻辑与证据链</td>
+<td>选型；对比</td>
+<td>发布方法论页；建立证据链</td>
+<td>对比表；事实卡</td>
+<td>答案能解释推荐理由。</td>
+<td>过期事实需复核。</td>
+</tr>
+<tr>
+<td>豆包</td>
+<td>口语化问题</td>
+<td>是什么；怎么用</td>
+<td>建设 FAQ；改写口语标题</td>
+<td>短问短答；场景页</td>
+<td>口语问题覆盖率 80%。</td>
+<td>避免创作式夸大。</td>
+</tr>
+<tr>
+<td>千问</td>
+<td>可追溯引用</td>
+<td>官方来源；产品能力</td>
+<td>建立来源台账；补齐结构化数据</td>
+<td>来源台账；FAQ Schema</td>
+<td>引用真实支持断言。</td>
+<td>引用需人工抽检。</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>长文本研究</td>
+<td>深度研究；方案设计</td>
+<td>整理长文知识库；前置事实摘要</td>
+<td>资料包；术语表</td>
+<td>关键事实不遗漏。</td>
+<td>避免信息埋在长文中部。</td>
+</tr>
+<tr>
+<td>元宝</td>
+<td>微信生态</td>
+<td>中文介绍；案例</td>
+<td>建设公众号专题；官网回链</td>
+<td>公众号文章；视频号摘要</td>
+<td>Top 30 问题有微信内容承接。</td>
+<td>避免微信内容孤岛。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_12">角色分工与验收指标</h2>
+<table>
+<thead>
+<tr>
+<th>项目包</th>
+<th>责任角色</th>
+<th>任务</th>
+<th>交付物</th>
+<th>验收指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>页面技术</td>
+<td>技术负责人</td>
+<td>上线品牌事实页</td>
+<td>品牌事实页</td>
+<td>事实卡不少于 10 条</td>
+</tr>
+<tr>
+<td>页面技术</td>
+<td>技术负责人</td>
+<td>补充 FAQ 结构化数据</td>
+<td>FAQ Schema</td>
+<td>20 个 FAQ 上线</td>
+</tr>
+<tr>
+<td>内容矩阵</td>
+<td>内容负责人</td>
+<td>建立问题库</td>
+<td>问题库</td>
+<td>不少于 60 题</td>
+</tr>
+<tr>
+<td>内容矩阵</td>
+<td>内容负责人</td>
+<td>生产场景页</td>
+<td>场景页</td>
+<td>上线 12 篇</td>
+</tr>
+<tr>
+<td>标题体系</td>
+<td>编辑负责人</td>
+<td>制定标题规范</td>
+<td>标题规范</td>
+<td>100 条标题候选</td>
+</tr>
+<tr>
+<td>标题体系</td>
+<td>编辑负责人</td>
+<td>改写核心页面标题</td>
+<td>标题改造清单</td>
+<td>20 个页面完成</td>
+</tr>
+<tr>
+<td>知识库</td>
+<td>产品市场负责人</td>
+<td>建设事实卡</td>
+<td>事实卡</td>
+<td>不少于 30 条</td>
+</tr>
+<tr>
+<td>知识库</td>
+<td>产品市场负责人</td>
+<td>建设术语表</td>
+<td>术语表</td>
+<td>不少于 50 个术语</td>
+</tr>
+<tr>
+<td>外部证据</td>
+<td>PR 负责人</td>
+<td>建立信源清单</td>
+<td>信源清单</td>
+<td>10 个来源</td>
+</tr>
+<tr>
+<td>外部证据</td>
+<td>PR 负责人</td>
+<td>发布证据型内容</td>
+<td>证据内容</td>
+<td>6 篇内容上线</td>
+</tr>
+<tr>
+<td>监测闭环</td>
+<td>数据负责人</td>
+<td>建立采样机制</td>
+<td>采样表</td>
+<td>50 题三轮采样</td>
+</tr>
+<tr>
+<td>监测闭环</td>
+<td>客户交付负责人</td>
+<td>建立复盘机制</td>
+<td>复盘报告</td>
+<td>每月复盘一次</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_13">监测闭环计划</h2>
+<table>
+<thead>
+<tr>
+<th>监测项</th>
+<th>方法</th>
+<th>频率</th>
+<th>负责人</th>
+<th>验收指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同题采样</td>
+<td>五平台 50 题三轮采样。</td>
+<td>第 1、45、90 天</td>
+<td>数据负责人</td>
+<td>字段完整率 95%。</td>
+</tr>
+<tr>
+<td>错误复核</td>
+<td>对照来源台账检查事实。</td>
+<td>每两周</td>
+<td>客户交付负责人</td>
+<td>Top 10 错误进入 Backlog。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_14">风险预案</h2>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>触发信号</th>
+<th>预案</th>
+<th>负责人</th>
+<th>验收指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事实错误</td>
+<td>AI 答案误写产品能力。</td>
+<td>事实卡和来源复核。</td>
+<td>产品市场负责人</td>
+<td>错误率低于 8%。</td>
+</tr>
+<tr>
+<td>引用缺失</td>
+<td>答案无来源或来源不支持断言。</td>
+<td>绑定来源台账。</td>
+<td>内容负责人</td>
+<td>核心断言 90% 有来源。</td>
+</tr>
+<tr>
+<td>平台波动</td>
+<td>同题结果变化大。</td>
+<td>三轮采样并记录元数据。</td>
+<td>数据负责人</td>
+<td>报告标注波动范围。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_15">来源台账</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>支持断言</th>
+<th>来源</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-001</td>
+<td>匿名化示例诊断摘要。</td>
+<td>内部测试输入</td>
+<td>https://example.com/</td>
+</tr>
+<tr>
+<td>R-001</td>
+<td>RAG 支持可检索知识资产建设。</td>
+<td>Lewis et al., RAG</td>
+<td>https://arxiv.org/abs/2005.11401</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_16">自检记录</h2>
+<table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>四格式文件</td>
+<td>生成后由 quality-report.json 复核</td>
+</tr>
+<tr>
+<td>平台覆盖</td>
+<td>DeepSeek、豆包、千问、Kimi、元宝均有差异动作</td>
+</tr>
+<tr>
+<td>项目包覆盖</td>
+<td>页面技术、内容矩阵、标题体系、知识库、外部证据、监测闭环均有任务和验收指标</td>
+</tr>
+<tr>
+<td>承诺边界</td>
+<td>不承诺平台必定引用，只提升可发现性、可验证性和可抽取性</td>
+</tr>
+</tbody>
+</table></main></body>
+</html>

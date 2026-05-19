@@ -1,0 +1,30 @@
+{
+  "id": "yao-geo-knowledge-base-builder",
+  "name": "GEO Knowledge Base Builder",
+  "version": "0.2.0",
+  "updated_at": "2026-05-19",
+  "description": "Build evidence-backed GEO brand knowledge bases with fact cards, FAQ, prohibited expressions, prompt input packs, source indexes, and four-format Chinese report deliverables.",
+  "owner": "Yao Team",
+  "status": "active",
+  "stage": "published",
+  "maturity": "beta",
+  "maturity_tier": "beta",
+  "review_cadence": "quarterly, with monthly review for high-volatility facts such as pricing, AI features, product naming, customer counts, and compliance boundaries",
+  "requires_web": true,
+  "primary_outputs": [
+    "geo-brand-knowledge-base-document",
+    "brand-fact-card-library",
+    "faq-and-prohibited-expression-list",
+    "content-generation-prompt-pack",
+    "source-index",
+    "four-format-report-delivery"
+  ],
+  "quality_gates": [
+    "official-source-first",
+    "evidence-tier-separation",
+    "pending-confirmation-boundary",
+    "docx-fixed-table-overflow-check",
+    "pdf-preview-overflow-check",
+    "four-format-existence-check"
+  ]
+}

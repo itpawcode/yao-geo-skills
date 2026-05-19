@@ -1,0 +1,34 @@
+name: yao-geo-explainer-builder
+version: 0.2.2
+description: Generate GEO explainers and How-to content with objective brand insertion and four-format delivery.
+inputs:
+  required:
+    - topic
+    - target_brand
+    - target_audience
+    - use_case
+    - brand_knowledge
+    - industry_materials
+  optional:
+    - sensitive_domain
+    - brand_insertion_allowed
+    - max_brand_mentions
+    - desired_length
+    - compliance_notes
+    - sources
+outputs:
+  - markdown
+  - html_package
+  - docx
+  - pdf
+  - quality_report
+quality_gates:
+  - core_answer_80_to_120_chars
+  - section_parity_across_markdown_html_docx
+  - numbered_how_to_steps
+  - evidence_ledger_complete
+  - brand_mentions_within_limit
+  - sensitive_domain_boundary_notice
+  - docx_table_width_within_page
+  - docx_long_tokens_wrapped
+  - pdf_page_count

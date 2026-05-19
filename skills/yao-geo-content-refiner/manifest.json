@@ -1,0 +1,9 @@
+{
+  "id": "yao-geo-content-refiner",
+  "version": "0.2.1",
+  "status": "active",
+  "maturity": "beta",
+  "updated_at": "2026-05-19",
+  "layout_profile": "fixed-width-docx-wide-table-cards",
+  "formats": ["markdown", "html", "docx", "pdf"]
+}

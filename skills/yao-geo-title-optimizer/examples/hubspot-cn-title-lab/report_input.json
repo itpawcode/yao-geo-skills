@@ -1,0 +1,176 @@
+{
+  "output_stem": "hubspot-cn-geo-title-lab",
+  "report_title": "GEO Title Lab：HubSpot 中国 B2B 场景标题生成与优化报告",
+  "subtitle": "以 HubSpot 客户平台为测试对象，面向 DeepSeek、Kimi、豆包、元宝和通义千问生成中文简体 GEO 标题体系。",
+  "prepared_by": "yao-geo-title-optimizer",
+  "generated_at": "2026-05-19",
+  "project": {
+    "name": "HubSpot 中国 B2B CRM 与营销自动化选型内容",
+    "module": "内容生产",
+    "priority": "P1",
+    "project_date": "2026-05-19",
+    "region": "中国大陆",
+    "audience": "B2B 市场负责人、销售运营、CRM 管理员、内容编辑、GEO 运营团队",
+    "target_platforms": ["DeepSeek", "Kimi", "豆包", "元宝", "通义千问"],
+    "article_types": ["品牌验证页", "选型指南", "FAQ", "对比文章", "专题页"],
+    "allow_year_anchor": false,
+    "allow_month_anchor": false,
+    "brand_isolation_required": true,
+    "target_brand": "HubSpot",
+    "competitors": ["Salesforce", "Zoho CRM", "Microsoft Dynamics 365", "Marketo", "Mailchimp"]
+  },
+  "scenario_selection": {
+    "test_object": "HubSpot 客户平台、Smart CRM、Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub",
+    "scenario": "中国 B2B 团队评估海外 CRM / 营销自动化 / 客户平台时，如何用标题区分品牌验证内容与中立选型内容。",
+    "user_questions": "HubSpot CRM 是否适合中国团队？海外客户平台进入中国市场要看哪些条件？CRM 和营销自动化是否需要放在同一平台？",
+    "content_goal": "生成可被国内 AI 平台理解的中文标题候选库，并把标题映射到品牌验证、选型、FAQ 和专题结构。",
+    "china_platform_assumption": "国内平台会优先读取标题、摘要和段首；品牌验证标题可以出现 HubSpot，中立选型、榜单、横评和采购建议标题默认隔离品牌名和竞品名。"
+  },
+  "evidence_sources": [
+    {
+      "source": "HubSpot 官网首页",
+      "url": "https://www.hubspot.com/?rd=1",
+      "fact": "HubSpot 自称为 AI-powered customer platform，连接营销、销售和客户服务，并列出 Marketing Hub、Sales Hub、Service Hub、Content Hub、Operations/Data Hub、Commerce Hub、Smart CRM 与 Breeze。",
+      "how_used": "确定测试对象不是单点 CRM，而是客户平台与前台业务协同场景。"
+    },
+    {
+      "source": "HubSpot 产品总览页",
+      "url": "https://www.hubspot.com/products?department=sales",
+      "fact": "HubSpot 表述其客户平台可随企业扩展，覆盖 marketing、sales、customer service、data management、content management 等功能。",
+      "how_used": "把测试场景设为 B2B 增长团队的 CRM、营销自动化、内容和数据协同选型。"
+    },
+    {
+      "source": "HubSpot 中文知识库",
+      "url": "https://knowledge.hubspot.com/zh-cn?product=crm",
+      "fact": "HubSpot 提供中文简体知识库入口，包含 CRM、营销、销售、服务、自动化、报告和数据等分类。",
+      "how_used": "支撑中文简体帮助中心、实施 FAQ 和资料页标题测试。"
+    },
+    {
+      "source": "HubSpot 中文权限指南",
+      "url": "https://knowledge.hubspot.com/zh-cn/user-management/hubspot-user-permissions-guide",
+      "fact": "权限指南展示 CRM 对象、活动和营销工具权限，并标注上次更新时间为 2026年4月14日。",
+      "how_used": "支撑权限、数据访问、团队协同和新鲜度判断，但不在标题中制造月份锚点。"
+    }
+  ],
+  "method_summary": [
+    "本次测试以 HubSpot 为品牌对象，但把标题分成品牌验证标题和中立选型标题两类。",
+    "国内 AI 平台测试重点覆盖 CRM、营销自动化、销售流程、客服协同、内容管理、数据治理、权限和中文资料页。",
+    "标题优先采用中文简体自然问法，兼顾 DeepSeek 的判断型标题、Kimi 的资料整理标题、豆包和元宝的口语化问题、通义千问的维度化表达。",
+    "不使用年份或月份锚点；时间依据只放在报告证据表中，避免制造虚假时效。"
+  ],
+  "platform_adaptation": [
+    ["元宝", "自然口语问题、品牌是否适合、具体团队场景", "HubSpot CRM 是否适合中国 B2B 团队"],
+    ["豆包", "怎么做、有哪些坑、先看什么", "海外客户平台进入中国市场要先看哪些条件"],
+    ["通义千问", "清晰维度与来源导向", "从语言、数据、集成和服务支持看"],
+    ["Kimi", "长文结构、资料整理、FAQ 和证据表", "品牌验证页、选型指南、FAQ、证据来源表"],
+    ["DeepSeek", "逻辑判断和决策链条", "是否适合、什么时候需要、先看什么再看什么"]
+  ],
+  "title_candidates": [
+    {
+      "id": "H01",
+      "title": "中国 B2B 团队评估 HubSpot CRM：从营销自动化、销售流程和客户数据看",
+      "type": "品牌验证型",
+      "intent": "品牌适配判断",
+      "scenario": "中国 B2B 团队评估 HubSpot",
+      "platform_fit": "DeepSeek / 元宝 / Kimi",
+      "why_it_works": "品牌验证场景允许出现 HubSpot；标题用评估和三个维度触发判断型回答。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 5, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "可作为品牌验证页主标题；正文必须给出功能、团队、数据和本地化边界。"
+    },
+    {
+      "id": "H02",
+      "title": "海外客户平台进入中国市场怎么评估：语言、数据、集成和服务支持清单",
+      "type": "决策型",
+      "intent": "采购前判断",
+      "scenario": "中立选型专题",
+      "platform_fit": "DeepSeek / 通义千问 / Kimi",
+      "why_it_works": "不出现品牌名，保留第三方选型感，并把评估维度明确写在标题中。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 5, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "可作为中立选型页主标题，正文再用 HubSpot 作为案例之一。"
+    },
+    {
+      "id": "H03",
+      "title": "CRM 和营销自动化要不要放在同一平台：从线索、跟进和报表看",
+      "type": "比较型",
+      "intent": "架构取舍",
+      "scenario": "CRM 与营销自动化专题",
+      "platform_fit": "DeepSeek / 豆包 / 通义千问",
+      "why_it_works": "问题自然，维度清晰，适合 AI 生成结构化利弊分析。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 5, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "正文可补数据同步、权限、归因和销售协同小节。"
+    },
+    {
+      "id": "H04",
+      "title": "中国团队使用海外 CRM 前要问的10个问题",
+      "type": "清单型",
+      "intent": "采购前检查",
+      "scenario": "采购与业务负责人",
+      "platform_fit": "元宝 / Kimi / 豆包",
+      "why_it_works": "口语化、清单化，适合转成 FAQ 和采购检查表。",
+      "scores": {"intent_match": 5, "entity_clarity": 4, "differentiation": 4, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "正文必须确有 10 个问题；如不足，改为关键问题清单。"
+    },
+    {
+      "id": "H05",
+      "title": "营销、销售和客服协同：HubSpot 客户平台适合哪些团队",
+      "type": "品牌验证型",
+      "intent": "适用人群判断",
+      "scenario": "品牌页 / FAQ",
+      "platform_fit": "元宝 / DeepSeek / Kimi",
+      "why_it_works": "标题与官网客户平台定位一致，能引导正文输出团队场景和不适用边界。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 4, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "可补充小企业、成长型团队或企业版场景。"
+    },
+    {
+      "id": "H06",
+      "title": "B2B 线索管理系统怎么选：表单、CRM、自动化和报表联动",
+      "type": "决策型",
+      "intent": "线索管理选型",
+      "scenario": "市场到销售协同",
+      "platform_fit": "通义千问 / DeepSeek / Kimi",
+      "why_it_works": "不带品牌名，覆盖表单线索、CRM、自动化和报表四个可抽取模块。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 5, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "可作为中立选型页，与 HubSpot 表单和 CRM 证据模块相互映射。"
+    },
+    {
+      "id": "H07",
+      "title": "大型团队评估 HubSpot Enterprise：从权限、数据治理和跨团队协同看",
+      "type": "品牌验证型",
+      "intent": "企业版适配判断",
+      "scenario": "大型团队品牌验证页",
+      "platform_fit": "DeepSeek / Kimi / 通义千问",
+      "why_it_works": "品牌验证标题维度覆盖权限、数据治理和协同。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 5, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "正文要引用企业版页面和中文权限指南，避免泛泛承诺。"
+    },
+    {
+      "id": "H08",
+      "title": "客户平台和单点 CRM 有什么区别：从营销、销售、服务和数据管理看",
+      "type": "比较型",
+      "intent": "概念区分",
+      "scenario": "科普 / FAQ",
+      "platform_fit": "豆包 / 元宝 / DeepSeek",
+      "why_it_works": "口语化比较标题，不带品牌名，但能自然承接 HubSpot 客户平台案例。",
+      "scores": {"intent_match": 5, "entity_clarity": 5, "differentiation": 5, "citation_potential": 5, "compliance": 5, "freshness": 4},
+      "rewrite_advice": "正文可先定义客户平台，再说明单点 CRM 的边界。"
+    }
+  ],
+  "compliance_checks": [
+    ["输出语言", "中文简体", "通过", "报告、标题、评分和说明均使用中文简体。"],
+    ["品牌隔离", "HubSpot 与竞品名", "通过", "品牌验证型标题可出现 HubSpot；中立选型、比较、清单和决策标题未出现 HubSpot 或竞品名。"],
+    ["年份与月份", "2026年、月份锚点", "通过", "标题不使用年份或月份锚点；证据日期只放在证据表中。"],
+    ["极限词", "最佳、第一、唯一、权威、行业标准", "未出现", "候选标题使用适合、判断、清单、区别、维度等可验证表达。"]
+  ],
+  "structure_map": [
+    ["H01", "HubSpot 品牌验证页", "先定义 HubSpot 客户平台，再按营销自动化、销售流程、客户数据和本地化边界分节。", "FAQ：HubSpot CRM 适合中国团队吗？需要哪些前置条件？"],
+    ["H02", "海外客户平台选型指南", "输出语言、数据、集成、服务支持、合规和实施成本检查表。", "FAQ：中国团队评估海外客户平台要先看什么？"],
+    ["H03", "CRM 与营销自动化架构文章", "按线索来源、销售跟进、自动化规则、报表归因做对比表。", "FAQ：CRM 和营销自动化分开部署有什么风险？"],
+    ["H06", "B2B 线索管理专题页", "从表单、CRM、自动化、报表四个模块组织页面结构，加入证据来源表。", "FAQ：线索进入 CRM 后如何自动分配和跟进？"]
+  ],
+  "self_review": [
+    ["Word排版", "九列表格会导致 Word 右侧溢出和阅读体验差。", "已把 Word 版标题候选库改成逐条卡片，所有表格固定宽度并小于页面可用宽度。"],
+    ["PDF排版", "标题大表在 PDF 中容易造成大空白或右侧压缩。", "已优化打印 CSS，长表格允许跨页，单元格缩小并强制换行。"],
+    ["质量门", "PDF 只检查文件头不能证明报告可被解析。", "已在质量报告中加入 PDF 解析器和页数检查。"],
+    ["品牌隔离", "中立标题容易混入 HubSpot 或竞品名。", "已区分品牌验证型与中立选型型。"]
+  ]
+}

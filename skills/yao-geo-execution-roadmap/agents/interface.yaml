@@ -1,0 +1,37 @@
+name: yao-geo-execution-roadmap
+version: 0.1.0
+language: zh-CN
+description: 把 GEO 诊断和机会地图转成 30/60/90 天综合实施方案，并产出 Markdown、HTML、Word、PDF 四格式报告。
+inputs:
+  required:
+    - diagnosis_summary
+    - opportunity_map
+    - target_platforms
+    - business_goals
+    - resource_constraints
+  optional:
+    - source_basis
+    - compliance_profile
+    - baseline_metrics
+    - budget_range
+    - existing_assets
+outputs:
+  - geo_execution_roadmap_report
+  - ninety_day_roadmap
+  - six_project_package_plan
+  - role_acceptance_metrics_table
+  - cn_platform_action_map
+  - risk_compliance_plan
+  - markdown_report
+  - html_report
+  - docx_report
+  - pdf_report
+guardrails:
+  - do_not_claim_platform_will_cite_a_page
+  - require_acceptance_metrics_for_every_task
+  - require_responsible_role_for_every_task
+  - require_source_basis_for_brand_claims
+  - require_compliance_node_for_sensitive_industries
+  - generate_and_review_four_formats
+  - require_docx_fixed_table_geometry
+  - split_wide_word_tables_into_grouped_tables

@@ -1,0 +1,47 @@
+{
+  "skill_id": "yao-geo-panorama-audit",
+  "required_files": [
+    "SKILL.md",
+    "agents/interface.yaml",
+    "manifest.json",
+    "references/skill-method.md",
+    "references/research-foundation.md",
+    "references/cn-platform-sampling.md",
+    "references/geo-quality-model.md",
+    "references/quality-gates.md",
+    "references/artifact-layout.md",
+    "templates/brief-template.md",
+    "evals/trigger_cases.json",
+    "evals/quality_cases.json",
+    "evals/expected_artifacts.json"
+  ],
+  "primary_outputs": [
+    "geo-panorama-audit-report",
+    "method-basis-and-scoring-criteria",
+    "question-sample-coverage-matrix",
+    "ai-answer-visibility-competitor-table",
+    "geo-opportunity-map-priority-matrix",
+    "page-content-asset-repair-list",
+    "four-format-report-delivery"
+  ],
+  "example_report_formats": [
+    "word-docx",
+    "pdf",
+    "html",
+    "markdown"
+  ],
+  "quality_expectations": [
+    "默认中文简体输出。",
+    "Skill 命名必须符合 yao-geo-xxx 规范。",
+    "示例报告和正式报告必须输出 Word、PDF、HTML、Markdown 四种格式。",
+    "四种格式必须使用白底报告版式，并完成排版自 review 与修复。",
+    "Word 密集表格必须拆成窄表或显式控制表格总宽，不能向右溢出。",
+    "PDF 必须检查 A4 页面、分页、表格边框和本地路径页脚。",
+    "必须说明研究依据、黑箱采样口径、实体显著性、引用支持和答案稳定性。",
+    "必须输出九类意图的问题样本覆盖矩阵。",
+    "必须覆盖品牌、竞品、内容、页面、外部信源和 AI 答案样本。",
+    "必须区分事实问题、结构问题、信源问题和平台波动。",
+    "必须记录平台采样上下文，不能用一次输出代表长期结论。",
+    "必须输出有资源约束的 P0/P1 机会地图。"
+  ]
+}

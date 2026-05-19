@@ -1,0 +1,29 @@
+[
+  {
+    "case": "已有诊断，要求 90 天执行方案",
+    "input": "根据这份 GEO 全景诊断，输出 30/60/90 天实施路线图和四格式报告。",
+    "should_trigger": true
+  },
+  {
+    "case": "只要全景诊断",
+    "input": "帮我采样 DeepSeek、豆包、千问、Kimi、元宝并做 GEO 全景诊断。",
+    "should_trigger": false,
+    "expected_alternative": "yao-geo-panorama-audit"
+  },
+  {
+    "case": "只要追踪看板",
+    "input": "帮我设计 GEO 效果追踪字段和复测看板。",
+    "should_trigger": false,
+    "expected_alternative": "yao-geo-tracking"
+  },
+  {
+    "case": "国内平台差异化实施",
+    "input": "把已有机会地图拆成 DeepSeek、豆包、千问、Kimi、元宝的执行动作。",
+    "should_trigger": true
+  },
+  {
+    "case": "四格式交付与 Word 排版复核",
+    "input": "用已有诊断结果生成 GEO 综合实施方案，输出 Word、PDF、HTML、Markdown，并检查 Word 表格不要向右溢出。",
+    "should_trigger": true
+  }
+]

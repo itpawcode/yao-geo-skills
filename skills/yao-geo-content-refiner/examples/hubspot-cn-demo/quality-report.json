@@ -1,0 +1,99 @@
+{
+  "title": "HubSpot CRM 线索管理内容 GEO 改造测试报告",
+  "checks": [
+    {
+      "format": "markdown",
+      "path": "skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.md",
+      "exists": true,
+      "bytes": 15905
+    },
+    {
+      "format": "html",
+      "path": "skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.html",
+      "exists": true,
+      "bytes": 19838
+    },
+    {
+      "format": "docx",
+      "path": "skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.docx",
+      "exists": true,
+      "bytes": 47153
+    },
+    {
+      "format": "pdf",
+      "path": "skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.pdf",
+      "exists": true,
+      "bytes": 23973
+    }
+  ],
+  "module_checks": [
+    {
+      "module": "报告摘要",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "原文 GEO 评分",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "GEO 改造版文章",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "改造前后差异报告",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "原子事实卡",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "FAQ 与同义问法",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "理论依据与改造映射",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "证据账本与缺口",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "页面发布版 HTML 建议",
+      "in_markdown": true,
+      "in_html": true
+    },
+    {
+      "module": "自 Review 结果",
+      "in_markdown": true,
+      "in_html": true
+    }
+  ],
+  "layout_profile": "fixed-width-docx-wide-table-cards",
+  "layout_logic": {
+    "docx_orientation": "landscape",
+    "docx_table_width_dxa": 15260,
+    "wide_table_rule": "Word/PDF 中超过 4 列的表格自动转纵向事实卡",
+    "url_wrapping": "Word/PDF 中长 URL 强制可换行"
+  },
+  "docx_layout": {
+    "status": "pass",
+    "orientation": "landscape",
+    "usable_width_dxa": 15308,
+    "table_count": 21,
+    "max_table_width_dxa": 15260,
+    "min_right_margin_dxa": 48,
+    "overflow_tables": []
+  },
+  "problems": [],
+  "status": "pass"
+}

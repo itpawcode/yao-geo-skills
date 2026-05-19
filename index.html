@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yao GEO Skills 导航</title>
+  <meta name="description" content="Yao GEO Skills 的 GitHub 导航说明页，按工作类型浏览 GEO 相关 skill、用途、输入输出和发布状态。">
+  <style>
+    :root {
+      --paper: #f5f4ed;
+      --paper-soft: #fbfaf6;
+      --ink: #171715;
+      --muted: #68665e;
+      --line: #ded9ca;
+      --line-strong: #c9c2ae;
+      --blue: #1b365d;
+      --blue-soft: #e7eef6;
+      --teal: #276760;
+      --green: #3f6b38;
+      --rust: #a24f2b;
+      --plum: #6f4a68;
+      --amber: #8a641f;
+      --white: #ffffff;
+      --shadow: 0 16px 40px rgba(27, 54, 93, 0.08);
+      --serif: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
+      --sans: Inter, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      --mono: "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.58;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 64px 0 88px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 44px;
+      align-items: stretch;
+      padding-bottom: 44px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      font-size: 64px;
+      line-height: 1.08;
+    }
+
+    .tagline {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: var(--paper-soft);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+    }
+
+    .hero-panel {
+      background: var(--paper-soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .stat {
+      min-height: 92px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .flow {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .flow-row {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .flow-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .flow-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .flow-dot {
+      min-height: 34px;
+      border-radius: 6px;
+      background: var(--blue-soft);
+      border: 1px solid #c9d7e6;
+    }
+
+    .flow-dot.teal { background: #e0f0ed; border-color: #bddbd5; }
+    .flow-dot.green { background: #e5efe1; border-color: #cadfc2; }
+    .flow-dot.rust { background: #f1e2d8; border-color: #dec5b6; }
+    .flow-dot.plum { background: #eee3ec; border-color: #d8c6d4; }
+
+    .section {
+      padding: 48px 0 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 28px;
+      margin-bottom: 22px;
+    }
+
+    .section-num {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.18;
+    }
+
+    .section-lede {
+      max-width: 780px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      margin: 22px 0 24px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(245, 244, 237, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .search {
+      width: 100%;
+      min-height: 42px;
+      padding: 10px 12px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .filter {
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--paper-soft);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .filter[aria-pressed="true"] {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+    }
+
+    .category {
+      margin-top: 34px;
+    }
+
+    .category h3 {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 12px;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .category h3 span {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper-soft);
+    }
+
+    .card[data-maturity="stable"] { border-top: 4px solid var(--green); }
+    .card[data-family="geo-strategy"] { border-top: 4px solid var(--blue); }
+    .card[data-family="geo-page-technical"] { border-top: 4px solid var(--teal); }
+    .card[data-family="geo-content-production"] { border-top: 4px solid var(--rust); }
+    .card[data-family="geo-knowledge-assets"] { border-top: 4px solid var(--plum); }
+    .card[data-family="geo-measurement"] { border-top: 4px solid var(--amber); }
+    .card[data-family="geo-research"] { border-top: 4px solid var(--muted); }
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card h4 {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 15px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .badge.warning {
+      background: #f4e6cf;
+      color: #7a4f12;
+    }
+
+    .desc {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 8px;
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .meta-list b {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .prep {
+      padding: 18px;
+      border-left: 4px solid var(--blue);
+      background: var(--paper-soft);
+      border-radius: 8px;
+    }
+
+    .prep h3 {
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .prep p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 58px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .is-hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .toolbar,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .filters {
+        justify-content: flex-start;
+      }
+
+      .cards,
+      .matrix {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 24px, 1180px);
+        padding-top: 34px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .tagline {
+        font-size: 18px;
+      }
+
+      .stat-grid,
+      .cards,
+      .matrix {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Yao GEO Skills · GitHub Catalog · 2026-05-19</p>
+        <h1>一套面向 GEO 工作流的 Skill 导航</h1>
+        <p class="tagline">从战略诊断、页面结构、内容生产、知识资产到效果监测，把重复的 GEO 交付动作沉淀成可复用、可验证、可开源的 skill 包。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#catalog">浏览 Skill</a>
+          <a class="button" href="README.md">README</a>
+          <a class="button" href="docs/github-release-prep.md">发布准备清单</a>
+          <a class="button" href="registry/skills.json">Registry</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="仓库概览">
+        <div class="stat-grid">
+          <div class="stat"><strong>17</strong><span>登记的 GEO skill 目录</span></div>
+          <div class="stat"><strong>17</strong><span>已具备 SKILL.md</span></div>
+          <div class="stat"><strong>7</strong><span>工作类型</span></div>
+          <div class="stat"><strong>11</strong><span>需要联网检索</span></div>
+        </div>
+        <p class="eyebrow">Workflow Map</p>
+        <div class="flow" aria-hidden="true">
+          <div class="flow-row"><div class="flow-label">诊断</div><div class="flow-bar"><div class="flow-dot"></div><div class="flow-dot teal"></div><div class="flow-dot rust"></div><div class="flow-dot green"></div></div></div>
+          <div class="flow-row"><div class="flow-label">建设</div><div class="flow-bar"><div class="flow-dot rust"></div><div class="flow-dot rust"></div><div class="flow-dot plum"></div><div class="flow-dot plum"></div></div></div>
+          <div class="flow-row"><div class="flow-label">运营</div><div class="flow-bar"><div class="flow-dot green"></div><div class="flow-dot green"></div><div class="flow-dot teal"></div><div class="flow-dot"></div></div></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="section-num">00 · Readiness</p>
+        <div>
+          <h2 class="section-title">发布前要先讲清楚三件事</h2>
+          <p class="section-lede">用户来到 GitHub 后，需要先判断这个仓库解决什么问题、自己该用哪个 skill、每个 skill 的输入输出和质量边界是什么。导航页负责快速浏览，README 和 docs 负责深入说明。</p>
+        </div>
+      </div>
+      <div class="matrix">
+        <div class="prep"><h3>定位</h3><p>说明 GEO 是 Generative Engine Optimization，仓库不是零散 prompt，而是可复用 skill 包。</p></div>
+        <div class="prep"><h3>选择</h3><p>按战略、页面、内容、知识、监测、运营、研究分类，让用户知道该调用哪一个。</p></div>
+        <div class="prep"><h3>使用</h3><p>每个 skill 都要有触发场景、必要输入、默认输出、示例和相邻边界。</p></div>
+        <div class="prep"><h3>信任</h3><p>公开 eval、示例、质量门和开源安全规则，避免用户把未完成包当成稳定能力。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="section-head">
+        <p class="section-num">01 · Catalog</p>
+        <div>
+          <h2 class="section-title">Skill 总览</h2>
+      <p class="section-lede">按工作类型筛选，也可以搜索 skill 名、用途、输出或平台关键词。draft 和 incubating 条目需要在使用前先确认成熟度。</p>
+        </div>
+      </div>
+
+      <div class="toolbar" role="search">
+        <input class="search" id="search" type="search" placeholder="搜索：诊断、标题、知识库、GEOFlow、DeepSeek、四格式..." aria-label="搜索 skill">
+        <div class="filters" aria-label="按类型筛选">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button class="filter" type="button" data-filter="geo-strategy" aria-pressed="false">战略</button>
+          <button class="filter" type="button" data-filter="geo-page-technical" aria-pressed="false">页面</button>
+          <button class="filter" type="button" data-filter="geo-content-production" aria-pressed="false">内容</button>
+          <button class="filter" type="button" data-filter="geo-knowledge-assets" aria-pressed="false">知识</button>
+          <button class="filter" type="button" data-filter="geo-measurement" aria-pressed="false">监测</button>
+          <button class="filter" type="button" data-filter="geo-operations" aria-pressed="false">运营</button>
+          <button class="filter" type="button" data-filter="geo-research" aria-pressed="false">研究</button>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-strategy">
+        <h3>战略诊断 <span>geo-strategy · 2</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-strategy" data-maturity="beta" data-search="yao-geo-panorama-audit panorama audit strategy diagnosis deepseek doubao qianwen kimi yuanbao 机会地图 全景诊断 竞品差距">
+            <div class="card-head"><h4>yao-geo-panorama-audit</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">四格式报告</span></div>
+            <p class="desc">建立品牌 GEO 基线，诊断 AI 答案可见性、竞品差距、页面内容缺口和外部信源，输出机会地图与 P0/P1 优先级。</p>
+            <div class="meta-list"><span><b>适合：</b>项目启动、季度复盘、竞品追赶、投放前评估。</span><span><b>输出：</b>全景诊断、平台采样、机会地图、修复清单。</span></div>
+            <div class="links"><a href="skills/yao-geo-panorama-audit/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-panorama-audit.md">说明页</a><a href="skills/yao-geo-panorama-audit/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-strategy" data-maturity="beta" data-search="yao-geo-execution-roadmap roadmap 30 60 90 implementation strategy 方案 路线图 执行">
+            <div class="card-head"><h4>yao-geo-execution-roadmap</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">offline ok</span><span class="badge">四格式报告</span></div>
+            <p class="desc">把诊断结论转成 30/60/90 天执行路线图，覆盖页面技术、内容矩阵、标题体系、知识库、外部证据和监测闭环。</p>
+            <div class="meta-list"><span><b>适合：</b>诊断后拆项目包、角色分工、验收指标和风险预案。</span><span><b>输出：</b>综合实施方案、路线图、责任表、平台动作。</span></div>
+            <div class="links"><a href="skills/yao-geo-execution-roadmap/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-execution-roadmap.md">说明页</a><a href="skills/yao-geo-execution-roadmap/examples/">示例</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-page-technical">
+        <h3>页面技术 <span>geo-page-technical · 2</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-page-technical" data-maturity="beta" data-search="yao-geo-page-audit page audit technical seo ai extractability 页面诊断 可抓取 结构规范">
+            <div class="card-head"><h4>yao-geo-page-audit</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">代码修复</span></div>
+            <p class="desc">输入网址后诊断首页、一级页和二级页的可抓取性、结构规范性、内容信号和 AI 可抽取性。</p>
+            <div class="meta-list"><span><b>适合：</b>官网、产品页、帮助中心、文档页、案例页和落地页诊断。</span><span><b>输出：</b>代码层修复清单、内容结构改造、Schema/HTML 建议。</span></div>
+            <div class="links"><a href="skills/yao-geo-page-audit/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-page-audit.md">说明页</a><a href="skills/yao-geo-page-audit/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-page-technical" data-maturity="beta" data-search="yao-geo-page-blueprint blueprint page information architecture schema cms html 页面蓝图 信息架构">
+            <div class="card-head"><h4>yao-geo-page-blueprint</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">offline ok</span><span class="badge">页面蓝图</span></div>
+            <p class="desc">生成 GEO 友好页面的信息架构、AI 可抽取模块、用户转化模块、HTML 语义结构、Schema 建议和 CMS 字段清单。</p>
+            <div class="meta-list"><span><b>适合：</b>产品页、专题页、文章页、榜单页、对比页、FAQ 页。</span><span><b>输出：</b>模块结构、字段清单、桌面/移动/公众号版排版建议。</span></div>
+            <div class="links"><a href="skills/yao-geo-page-blueprint/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-page-blueprint.md">说明页</a><a href="skills/yao-geo-page-blueprint/examples/">示例</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-content-production">
+        <h3>内容生产 <span>geo-content-production · 5</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-content-production" data-maturity="beta" data-search="yao-geo-title-optimizer title optimizer 标题 候选库 scorecard 合规">
+            <div class="card-head"><h4>yao-geo-title-optimizer</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">offline ok</span><span class="badge warning">缺 manifest</span></div>
+            <p class="desc">为文章、页面、FAQ 和专题生成 GEO 标题候选库，覆盖平台适配、品牌隔离、合规过滤、标题评分和结构映射。</p>
+            <div class="meta-list"><span><b>适合：</b>选题命名、标题 A/B 候选、内容矩阵标题库。</span><span><b>输出：</b>标题候选、评分卡、合规检查、文章结构映射。</span></div>
+            <div class="links"><a href="skills/yao-geo-title-optimizer/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-title-optimizer.md">说明页</a><a href="skills/yao-geo-title-optimizer/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-content-production" data-maturity="beta" data-search="yao-geo-explainer-builder explainer how to faq glossary 科普 教程 术语表">
+            <div class="card-head"><h4>yao-geo-explainer-builder</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">offline ok</span><span class="badge warning">缺说明页</span></div>
+            <p class="desc">生成 GEO 科普文章、How-to 教程、概念解释、购买指南、避坑清单、FAQ、术语表和品牌自然植入建议。</p>
+            <div class="meta-list"><span><b>适合：</b>教育型内容、概念解释、FAQ 和术语体系建设。</span><span><b>输出：</b>解释文章、教程结构、术语表、品牌植入建议。</span></div>
+            <div class="links"><a href="skills/yao-geo-explainer-builder/SKILL.md">SKILL</a><a href="skills/yao-geo-explainer-builder/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-content-production" data-maturity="beta" data-search="yao-geo-comparison-builder comparison alternative competitor faq 对比 替代 竞品 选型">
+            <div class="card-head"><h4>yao-geo-comparison-builder</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">公平对比</span></div>
+            <p class="desc">生成目标品牌与竞品、同类方案、传统方案或自建方案的 GEO 对比内容，强调同口径维度和证据锚点。</p>
+            <div class="meta-list"><span><b>适合：</b>品牌替代方案、选型页、竞品对比页、FAQ 对比问答。</span><span><b>输出：</b>对比表、场景选择、FAQ、合规边界、四格式报告。</span></div>
+            <div class="links"><a href="skills/yao-geo-comparison-builder/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-comparison-builder.md">说明页</a><a href="skills/yao-geo-comparison-builder/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-content-production" data-maturity="beta" data-search="yao-geo-content-refiner content refiner seo article cms html 旧文改造 事实卡 faq">
+            <div class="card-head"><h4>yao-geo-content-refiner</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge warning">缺说明页</span></div>
+            <p class="desc">把已有 SEO 文章、公众号文章、官网文章、白皮书和产品页文案改造成结构化、可信、可引用、可抽取的 GEO 内容。</p>
+            <div class="meta-list"><span><b>适合：</b>旧文升级、CMS 发布版重构、事实卡与 FAQ 补强。</span><span><b>输出：</b>原文评分、改造版文章、差异报告、CMS HTML 建议。</span></div>
+            <div class="links"><a href="skills/yao-geo-content-refiner/SKILL.md">SKILL</a><a href="skills/yao-geo-content-refiner/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-content-production" data-maturity="beta" data-search="yao-geo-ranking-article-builder ranking article listicle 榜单 评测 文章 品牌 brief">
+            <div class="card-head"><h4>yao-geo-ranking-article-builder</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">榜单评测</span></div>
+            <p class="desc">基于品牌 Brief、选题 JSON、竞品库和可信来源生成 GEO 榜单评测文章，覆盖评选方法、对比表、适合人群和 FAQ。</p>
+            <div class="meta-list"><span><b>适合：</b>榜单文章、评测文章、Top N 选型内容。</span><span><b>输出：</b>榜单正文、来源表、FAQ、四格式内容包。</span></div>
+            <div class="links"><a href="skills/yao-geo-ranking-article-builder/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-ranking-article-builder.md">说明页</a><a href="skills/yao-geo-ranking-article-builder/examples/">示例</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-knowledge-assets">
+        <h3>知识资产 <span>geo-knowledge-assets · 2</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-knowledge-assets" data-maturity="beta" data-search="yao-geo-brand-graph brand graph entity relation json ld rdf mermaid 品牌图谱 实体 关系">
+            <div class="card-head"><h4>yao-geo-brand-graph</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">知识图谱</span></div>
+            <p class="desc">把企业信息转成品牌、产品、人物、地点、案例、证据和场景之间的可审计实体关系图。</p>
+            <div class="meta-list"><span><b>适合：</b>知识库升级、品牌百科化、内容一致性治理。</span><span><b>输出：</b>Mermaid、JSON-LD、RDF、消歧表、可信等级。</span></div>
+            <div class="links"><a href="skills/yao-geo-brand-graph/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-brand-graph.md">说明页</a><a href="skills/yao-geo-brand-graph/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-knowledge-assets" data-maturity="beta" data-search="yao-geo-knowledge-base-builder knowledge base facts faq prompt sources 知识库 事实卡">
+            <div class="card-head"><h4>yao-geo-knowledge-base-builder</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">知识库</span></div>
+            <p class="desc">基于官网、产品页、帮助中心、白皮书、销售材料和资质文件生成 GEO 品牌知识库、事实卡、FAQ、禁用表达和来源索引。</p>
+            <div class="meta-list"><span><b>适合：</b>下游榜单、对比、解释、标题、页面设计和监测任务的事实底座。</span><span><b>输出：</b>品牌知识库、事实卡、Prompt 输入包、四格式报告。</span></div>
+            <div class="links"><a href="skills/yao-geo-knowledge-base-builder/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-knowledge-base-builder.md">说明页</a><a href="skills/yao-geo-knowledge-base-builder/examples/">示例</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-measurement">
+        <h3>监测归因 <span>geo-measurement · 2</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-measurement" data-maturity="beta" data-search="yao-geo-tracking attribution tracking plan backend html word 归因 追踪 转化">
+            <div class="card-head"><h4>yao-geo-tracking</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">归因框架</span></div>
+            <p class="desc">基于公司名和官网优先检索，生成企业个性化 GEO 后端追踪、直接效果与间接效果归因框架。</p>
+            <div class="meta-list"><span><b>适合：</b>设计 GEO 效果跟踪体系、转化追踪方案、后端分析报告。</span><span><b>输出：</b>归因设计、数据模型、路线图、HTML/Word 报告。</span></div>
+            <div class="links"><a href="skills/yao-geo-tracking/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-tracking.md">说明页</a><a href="skills/yao-geo-tracking/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-measurement" data-maturity="beta" data-search="yao-geo-effect-monitor signal monitor ai answer citation monthly report 监测 引用 月报 告警">
+            <div class="card-head"><h4>yao-geo-effect-monitor</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">月报监测</span></div>
+            <p class="desc">设计 GEO Signal Monitor，建立 AI 答案监测、引用追踪、品牌事实纠偏、月报告警和谨慎归因闭环。</p>
+            <div class="meta-list"><span><b>适合：</b>长期运营、客户月报、内容迭代、外部信源建设。</span><span><b>输出：</b>Prompt 库、指标体系、采样口径、纠偏任务表。</span></div>
+            <div class="links"><a href="skills/yao-geo-effect-monitor/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-effect-monitor.md">说明页</a><a href="skills/yao-geo-effect-monitor/examples/">示例</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-operations">
+        <h3>GEOFlow 运营 <span>geo-operations · 3</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-operations" data-maturity="stable" data-search="yao-geoflow-cli geoflow cli laravel api task article publish 操作 发布 任务">
+            <div class="card-head"><h4>yao-geoflow-cli</h4></div>
+            <div class="badge-row"><span class="badge">stable</span><span class="badge">offline ok</span><span class="badge">CLI/API</span></div>
+            <p class="desc">通过本地 geoflow CLI 或 Laravel API fallback 操作已有 GEOFlow 系统，用于目录查询、任务管理、文章上传、审核与发布。</p>
+            <div class="meta-list"><span><b>适合：</b>已有 GEOFlow 系统，需要脚本化运营、批量处理和发布链路验证。</span><span><b>输出：</b>目录查询结果、任务操作结果、文章发布结果。</span></div>
+            <div class="links"><a href="skills/yao-geoflow-cli/SKILL.md">SKILL</a><a href="docs/skills/yao-geoflow-cli.md">说明页</a><a href="skills/yao-geoflow-cli/examples/">示例</a></div>
+          </article>
+
+          <article class="card" data-family="geo-operations" data-maturity="beta" data-search="yao-geoflow-template template clone reference url theme package geoflow 模板 复刻">
+            <div class="card-head"><h4>yao-geoflow-template</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">模板映射</span></div>
+            <p class="desc">把参考网址映射到 GEOFlow 前端契约，生成 preview-first 主题包方案、设计 token、模块映射和启用结构。</p>
+            <div class="meta-list"><span><b>适合：</b>前台模板复刻、参考站样式映射、主题包规划。</span><span><b>输出：</b>tokens、mapping、manifest、preview 包结构。</span></div>
+            <div class="links"><a href="skills/yao-geoflow-template/SKILL.md">SKILL</a><a href="docs/skills/yao-geoflow-template.md">说明页</a><a href="docs/skills/yao-geoflow-template.en.md">EN</a><a href="skills/yao-geoflow-template/examples/">示例说明</a></div>
+          </article>
+
+          <article class="card" data-family="geo-operations" data-maturity="beta" data-search="yao-geoflow-design blade theme laravel preview edit clone design geoflow 主题 设计">
+            <div class="card-head"><h4>yao-geoflow-design</h4></div>
+            <div class="badge-row"><span class="badge">beta</span><span class="badge">requires web</span><span class="badge">主题编辑</span></div>
+            <p class="desc">发现当前 GEOFlow Laravel Blade 主题，进入 preview-first 编辑会话，安全完成模板复刻、现有模板优化和局部样式调整。</p>
+            <div class="meta-list"><span><b>适合：</b>当前主题迭代、指定模板改版、参考站风格落地。</span><span><b>输出：</b>预览主题、设计调整、发布或替换建议。</span></div>
+            <div class="links"><a href="skills/yao-geoflow-design/SKILL.md">SKILL</a><a href="docs/skills/yao-geoflow-design.md">说明页</a><a href="docs/skills/yao-geoflow-design.en.md">EN</a><a href="skills/yao-geoflow-design/examples/">示例说明</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" data-category="geo-research">
+        <h3>研究拓词 <span>geo-research · 1</span></h3>
+        <div class="cards">
+          <article class="card" data-family="geo-research" data-maturity="draft" data-search="yao-geo-intent-miner intent miner prompts questions seed words 拓词 意图 问题集 追问">
+            <div class="card-head"><h4>yao-geo-intent-miner</h4></div>
+            <div class="badge-row"><span class="badge">draft</span><span class="badge">offline ok</span><span class="badge">incubating</span></div>
+            <p class="desc">把种子词、品牌、产品、竞品、区域、人群和业务材料扩展成 AI 搜索问题集、意图簇、追问链路、查询重写和监测 Prompt。</p>
+            <div class="meta-list"><span><b>适合：</b>内容选题前的用户问题发现、Prompt 库建设、意图聚类。</span><span><b>输出：</b>意图簇、问题集、追问链路、FAQ 和监测 Prompt。</span></div>
+            <div class="links"><a href="skills/yao-geo-intent-miner/SKILL.md">SKILL</a><a href="docs/skills/yao-geo-intent-miner.md">说明页</a><a href="skills/yao-geo-intent-miner/examples/">示例</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>本页是静态导航说明页，可直接打开，也可作为 GitHub Pages 首页。发布前请先处理 `docs/github-release-prep.md` 中的 P0/P1 项。</p>
+    </footer>
+  </main>
+
+  <script>
+    const searchInput = document.querySelector("#search");
+    const filters = Array.from(document.querySelectorAll(".filter"));
+    const cards = Array.from(document.querySelectorAll(".card"));
+    const categories = Array.from(document.querySelectorAll(".category"));
+    let activeFilter = "all";
+
+    function normalize(value) {
+      return value.toLowerCase().trim();
+    }
+
+    function applyFilters() {
+      const query = normalize(searchInput.value);
+
+      cards.forEach((card) => {
+        const familyMatch = activeFilter === "all" || card.dataset.family === activeFilter;
+        const text = normalize(`${card.innerText} ${card.dataset.search || ""}`);
+        const searchMatch = !query || text.includes(query);
+        card.classList.toggle("is-hidden", !(familyMatch && searchMatch));
+      });
+
+      categories.forEach((category) => {
+        const visibleCards = category.querySelectorAll(".card:not(.is-hidden)");
+        category.classList.toggle("is-hidden", visibleCards.length === 0);
+      });
+    }
+
+    filters.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        filters.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener("input", applyFilters);
+  </script>
+</body>
+</html>

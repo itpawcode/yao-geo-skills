@@ -1,0 +1,31 @@
+{
+  "required_files": [
+    "SKILL.md",
+    "manifest.json",
+    "agents/interface.yaml",
+    "templates/brief-template.md",
+    "references/research-foundation.md",
+    "references/explainer-method.md",
+    "references/cn-platform-adaptation.md",
+    "references/brand-insertion-policy.md",
+    "references/artifact-layout.md",
+    "references/quality-gates.md",
+    "reports/output-risk-profile.md",
+    "scripts/render_yao_geo_explainer_builder.py",
+    "examples/acme-sleep-demo/report_input.json"
+  ],
+  "rendered_outputs": [
+    "deliverables/acme-sleep-geo-explainer.md",
+    "deliverables/html-package/index.html",
+    "deliverables/acme-sleep-geo-explainer.docx",
+    "deliverables/acme-sleep-geo-explainer.pdf",
+    "quality-report.json"
+  ],
+  "layout_requirements": {
+    "background": "white",
+    "docx_max_table_width_dxa": 9638,
+    "docx_long_ascii_token_limit": 36,
+    "html_table_border_collapse": true,
+    "pdf_from_html": true
+  }
+}

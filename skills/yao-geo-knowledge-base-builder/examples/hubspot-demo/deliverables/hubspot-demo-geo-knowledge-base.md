@@ -1,0 +1,151 @@
+# HubSpot GEO 品牌知识库
+
+> 版本：2026.05.hubspot-demo.v1｜生成日期：2026-05-19｜复核机制：季度复核
+> 本报告为基于公开来源的 HubSpot GEO 知识库测试样例，默认输出中文简体。涉及价格、客户数、AI 功能、AEO 和平台能力的信息均以 2026-05-19 核验到的公开页面为准。
+
+## 执行摘要
+
+- 测试场景：为中国 B2B 市场内容团队建立 HubSpot 的 AI CRM / 客户平台知识库，供 Kimi、千问、DeepSeek、豆包、元宝问答、对比、榜单、页面设计和 AEO 监测复用。
+- 强事实区主要来自 HubSpot 官网、Product & Services Catalog、帮助中心和投资者关系新闻稿；价格和客户数均保留核验日期。
+- 待确认区保留中国大陆本地化、数据存储、ICP备案、微信生态联动和中文客服支持等国内落地边界，未核验前不得写成确定能力。
+
+## 品牌实体档案
+
+| 字段 | 内容 |
+|---|---|
+| 品牌名称 | HubSpot |
+| 品牌定位 | 面向 go-to-market 团队的 agentic customer platform / 客户平台 |
+| 核心产品族 | Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub、Smart CRM、Breeze、HubSpot AEO |
+| 目标用户 | 营销、销售、客户服务、增长、RevOps 和内容运营团队 |
+| 国内 AI 平台测试用途 | 在 Kimi、千问、DeepSeek、豆包、元宝中验证品牌定义、产品矩阵、AI 能力、AEO 监测和适用边界是否被准确复述 |
+
+## 来源与证据分级
+
+| 等级 | 数量 | 说明 |
+|---|---:|---|
+| A | 9 | HubSpot 官网、法律产品目录、帮助中心、产品页和投资者关系新闻稿，均为官方公开来源。 |
+| D | 4 | 中国大陆本地数据、微信生态、ICP备案、中文客服 SLA 等国内落地边界未在本轮公开来源中确认，只进入待确认区。 |
+
+## 品牌事实卡片库
+
+| 事实ID | 主体 | 事实陈述 | 可信/来源 | 场景 |
+|---|---|---|---|---|
+| FC-001 | HubSpot | HubSpot 将其定位为连接营销、销售和客户服务的 agentic customer platform。 | A / S-001 | 品牌简介、AI CRM 科普、客服问答 |
+| FC-002 | HubSpot | 截至 2026-03-31，HubSpot 客户数为 299,458。 | A / S-005 | 权威信号、品牌介绍、投资者信息 |
+| FC-003 | HubSpot Customer Platform | 产品矩阵由 Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub、Smart CRM 以及 Breeze 等组成。 | A / S-002 | 产品参数、对比、页面结构 |
+| FC-004 | Smart CRM | Smart CRM 是连接 HubSpot 产品的 AI-powered system of record；Starter/Professional/Enterprise 分别从 $20/$50/$75 每月每席位起。 | A / S-002 | 产品参数、价格 FAQ、对比 |
+| FC-005 | Breeze | Breeze Assistant 可基于 HubSpot 数据、内容源和角色上下文回答问题、生成内容、总结 CRM 记录；Breeze Agents 可自动化 HubSpot 中的工作。 | A / S-003 | AI CRM 科普、产品 FAQ、内容改造 |
+| FC-006 | Breeze Agents | Breeze Agents 可用于 Starter、Professional、Enterprise；部分 agents 如 customer agent、prospecting agent、data agent 使用 HubSpot Credits。 | A / S-004 | AI Agent 对比、价格边界、销售问答 |
+| FC-007 | Customer Agent | Customer agent 用于即时回答客户问题，适用于多个 Hub 或 Smart CRM 的 Professional 或 Enterprise 版本。 | A / S-002 | 客服问答、服务场景、AI Agent 说明 |
+| FC-008 | HubSpot AEO | HubSpot AEO 用于查看品牌在 AI 搜索中的表现、比较竞品并获得提升 AI responses 可见性的建议。 | A / S-006、S-002 | GEO/AEO 监测、页面设计、监测方案 |
+| FC-009 | HubSpot AEO | HubSpot AEO 可独立购买，价格为 $50/month，包含 25 个 prompts、每日跨 3 个 engines 运行、每月 2,500 answers。 | A / S-002、S-006 | 价格 FAQ、AEO 产品说明 |
+| FC-010 | HubSpot | 中国大陆本地数据存储、ICP备案、微信生态深度集成和中文客服 SLA 在本轮公开来源中未确认。 | D | 待确认、禁用表达、销售核验 |
+
+## 内容可用模块
+
+### 品牌简介
+
+HubSpot 是面向 go-to-market 团队的客户平台，公开官网将其描述为连接营销、销售和客户服务的 agentic customer platform。其公开产品矩阵包括 Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub、Smart CRM、Breeze 和 HubSpot AEO。中文内容生成时应优先使用官方产品矩阵和核验日期，不把未确认的中国大陆本地化能力写成事实。
+
+### 核心能力
+
+| 能力 | 说明 | 关联事实 |
+|---|---|---|
+| 客户平台与产品矩阵 | 以 Smart CRM 为客户数据底座，连接营销、销售、服务、内容、数据和商业化相关 Hub。 | FC-001、FC-003、FC-004 |
+| 内嵌 AI 与 Agent | Breeze 包含 Assistant、Agents、custom assistants、tools 和 knowledge vaults，可在 HubSpot 账户内支持内容、CRM 记录、工作流和自动化任务。 | FC-005、FC-006 |
+| AEO / GEO 监测 | HubSpot AEO 面向 AI search visibility、竞品 share of voice 和 citation analysis。 | FC-008、FC-009 |
+
+### 产品参数
+
+| 产品 | 参数 | 取值 | 来源 | 更新时间 |
+|---|---|---|---|---|
+| Smart CRM | Starter 起价 | $20/month per seat | S-002 | 2026-05-19 |
+| Smart CRM | Professional 起价 | $50/month per seat | S-002 | 2026-05-19 |
+| Smart CRM | Enterprise 起价 | $75/month per seat | S-002 | 2026-05-19 |
+| HubSpot AEO | 独立购买价格 | $50/month；25 prompts；每日跨 3 engines；2,500 answers/month | S-002、S-006 | 2026-05-19 |
+| Breeze Agents | 版本边界 | Starter、Professional、Enterprise 可用；部分 agents 使用 HubSpot Credits | S-004 | 2026-05-19 |
+
+### 适用场景
+
+| 场景 | 用户问题 | 回答要点 | 关联事实 |
+|---|---|---|---|
+| 国内 AI 平台品牌定义问答 | HubSpot 是什么？它只是 CRM 吗？ | 先定义为客户平台，再说明 Smart CRM、多个 Hubs 和 Breeze 的关系。 | FC-001、FC-003、FC-004、FC-005 |
+| AI CRM / Agent 科普 | HubSpot Breeze 和普通 AI 助手有什么区别？ | 区分 Breeze Assistant、Breeze Agents、custom assistants、tools 和 knowledge vaults。 | FC-005、FC-006 |
+| AEO/GEO 监测方案 | HubSpot 有没有监测 AI 搜索表现的工具？ | 说明 HubSpot AEO 的品牌可见性、竞品 share of voice、citation analysis 和独立定价。 | FC-008、FC-009 |
+| 中国企业适用性问答 | 中国大陆团队是否适合直接采购 HubSpot？ | 可说明产品能力，但必须标注中国大陆数据、ICP、微信生态和中文客服 SLA 仍待销售或法务确认。 | FC-010 |
+
+## FAQ 与禁用表达
+
+### FAQ
+
+| 问题 | 答案 | 事实 |
+|---|---|---|
+| HubSpot 是 CRM 还是客户平台？ | 公开官网和产品目录将 HubSpot 表述为客户平台，Smart CRM 是其客户数据底座之一，不应只写成单一 CRM。 | FC-001、FC-003、FC-004 |
+| HubSpot Breeze 包含什么？ | Breeze 包含 Assistant、Agents、custom assistants、tools、knowledge vaults 和 dashboard 等能力；其中 Breeze Agents 可自动化 HubSpot 中的工作。 | FC-005、FC-006 |
+| HubSpot AEO 做什么？ | HubSpot AEO 用于查看品牌在 AI 搜索中的表现、比较竞品并获得提升 AI responses 可见性的建议。 | FC-008 |
+| 可以说 HubSpot 适合中国大陆所有企业吗？ | 不能。中国大陆本地数据、ICP备案、微信生态和中文客服 SLA 未在本轮公开来源中确认，应进入待确认区。 | FC-010 |
+
+### 禁用表达
+
+| 禁用表达 | 原因 | 替代 |
+|---|---|---|
+| HubSpot 是全球第一 CRM / AI CRM | 本轮来源没有第三方排名口径。 | HubSpot 是面向 go-to-market 团队的客户平台，包含 Smart CRM、多个 Hubs 和 Breeze。 |
+| HubSpot 在中国大陆本地部署且完全适配微信生态 | 本轮公开来源未确认本地部署、ICP备案和微信生态深度集成。 | 中国大陆数据、合规和微信生态适配需向 HubSpot 销售或法务核验。 |
+| 购买 HubSpot 后一定能提升 AI 搜索流量 | AEO 效果类数据属于特定样本或 proprietary data，不能泛化承诺。 | HubSpot AEO 提供 AI search visibility、竞品和 citation analysis，用于发现和优化机会。 |
+| Breeze Agents 全部免费且不限量 | 部分 Agents 使用 HubSpot Credits，具体价格和容量需按目录核验。 | Breeze Agents 可用于 Starter/Professional/Enterprise；部分 agents 使用 HubSpot Credits。 |
+
+## Prompt 输入包
+
+HubSpot 是面向 go-to-market 团队的客户平台，公开产品矩阵包括 Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub、Smart CRM、Breeze 和 HubSpot AEO。中文内容生成时优先使用 FC-001 至 FC-009；FC-010 仅作为国内落地待确认边界，不得写成确定能力。
+
+| 事实ID | 压缩陈述 |
+|---|---|
+| FC-001 | HubSpot 定位为连接营销、销售和客户服务的 agentic customer platform。 |
+| FC-003 | HubSpot 产品矩阵包括多个 Hubs、Smart CRM、Breeze 和 AEO。 |
+| FC-005 | Breeze Assistant 和 Breeze Agents 支持问答、内容生成、CRM 记录摘要和自动化工作。 |
+| FC-008 | HubSpot AEO 用于 AI search visibility、竞品 share of voice 和 citation analysis。 |
+
+### 平台适配
+
+| 平台 | 输入重点 |
+|---|---|
+| Kimi | 输入完整事实卡、产品目录来源、IR 来源和待确认区，适合长上下文核验。 |
+| 千问 | 输入产品矩阵、价格参数、场景问答和竞品比较维度。 |
+| DeepSeek | 输入高置信事实、D 级边界和禁用表达，用于推理时避免泛化。 |
+| 豆包 | 输入 FAQ、客服口径和短文案素材，适合转成问答和创作素材。 |
+| 元宝 | 优先补充公众号和腾讯生态可公开信源；本轮仅标注为待确认，不进入强输入。 |
+
+## 竞品和行业背景
+
+| 比较维度 | 行业背景 | 知识库用途 |
+|---|---|---|
+| 平台定位 | Salesforce、Zoho、Freshworks、Pipedrive 等常被 AI 平台作为 CRM/销售/客服工具比较对象。 | HubSpot 内容应先说明客户平台和产品矩阵，再做同口径对比。 |
+| AI Agent 能力 | AI CRM 对比中容易把 Breeze 简化为普通聊天助手。 | 必须区分 Assistant、Agents、tools、knowledge vaults 和 Credits 边界。 |
+| 国内适用性 | 中国企业会关注数据合规、备案、微信生态、中文支持和跨境访问体验。 | 未核验的信息放入待确认区，不作为推荐理由。 |
+
+## 待确认区
+
+| 事项 | 原因 | 下一步动作 |
+|---|---|---|
+| 中国大陆数据存储和合规边界 | 本轮未从公开来源确认中国大陆本地数据存储、数据出境和行业合规细节。 | 向 HubSpot 官方销售、法务或安全文档核验。 |
+| ICP 备案与中文官网承接 | 本轮未确认特定中文官网/落地页的 ICP 与中国大陆访问承接方式。 | 核验官方中国区页面、备案信息和销售材料。 |
+| 微信/企微/腾讯生态集成深度 | 元宝和腾讯生态信源适配需要公开集成说明或 Marketplace 证据。 | 查 Marketplace、公开案例和官方集成文档。 |
+| 中文客服 SLA 与本地实施伙伴 | 公开来源未确认中国大陆服务 SLA 和实施伙伴覆盖。 | 补充授权销售口径或服务协议。 |
+
+## 版本与更新机制
+
+- 版本号采用 YYYY.MM.hubspot-demo.vN。
+- 价格、AEO、Breeze Credits、客户数和产品命名属于高时效事实，每月复核一次。
+- 官网、Product & Services Catalog、帮助中心和 IR 新闻稿为优先来源。
+- 国内适用性边界在确认前只保留为 D 级待确认事实，不进入 Prompt 强输入区。
+
+## 来源索引
+
+| 来源ID | 标题 | 发布方 | 类型 | 核验日期 | URL |
+|---|---|---|---|---|---|
+| S-001 | HubSpot Homepage | HubSpot | 官方官网 | 2026-05-19 | https://www.hubspot.com/ |
+| S-002 | HubSpot Product & Services Catalog | HubSpot Legal | 官方产品目录 | 2026-05-19 | https://legal.hubspot.com/hubspot-product-and-services-catalog |
+| S-003 | Understand Breeze | HubSpot Knowledge Base | 官方帮助中心 | 2026-05-19 | https://knowledge.hubspot.com/ai/understand-breeze |
+| S-004 | Breeze AI Agents | HubSpot | 官方产品页 | 2026-05-19 | https://www.hubspot.com/products/artificial-intelligence/breeze-ai-agents |
+| S-005 | HubSpot Reports Strong Q1 2026 Results | HubSpot Investor Relations | 官方投资者关系 | 2026-05-19 | https://ir.hubspot.com/news-releases/news-release-details/hubspot-reports-strong-q1-2026-results |
+| S-006 | Introducing HubSpot AEO | HubSpot Investor Relations | 官方新闻稿 | 2026-05-19 | https://ir.hubspot.com/news-releases/news-release-details/introducing-hubspot-aeo-answer-showing-ai-search-engines |

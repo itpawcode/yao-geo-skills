@@ -5,12 +5,43 @@
 英文说明文档：
 [英文版 README](docs/README.en.md)
 
+可视化导航页：
+[index.html](index.html)
+
 说明：
 本仓库里的 `GEO` 指生成式引擎优化，不是地理信息或地图相关工具。
 
+## 当前状态
+
+当前仓库包含 `17` 个 GEO 相关 skill，覆盖战略诊断、页面技术、内容生产、知识资产、监测归因、研究拓词和 GEOFlow 运营。
+
+| 分类 | 数量 | 代表场景 |
+|---|---:|---|
+| `geo-operations` | 3 | GEOFlow CLI 操作、模板映射、Laravel Blade 主题编辑 |
+| `geo-strategy` | 2 | GEO 全景诊断、30/60/90 天执行路线图 |
+| `geo-page-technical` | 2 | 页面 GEO 诊断、GEO 友好页面蓝图 |
+| `geo-content-production` | 5 | 标题、科普、对比、旧文改造、榜单评测 |
+| `geo-knowledge-assets` | 2 | 品牌知识图谱、品牌知识库和事实卡 |
+| `geo-measurement` | 2 | GEO 归因追踪、AI 答案监测月报 |
+| `geo-research` | 1 | AI 搜索问题集、意图簇和监测 Prompt |
+
+每个正式 skill 至少包含：
+
+- `SKILL.md`：Agent 调用入口和执行边界
+- `manifest.json`：公开元信息
+- `templates/brief-template.md`：输入简报模板
+- `evals/trigger_cases.json` 与 `evals/expected_artifacts.json`：触发和产物校验
+- `docs/skills/<skill-id>.md`：适合 GitHub 用户阅读的说明页
+
+可运行仓库校验：
+
+```bash
+python3 scripts/validate_repository.py
+```
+
 ## 仓库定位与背景
 
-`yao-geo-skills` 用来沉淀一批可复用、可验证、可开源分享的 GEO Skill。  
+`yao-geo-skills` 用来沉淀一批可复用、可验证、可开源分享的 GEO Skill。
 这里关注的不是零散 prompt，而是完整的执行资产：
 
 - 有清晰边界的 `SKILL.md`
@@ -104,13 +135,26 @@ git checkout main
 直接打开对应 skill 目录，在 GitHub 页面按需下载文件：
 
 - [skills/yao-geo-tracking](skills/yao-geo-tracking)
+- [skills/yao-geo-effect-monitor](skills/yao-geo-effect-monitor)
+- [skills/yao-geo-panorama-audit](skills/yao-geo-panorama-audit)
+- [skills/yao-geo-page-audit](skills/yao-geo-page-audit)
+- [skills/yao-geo-ranking-article-builder](skills/yao-geo-ranking-article-builder)
+- [skills/yao-geo-explainer-builder](skills/yao-geo-explainer-builder)
+- [skills/yao-geo-content-refiner](skills/yao-geo-content-refiner)
+- [skills/yao-geo-title-optimizer](skills/yao-geo-title-optimizer)
+- [skills/yao-geo-comparison-builder](skills/yao-geo-comparison-builder)
+- [skills/yao-geo-execution-roadmap](skills/yao-geo-execution-roadmap)
+- [skills/yao-geo-page-blueprint](skills/yao-geo-page-blueprint)
+- [skills/yao-geo-brand-graph](skills/yao-geo-brand-graph)
+- [skills/yao-geo-knowledge-base-builder](skills/yao-geo-knowledge-base-builder)
+- [skills/yao-geo-intent-miner](skills/yao-geo-intent-miner)
 - [skills/yao-geoflow-cli](skills/yao-geoflow-cli)
 - [skills/yao-geoflow-template](skills/yao-geoflow-template)
 - [skills/yao-geoflow-design](skills/yao-geoflow-design)
 
 ## Skills 导航
 
-当前 catalog 按工作类型分成 `operations / measurement / research` 三组，方便快速判断一个 skill 是偏执行、偏监测，还是偏研究。
+当前 catalog 按工作类型分成 `operations / strategy / page-technical / content-production / knowledge-assets / measurement / research`，方便快速判断一个 skill 是偏执行、偏战略诊断、偏页面技术、偏内容生产、偏知识资产、偏监测，还是偏研究。
 
 ### `operations`
 
@@ -152,6 +196,193 @@ git checkout main
   </tr>
 </table>
 
+### `strategy`
+
+<table>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-panorama-audit</code></strong><br>
+      作用：建立品牌 GEO 全景基线，面向 DeepSeek、豆包、千问、Kimi、元宝诊断 AI 答案可见性、竞品差距、内容页面缺口和外部信源，并输出机会地图与 P0/P1 优先级。<br><br>
+      适合：项目启动、季度复盘、竞品追赶、投放前评估，以及需要先判断 GEO 机会和资源优先级的战略诊断。<br><br>
+      合成示例：<br>
+      <a href="skills/yao-geo-panorama-audit/examples/lingxu-synthetic-panorama/lingxu-panorama-audit.md">Markdown</a> ·
+      <a href="skills/yao-geo-panorama-audit/examples/lingxu-synthetic-panorama/lingxu-panorama-audit.html">HTML</a> ·
+      <a href="skills/yao-geo-panorama-audit/examples/lingxu-synthetic-panorama/lingxu-panorama-audit.docx">Word</a> ·
+      <a href="skills/yao-geo-panorama-audit/examples/lingxu-synthetic-panorama/lingxu-panorama-audit.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-panorama-audit.md">说明页</a> ·
+      <a href="skills/yao-geo-panorama-audit">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-execution-roadmap</code></strong><br>
+      作用：把 GEO 全景诊断、机会地图和平台采样结论转成 30/60/90 天执行路线图，覆盖页面技术、内容矩阵、标题体系、知识库、外部证据、监测闭环和四格式交付。<br><br>
+      适合：诊断完成后，需要面向 CEO、市场、增长、内容、技术和客户交付团队拆项目包、责任分工、验收指标、预算优先级和风险预案。<br><br>
+      公开示例：<br>
+      <a href="skills/yao-geo-execution-roadmap/examples/lingxu-demo/report_input.json">输入</a> ·
+      <a href="skills/yao-geo-execution-roadmap/examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.md">Markdown</a> ·
+      <a href="skills/yao-geo-execution-roadmap/examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.html">HTML</a> ·
+      <a href="skills/yao-geo-execution-roadmap/examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.docx">Word</a> ·
+      <a href="skills/yao-geo-execution-roadmap/examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-execution-roadmap.md">说明页</a> ·
+      <a href="skills/yao-geo-execution-roadmap">Skill 包</a>
+    </td>
+  </tr>
+</table>
+
+### `page-technical`
+
+<table>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-page-audit</code></strong><br>
+      作用：输入网址后诊断首页、代表性一级页和二级页的可抓取性、结构规范性、内容信号和 AI 可抽取性，输出代码层与内容层修复清单。<br><br>
+      适合：官网首页、栏目页、产品页、文章页、帮助中心、文档页、案例页和落地页的 GEO Page Audit，以及需要 Word/PDF/HTML/Markdown 四件套报告的页面诊断交付。<br><br>
+      公开示例：<br>
+      <a href="skills/yao-geo-page-audit/examples/example-site-demo/example-site-geo-page-audit.md">Markdown</a> ·
+      <a href="skills/yao-geo-page-audit/examples/example-site-demo/example-site-geo-page-audit.html">HTML</a> ·
+      <a href="skills/yao-geo-page-audit/examples/example-site-demo/example-site-geo-page-audit.docx">Word</a> ·
+      <a href="skills/yao-geo-page-audit/examples/example-site-demo/example-site-geo-page-audit.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-page-audit.md">说明页</a> ·
+      <a href="skills/yao-geo-page-audit">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-page-blueprint</code></strong><br>
+      作用：生成 GEO 友好页面的信息架构、AI 可抽取模块、用户转化模块、HTML 语义结构、Schema 建议、CMS 字段清单，以及桌面端、移动端和公众号版排版方案。<br><br>
+      适合：官网产品页、专题页、文章页、榜单页、对比页、FAQ页、知识库页和案例页设计，尤其是需要同时服务国内 AI 平台抽取和真实用户转化的页面技术场景。<br><br>
+      公开示例：<br>
+      <a href="skills/yao-geo-page-blueprint/examples/demo/report_input.json">输入</a> ·
+      <a href="skills/yao-geo-page-blueprint/examples/demo/lingxu-yao-geo-page-blueprint-demo.md">Markdown</a> ·
+      <a href="skills/yao-geo-page-blueprint/examples/demo/lingxu-yao-geo-page-blueprint-demo.html">HTML</a> ·
+      <a href="skills/yao-geo-page-blueprint/examples/demo/lingxu-yao-geo-page-blueprint-demo.docx">Word</a> ·
+      <a href="skills/yao-geo-page-blueprint/examples/demo/lingxu-yao-geo-page-blueprint-demo.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-page-blueprint.md">说明页</a> ·
+      <a href="skills/yao-geo-page-blueprint">Skill 包</a>
+    </td>
+  </tr>
+</table>
+
+### `content-production`
+
+<table>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-title-optimizer</code></strong><br>
+      作用：为文章、页面、FAQ 和专题生成 GEO 标题候选库，覆盖国内 AI 平台适配、品牌隔离、合规过滤、标题评分和文章结构映射。<br><br>
+      适合：内容矩阵标题库、选题命名、标题候选评审、标题到文章结构映射，以及需要 Word/PDF/HTML/Markdown 四格式交付的标题系统。<br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-title-optimizer.md">说明页</a> ·
+      <a href="skills/yao-geo-title-optimizer">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-comparison-builder</code></strong><br>
+      作用：生成目标品牌与竞品、同类方案、传统方案或自建方案的 GEO 对比内容，覆盖同口径维度、证据锚点、场景选择、FAQ 和国内 AI 平台适配。<br><br>
+      适合：品牌替代方案、选型页、竞品对比页、FAQ 页、商业决策类内容，以及需要 Word/PDF/HTML/Markdown 四格式交付的对比内容生产。<br><br>
+      HubSpot 示例：<br>
+      <a href="skills/yao-geo-comparison-builder/examples/hubspot-cn-demo/hubspot-cn-comparison-report.md">Markdown</a> ·
+      <a href="skills/yao-geo-comparison-builder/examples/hubspot-cn-demo/hubspot-cn-comparison-report.html">HTML</a> ·
+      <a href="skills/yao-geo-comparison-builder/examples/hubspot-cn-demo/hubspot-cn-comparison-report.docx">Word</a> ·
+      <a href="skills/yao-geo-comparison-builder/examples/hubspot-cn-demo/hubspot-cn-comparison-report.pdf">PDF</a> ·
+      <a href="skills/yao-geo-comparison-builder/examples/hubspot-cn-demo/quality-report.json">质量报告</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-comparison-builder.md">说明页</a> ·
+      <a href="skills/yao-geo-comparison-builder">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-ranking-article-builder</code></strong><br>
+      作用：基于品牌 Brief、选题 JSON、竞品库和可信来源生成 GEO 榜单评测文章，覆盖评选方法、核心对比表、榜单正文、适合人群、FAQ 和来源表。<br><br>
+      适合：best、top、alternatives、vs、人群和场景类榜单内容生产，以及需要 Word/PDF/HTML/Markdown 四格式文章包的投放和代理商交付。<br><br>
+      公开示例：<br>
+      <a href="skills/yao-geo-ranking-article-builder/examples/synthetic-demo/demo-geo-ranking-article.md">Markdown</a> ·
+      <a href="skills/yao-geo-ranking-article-builder/examples/synthetic-demo/demo-geo-ranking-article.html">HTML</a> ·
+      <a href="skills/yao-geo-ranking-article-builder/examples/synthetic-demo/demo-geo-ranking-article.docx">Word</a> ·
+      <a href="skills/yao-geo-ranking-article-builder/examples/synthetic-demo/demo-geo-ranking-article.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-ranking-article-builder.md">说明页</a> ·
+      <a href="skills/yao-geo-ranking-article-builder">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-explainer-builder</code></strong><br>
+      作用：生成 GEO 科普文章、How-to 教程、概念解释、怎么选、避坑指南、FAQ、术语表和品牌自然植入建议。<br><br>
+      适合：品牌教育、行业知识、购买前科普、公众号教程、AI 搜索问答素材，以及需要 Word/PDF/HTML/Markdown 四格式交付的内容生产。<br><br>
+      公开示例：<br>
+      <a href="skills/yao-geo-explainer-builder/examples/acme-sleep-demo/rendered/deliverables/acme-sleep-geo-explainer.md">Markdown</a> ·
+      <a href="skills/yao-geo-explainer-builder/examples/acme-sleep-demo/rendered/deliverables/html-package/index.html">HTML</a> ·
+      <a href="skills/yao-geo-explainer-builder/examples/acme-sleep-demo/rendered/deliverables/acme-sleep-geo-explainer.docx">Word</a> ·
+      <a href="skills/yao-geo-explainer-builder/examples/acme-sleep-demo/rendered/deliverables/acme-sleep-geo-explainer.pdf">PDF</a> ·
+      <a href="skills/yao-geo-explainer-builder/examples/acme-sleep-demo/rendered/quality-report.json">质量报告</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-explainer-builder.md">说明页</a> ·
+      <a href="skills/yao-geo-explainer-builder">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-content-refiner</code></strong><br>
+      作用：把已有 SEO 文章、公众号文章、官网文章、白皮书和产品页文案改造成结构化、可信、可引用、可抽取的 GEO 内容。<br><br>
+      适合：旧文 GEO 改造、AI 可引用内容修复、FAQ 和原子事实补强、CMS 发布版 HTML 建议，以及 Word/PDF/HTML/Markdown 四格式交付。<br><br>
+      HubSpot 国内 AI 平台测试示例：<br>
+      <a href="skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.md">Markdown</a> ·
+      <a href="skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.html">HTML</a> ·
+      <a href="skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.docx">Word</a> ·
+      <a href="skills/yao-geo-content-refiner/examples/hubspot-cn-demo/hubspot-cn-geo-content-refiner-report.pdf">PDF</a> ·
+      <a href="skills/yao-geo-content-refiner/examples/hubspot-cn-demo/quality-report.json">质量报告</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-content-refiner.md">说明页</a> ·
+      <a href="skills/yao-geo-content-refiner">Skill 包</a>
+    </td>
+  </tr>
+</table>
+
+### `knowledge-assets`
+
+<table>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-brand-graph</code></strong><br>
+      作用：把企业信息转成品牌、产品、人物、地点、案例、证据和场景之间的实体关系图，输出实体清单、关系清单、可信等级、Mermaid、JSON-LD、三元组和图谱补强建议。<br><br>
+      适合：知识库升级、页面结构设计、监测纠偏、品牌百科化和 AI 内容一致性治理，尤其是需要解决品牌错指、简称歧义、产品关系不清和证据链缺失的场景。<br><br>
+      公开示例：
+      <a href="skills/yao-geo-brand-graph/examples/hubspot-domestic-ai-test/report_input.json">输入</a> ·
+      <a href="skills/yao-geo-brand-graph/examples/hubspot-domestic-ai-test/hubspot-domestic-ai-yao-geo-brand-graph.md">Markdown</a> ·
+      <a href="skills/yao-geo-brand-graph/examples/hubspot-domestic-ai-test/hubspot-domestic-ai-yao-geo-brand-graph.html">HTML</a> ·
+      <a href="skills/yao-geo-brand-graph/examples/hubspot-domestic-ai-test/hubspot-domestic-ai-yao-geo-brand-graph.docx">Word</a> ·
+      <a href="skills/yao-geo-brand-graph/examples/hubspot-domestic-ai-test/hubspot-domestic-ai-yao-geo-brand-graph.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-brand-graph.md">说明页</a> ·
+      <a href="skills/yao-geo-brand-graph">Skill 包</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-knowledge-base-builder</code></strong><br>
+      作用：基于官网、产品页、帮助中心、白皮书、销售材料、媒体稿和资质文件生成 GEO 品牌知识库、事实卡、FAQ、禁用表达、Prompt 输入包和来源索引。<br><br>
+      适合：内容生成、内容改造、页面设计、监测和客服问答前置准备，尤其是面向 Kimi、千问、DeepSeek、豆包、元宝复用结构化品牌事实的知识资产场景。<br><br>
+      公开示例：
+      <a href="skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/report_input.json">输入</a> ·
+      <a href="skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.html">HTML</a> ·
+      <a href="skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.md">Markdown</a> ·
+      <a href="skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.docx">Word</a> ·
+      <a href="skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-knowledge-base-builder.md">说明页</a> ·
+      <a href="skills/yao-geo-knowledge-base-builder">Skill 包</a>
+    </td>
+  </tr>
+</table>
+
 ### `measurement`
 
 <table>
@@ -174,6 +405,20 @@ git checkout main
       <a href="skills/yao-geo-tracking/assets/screenshots/lingxu-cn-yao-geo-tracking.png">国内截图</a>
     </td>
   </tr>
+  <tr>
+    <td valign="top" width="100%">
+      <strong><code>yao-geo-effect-monitor</code></strong><br>
+      作用：设计 GEO Signal Monitor，面向 DeepSeek、豆包、千问、Kimi、元宝建立 AI 答案监测、引用追踪、品牌事实纠偏、月报告警和谨慎归因闭环。<br><br>
+      适合：GEO 长期运营、客户月报、内容迭代、页面优化、外部信源建设、品牌事实纠偏和看板/API 字段规划。<br><br>
+      示例报告：<a href="skills/yao-geo-effect-monitor/examples/synthetic-demo/xinglan-effect-monitor-demo.md">Markdown</a> ·
+      <a href="skills/yao-geo-effect-monitor/examples/synthetic-demo/xinglan-effect-monitor-demo.html">HTML</a> ·
+      <a href="skills/yao-geo-effect-monitor/examples/synthetic-demo/xinglan-effect-monitor-demo.docx">Word</a> ·
+      <a href="skills/yao-geo-effect-monitor/examples/synthetic-demo/xinglan-effect-monitor-demo.pdf">PDF</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-effect-monitor.md">说明页</a> ·
+      <a href="skills/yao-geo-effect-monitor">Skill 包</a>
+    </td>
+  </tr>
 </table>
 
 ### `research`
@@ -181,27 +426,39 @@ git checkout main
 <table>
   <tr>
     <td valign="top" width="100%">
-      <strong>待发布</strong><br>
-      当前仓库还没有正式发布的 research family skill；这一组会优先承载关键词发现、竞品证据扫描、品牌事实表、内容审计等 GEO 研究型工作。<br><br>
-      规划方向：<br>
-      <code>geo-keyword-discovery</code> ·
-      <code>geo-competitor-scan</code> ·
-      <code>geo-brand-fact-sheet</code> ·
-      <code>geo-content-audit</code><br><br>
-      如需贡献 research 类 skill，请先阅读：<br>
-      <a href="docs/publishing-rules.md">发布规则</a> ·
-      <a href="registry/skills.json">技能清单</a>
+      <strong><code>yao-geo-intent-miner</code></strong><br>
+      作用：把种子词、品牌、产品、竞品、区域、人群和业务材料扩展成 AI 搜索问题集、意图簇、追问链路、查询重写、内容选题、FAQ 题库和监测 Prompt 库。<br><br>
+      适合：内容生产前建立问题底座，尤其是需要面向 DeepSeek、豆包、千问、Kimi、元宝适配国内平台问法，并输出 Word/PDF/HTML/Markdown 四格式交付的意图拓词场景。<br><br>
+      公开示例：<br>
+      <a href="skills/yao-geo-intent-miner/examples/hubspot-cn-demo/input/report_input.json">示例输入</a> ·
+      <a href="skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.html">HTML</a> ·
+      <a href="skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.docx">Word</a> ·
+      <a href="skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.pdf">PDF</a> ·
+      <a href="skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/hubspot-cn-ai-intent-miner-demo.md">Markdown</a> ·
+      <a href="skills/yao-geo-intent-miner/examples/hubspot-cn-demo/expected-output/quality-report.json">质量报告</a><br><br>
+      相关入口：<br>
+      <a href="docs/skills/yao-geo-intent-miner.md">说明页</a> ·
+      <a href="skills/yao-geo-intent-miner">Skill 包</a>
     </td>
   </tr>
 </table>
 
 ## 相关示例
 
-目前仓库里最完整的公开示例来自 `yao-geo-tracking`：
+仓库内已包含多组公开或合成示例，重点用于展示输入结构、方法链路、四格式交付和质量门：
 
-- 海外公开公司示例：HubSpot
-- 国内公开合成示例：岭序商机云
-- 示例输出形态：`report_input.json`、`HTML`、`DOCX`、截图
+- `yao-geo-tracking`：海外公开公司示例 HubSpot、国内公开合成示例岭序商机云
+- `yao-geo-panorama-audit`：岭序商机云 GEO 全景诊断合成示例、HubSpot 国内 AI 平台测试示例
+- `yao-geo-page-audit`：示例云服页面 GEO 诊断合成示例、HubSpot 页面诊断示例
+- `yao-geo-page-blueprint`：页面蓝图示例和 HubSpot 中文页面蓝图示例
+- `yao-geo-ranking-article-builder`：榜单评测文章合成示例和 HubSpot 示例
+- `yao-geo-comparison-builder`：HubSpot 中文对比报告示例
+- `yao-geo-content-refiner`：HubSpot 旧文 GEO 改造示例
+- `yao-geo-explainer-builder`：Acme Sleep 科普文章合成示例
+- `yao-geo-brand-graph`：HubSpot 国内 AI 平台品牌图谱示例
+- `yao-geo-knowledge-base-builder`：HubSpot 品牌知识库示例
+- `yao-geo-intent-miner`：HubSpot 中文 AI 意图拓词示例
+- 示例输出形态：`Markdown`、`HTML`、`Word`、`PDF`、`report_input.json`、`quality-report.json`、截图或预览图（视 skill 类型而定）
 
 这些示例的作用不是给出“真实经营结论”，而是展示：
 
@@ -213,6 +470,7 @@ git checkout main
 
 ```text
 yao-geo-skills/
+├── index.html
 ├── README.md
 ├── LICENSE
 ├── .github/

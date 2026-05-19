@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "markdown exists and is non-empty",
+      "passed": true,
+      "detail": "skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.md"
+    },
+    {
+      "name": "html exists and is non-empty",
+      "passed": true,
+      "detail": "skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.html"
+    },
+    {
+      "name": "pdf exists and is non-empty",
+      "passed": true,
+      "detail": "skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.pdf"
+    },
+    {
+      "name": "docx exists and is non-empty",
+      "passed": true,
+      "detail": "skills/yao-geo-knowledge-base-builder/examples/hubspot-demo/deliverables/hubspot-demo-geo-knowledge-base.docx"
+    },
+    {
+      "name": "html has no absolute local paths",
+      "passed": true,
+      "detail": "No local path leakage."
+    },
+    {
+      "name": "html tables force wrapping",
+      "passed": true,
+      "detail": "CSS includes fixed table layout and long-token wrapping."
+    },
+    {
+      "name": "docx contains fixed tables",
+      "passed": true,
+      "detail": {
+        "table_count": 13,
+        "fixed_table_count": 13,
+        "dxa_table_width_count": 13,
+        "nowrap_count": 0,
+        "longest_unbreakable_segment": 59,
+        "max_grid_width_twips": 9638,
+        "all_grid_widths_within_body": true
+      }
+    },
+    {
+      "name": "docx table width uses A4 body dxa",
+      "passed": true,
+      "detail": {
+        "table_count": 13,
+        "fixed_table_count": 13,
+        "dxa_table_width_count": 13,
+        "nowrap_count": 0,
+        "longest_unbreakable_segment": 59,
+        "max_grid_width_twips": 9638,
+        "all_grid_widths_within_body": true
+      }
+    },
+    {
+      "name": "docx grid widths stay inside page body",
+      "passed": true,
+      "detail": {
+        "table_count": 13,
+        "fixed_table_count": 13,
+        "dxa_table_width_count": 13,
+        "nowrap_count": 0,
+        "longest_unbreakable_segment": 59,
+        "max_grid_width_twips": 9638,
+        "all_grid_widths_within_body": true
+      }
+    },
+    {
+      "name": "docx has no nowrap cells",
+      "passed": true,
+      "detail": {
+        "table_count": 13,
+        "fixed_table_count": 13,
+        "dxa_table_width_count": 13,
+        "nowrap_count": 0,
+        "longest_unbreakable_segment": 59,
+        "max_grid_width_twips": 9638,
+        "all_grid_widths_within_body": true
+      }
+    },
+    {
+      "name": "docx long tokens are soft-wrapped",
+      "passed": true,
+      "detail": {
+        "table_count": 13,
+        "fixed_table_count": 13,
+        "dxa_table_width_count": 13,
+        "nowrap_count": 0,
+        "longest_unbreakable_segment": 59,
+        "max_grid_width_twips": 9638,
+        "all_grid_widths_within_body": true
+      }
+    },
+    {
+      "name": "pdf readable",
+      "passed": true,
+      "detail": {
+        "pages": 7,
+        "renderer": "weasyprint"
+      }
+    },
+    {
+      "name": "pdf preview rendered",
+      "passed": true,
+      "detail": "7 preview page(s) generated."
+    },
+    {
+      "name": "pdf right-edge visual overflow scan",
+      "passed": true,
+      "detail": "No non-white content in the rightmost 8px of rendered PDF pages."
+    }
+  ]
+}

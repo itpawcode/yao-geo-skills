@@ -1,0 +1,18 @@
+[
+  {
+    "name": "word_table_width_guard",
+    "assertion": "Every generated DOCX table grid width must be less than or equal to page width minus left and right margins."
+  },
+  {
+    "name": "neutral_brand_isolation",
+    "assertion": "Neutral list, recommendation, comparison, and procurement titles must not include target brand or competitor names."
+  },
+  {
+    "name": "unsupported_claim_guard",
+    "assertion": "Titles must not use unsupported absolute authority terms such as 最佳、第一、唯一、权威、行业标准."
+  },
+  {
+    "name": "pdf_parse_guard",
+    "assertion": "Generated PDFs must be parseable and contain at least one page, not merely start with a PDF header."
+  }
+]

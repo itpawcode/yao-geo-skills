@@ -1,0 +1,21 @@
+[
+  {
+    "name": "question_records_complete",
+    "must_include": [
+      "intent_type",
+      "cluster",
+      "standalone_rewrite",
+      "retrieval_rewrite",
+      "evidence_query",
+      "content_asset"
+    ]
+  },
+  {
+    "name": "layout_checks_complete",
+    "must_include": [
+      "docx_tables_fit_page_width",
+      "docx_has_fixed_table_layout",
+      "pdf_is_landscape"
+    ]
+  }
+]

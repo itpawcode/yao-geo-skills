@@ -1,0 +1,14 @@
+{
+  "artifact_set": "xinglan-effect-monitor-demo",
+  "synthetic": true,
+  "checks": {
+    "four_files_required": true,
+    "single_markdown_source": true,
+    "white_background_required": true,
+    "table_borders_required": true,
+    "citation_recall_precision_present": true,
+    "cautious_attribution_present": true,
+    "five_platform_sampling_present": true
+  },
+  "review_status": "file_checks_passed"
+}

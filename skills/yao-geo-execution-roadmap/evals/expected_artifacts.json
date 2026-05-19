@@ -1,0 +1,45 @@
+{
+  "required_files": [
+    "SKILL.md",
+    "agents/interface.yaml",
+    "templates/brief-template.md",
+    "references/skill-method.md",
+    "references/research-backed-framework.md",
+    "references/cn-platform-adaptation.md",
+    "references/artifact-layout.md",
+    "references/quality-gates.md",
+    "scripts/render_yao_geo_execution_roadmap.py",
+    "examples/lingxu-demo/report_input.json",
+    "examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.md",
+    "examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.html",
+    "examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.docx",
+    "examples/lingxu-demo/lingxu-cn-yao-geo-execution-roadmap.pdf",
+    "examples/lingxu-demo/quality-report.json",
+    "examples/hubspot-cn-demo/report_input.json",
+    "examples/hubspot-cn-demo/hubspot-cn-yao-geo-execution-roadmap.md",
+    "examples/hubspot-cn-demo/hubspot-cn-yao-geo-execution-roadmap.html",
+    "examples/hubspot-cn-demo/hubspot-cn-yao-geo-execution-roadmap.docx",
+    "examples/hubspot-cn-demo/hubspot-cn-yao-geo-execution-roadmap.pdf",
+    "examples/hubspot-cn-demo/quality-report.json"
+  ],
+  "required_report_sections": [
+    "执行摘要",
+    "北极星指标",
+    "六个项目包",
+    "90 天执行路线图",
+    "国内平台差异化动作",
+    "风险预案",
+    "来源台账",
+    "自检记录"
+  ],
+  "quality_gates": [
+    "four_files_exist",
+    "six_project_packages_present",
+    "role_and_acceptance_metrics_present",
+    "cn_platforms_present",
+    "html_white_background",
+    "docx_valid_and_contains_sections",
+    "docx_fixed_table_geometry",
+    "pdf_valid"
+  ]
+}

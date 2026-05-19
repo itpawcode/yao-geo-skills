@@ -1,0 +1,1061 @@
+{
+  "title": "HubSpot 品牌实体知识图谱测试报告（国内 AI 平台场景）",
+  "slug": "hubspot-domestic-ai",
+  "brand_name": "HubSpot",
+  "scope": "以 HubSpot 官方资料、投资者关系披露和官方客户案例为来源，测试品牌实体图谱在 DeepSeek、豆包、千问、Kimi、腾讯元宝等国内 AI 平台问答场景中的消歧、证据和结构化输出能力。",
+  "report_date": "2026-05-19",
+  "executive_summary": [
+    "HubSpot 的核心规范实体应从早期“入站营销软件”升级为“AI-powered / agentic customer platform”，并保留 Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub、Smart CRM、Breeze 等产品和技术别名。",
+    "国内 AI 平台容易把 HubSpot 简化为营销自动化工具，或把 Content Hub/Data Hub 与旧产品名混淆；测试场景应覆盖品牌定义、产品线、人物地点、客户案例和 AI 能力五类问题。",
+    "关系图谱必须区分官方事实、投资者关系披露、官方客户案例、媒体描述和推断，避免把 Q1 2026 客户数、案例效果和 AI Agent 能力写成无日期、无来源的泛化断言。"
+  ],
+  "entities": [
+    {
+      "id": "brand:hubspot",
+      "type": "品牌",
+      "name": "HubSpot",
+      "aliases": [
+        "HubSpot, Inc.",
+        "HubSpot Customer Platform",
+        "Hubspot"
+      ],
+      "description": "面向成长型企业的客户平台品牌，覆盖营销、销售、服务、内容、数据、商务和 CRM 能力。",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:customer-platform",
+      "type": "产品",
+      "name": "HubSpot Customer Platform",
+      "aliases": [
+        "客户平台",
+        "AI-powered customer platform",
+        "agentic customer platform"
+      ],
+      "description": "用于统一营销、销售、客户服务和客户数据的客户平台。",
+      "source_ids": [
+        "S2",
+        "S4",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:smart-crm",
+      "type": "产品",
+      "name": "Smart CRM",
+      "aliases": [
+        "HubSpot CRM",
+        "智能 CRM"
+      ],
+      "description": "客户平台中的客户数据记录系统。",
+      "source_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:marketing-hub",
+      "type": "产品",
+      "name": "Marketing Hub",
+      "aliases": [
+        "Marketing Hub®",
+        "营销 Hub"
+      ],
+      "description": "用于获客、营销自动化和营销分析的产品线。",
+      "source_ids": [
+        "S2"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:sales-hub",
+      "type": "产品",
+      "name": "Sales Hub",
+      "aliases": [
+        "销售 Hub"
+      ],
+      "description": "销售软件产品线。",
+      "source_ids": [
+        "S2"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:service-hub",
+      "type": "产品",
+      "name": "Service Hub",
+      "aliases": [
+        "服务 Hub"
+      ],
+      "description": "客户服务软件产品线。",
+      "source_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:content-hub",
+      "type": "产品",
+      "name": "Content Hub",
+      "aliases": [
+        "内容 Hub",
+        "CMS Hub"
+      ],
+      "description": "内容营销和内容管理产品线，需与旧称 CMS Hub 做消歧。",
+      "source_ids": [
+        "S2",
+        "S7"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:data-hub",
+      "type": "产品",
+      "name": "Data Hub",
+      "aliases": [
+        "数据 Hub",
+        "Operations Hub"
+      ],
+      "description": "客户平台的数据产品线，国内问答中需避免与旧产品名混淆。",
+      "source_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "product:commerce-hub",
+      "type": "产品",
+      "name": "Commerce Hub",
+      "aliases": [
+        "商务 Hub"
+      ],
+      "description": "客户平台中的商务产品线。",
+      "source_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "tech:breeze",
+      "type": "技术",
+      "name": "Breeze",
+      "aliases": [
+        "Breeze AI",
+        "Breeze Assistant",
+        "Breeze Agents"
+      ],
+      "description": "客户平台中的 AI 能力集合；Q1 2026 披露中提到 Customer Agent、Prospecting Agent 和 Data Agent。",
+      "source_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "feature:customer-agent",
+      "type": "功能",
+      "name": "Customer Agent",
+      "aliases": [
+        "客户代理",
+        "Breeze Customer Agent"
+      ],
+      "description": "HubSpot Q1 2026 披露和产品页提到的 AI Agent 能力。",
+      "source_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "feature:prospecting-agent",
+      "type": "功能",
+      "name": "Prospecting Agent",
+      "aliases": [
+        "销售拓客代理"
+      ],
+      "description": "HubSpot Q1 2026 披露的 AI Agent 能力之一。",
+      "source_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "feature:data-agent",
+      "type": "功能",
+      "name": "Data Agent",
+      "aliases": [
+        "数据代理"
+      ],
+      "description": "HubSpot Q1 2026 披露的 AI Agent 能力之一。",
+      "source_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "service:professional-services",
+      "type": "服务",
+      "name": "Professional services and other revenue",
+      "aliases": [
+        "专业服务"
+      ],
+      "description": "投资者关系披露中的专业服务和其他收入类别。",
+      "source_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "industry:crm-software",
+      "type": "行业",
+      "name": "CRM 与客户平台软件",
+      "aliases": [
+        "Customer platform software",
+        "CRM software"
+      ],
+      "description": "覆盖营销、销售、服务、内容、数据和客户关系管理的软件行业。",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "confidence": "第三方证据",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "user:scaling-businesses",
+      "type": "用户",
+      "name": "成长型企业团队",
+      "aliases": [
+        "scaling businesses",
+        "营销团队",
+        "销售团队"
+      ],
+      "description": "HubSpot 公开描述中的主要服务对象。",
+      "source_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "scene:marketing-automation",
+      "type": "场景",
+      "name": "营销自动化与客户旅程统一",
+      "aliases": [
+        "campaign automation",
+        "personalized campaigns"
+      ],
+      "description": "获客、营销自动化、邮件活动、个性化内容和客户旅程追踪。",
+      "source_ids": [
+        "S2",
+        "S6",
+        "S7"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "customer:doordash",
+      "type": "客户",
+      "name": "DoorDash",
+      "aliases": [
+        "Doordash"
+      ],
+      "description": "官方客户案例中的技术公司客户。",
+      "source_ids": [
+        "S6"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "case:doordash-email-campaign",
+      "type": "案例",
+      "name": "DoorDash 邮件活动生产提效案例",
+      "aliases": [
+        "DoorDash case study"
+      ],
+      "description": "官方案例称 DoorDash 使用 HubSpot 缩短邮件活动生产时间并自动化营销邮件。",
+      "source_ids": [
+        "S6"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "customer:kelly-services",
+      "type": "客户",
+      "name": "Kelly Services",
+      "aliases": [
+        "Kelly"
+      ],
+      "description": "官方客户案例中的人力资源与招聘行业客户。",
+      "source_ids": [
+        "S7"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "case:kelly-unified-marketing",
+      "type": "案例",
+      "name": "Kelly Services 统一营销平台案例",
+      "aliases": [
+        "Kelly Services case study"
+      ],
+      "description": "官方案例称 Kelly Services 使用 Marketing Hub 和 Content Hub 后提升用户、会话和转化。",
+      "source_ids": [
+        "S7"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "person:yamini-rangan",
+      "type": "人物",
+      "name": "Yamini Rangan",
+      "aliases": [
+        "Yamini",
+        "HubSpot CEO"
+      ],
+      "description": "HubSpot 首席执行官。",
+      "source_ids": [
+        "S5",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "person:dharmesh-shah",
+      "type": "人物",
+      "name": "Dharmesh Shah",
+      "aliases": [
+        "Dharmesh",
+        "HubSpot CTO"
+      ],
+      "description": "HubSpot 联合创始人兼 CTO。",
+      "source_ids": [
+        "S1",
+        "S5"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "person:brian-halligan",
+      "type": "人物",
+      "name": "Brian Halligan",
+      "aliases": [
+        "Brian Halligan"
+      ],
+      "description": "HubSpot 联合创始人，曾任 CEO 和执行董事长。",
+      "source_ids": [
+        "S1",
+        "S9"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "place:cambridge-hq",
+      "type": "地点",
+      "name": "Cambridge, Massachusetts",
+      "aliases": [
+        "Cambridge, MA",
+        "2 Canal Park"
+      ],
+      "description": "HubSpot 全球总部所在地。",
+      "source_ids": [
+        "S8",
+        "S11"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "time:2026-q1",
+      "type": "时间",
+      "name": "2026 年第一季度",
+      "aliases": [
+        "Q1 2026",
+        "截至 2026-03-31"
+      ],
+      "description": "Q1 2026 业绩披露时间范围。",
+      "source_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    },
+    {
+      "id": "evidence:q1-2026-release",
+      "type": "证据",
+      "name": "HubSpot Q1 2026 Results",
+      "aliases": [
+        "Q1 2026 results"
+      ],
+      "description": "用于确认 2026 年第一季度客户数、收入和 AI Agent 披露。",
+      "source_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "privacy_review": "公开"
+    }
+  ],
+  "relations": [
+    {
+      "subject": "brand:hubspot",
+      "predicate": "拥有",
+      "object": "product:customer-platform",
+      "direction": "brand:hubspot -> product:customer-platform",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "品牌主关系应从营销软件升级为客户平台。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "提供",
+      "object": "product:marketing-hub",
+      "direction": "product:customer-platform -> product:marketing-hub",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "notes": "产品线关系。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "提供",
+      "object": "product:sales-hub",
+      "direction": "product:customer-platform -> product:sales-hub",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "notes": "产品线关系。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "提供",
+      "object": "product:service-hub",
+      "direction": "product:customer-platform -> product:service-hub",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "notes": "产品线关系。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "提供",
+      "object": "product:content-hub",
+      "direction": "product:customer-platform -> product:content-hub",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "notes": "说明 Content Hub 与旧称 CMS Hub 的关系。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "提供",
+      "object": "product:data-hub",
+      "direction": "product:customer-platform -> product:data-hub",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "notes": "避免 Data Hub 与旧产品名混淆。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "引用",
+      "object": "product:smart-crm",
+      "direction": "product:customer-platform -> product:smart-crm",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ],
+      "confidence": "官方事实",
+      "notes": "Smart CRM 是客户数据统一基础节点。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "引用",
+      "object": "tech:breeze",
+      "direction": "product:customer-platform -> tech:breeze",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "AI 能力必须绑定来源日期。"
+    },
+    {
+      "subject": "tech:breeze",
+      "predicate": "提供",
+      "object": "feature:customer-agent",
+      "direction": "tech:breeze -> feature:customer-agent",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "Customer Agent 是 Breeze 下的功能节点。"
+    },
+    {
+      "subject": "tech:breeze",
+      "predicate": "提供",
+      "object": "feature:prospecting-agent",
+      "direction": "tech:breeze -> feature:prospecting-agent",
+      "evidence_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "Q1 2026 披露。"
+    },
+    {
+      "subject": "tech:breeze",
+      "predicate": "提供",
+      "object": "feature:data-agent",
+      "direction": "tech:breeze -> feature:data-agent",
+      "evidence_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "Q1 2026 披露。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "适用",
+      "object": "industry:crm-software",
+      "direction": "product:customer-platform -> industry:crm-software",
+      "evidence_ids": [
+        "S3",
+        "S4"
+      ],
+      "confidence": "第三方证据",
+      "notes": "行业归类。"
+    },
+    {
+      "subject": "product:customer-platform",
+      "predicate": "服务",
+      "object": "user:scaling-businesses",
+      "direction": "product:customer-platform -> user:scaling-businesses",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "服务对象。"
+    },
+    {
+      "subject": "product:marketing-hub",
+      "predicate": "适用",
+      "object": "scene:marketing-automation",
+      "direction": "product:marketing-hub -> scene:marketing-automation",
+      "evidence_ids": [
+        "S2",
+        "S6",
+        "S7"
+      ],
+      "confidence": "官方事实",
+      "notes": "营销自动化高频场景。"
+    },
+    {
+      "subject": "case:doordash-email-campaign",
+      "predicate": "服务",
+      "object": "customer:doordash",
+      "direction": "case:doordash-email-campaign -> customer:doordash",
+      "evidence_ids": [
+        "S6"
+      ],
+      "confidence": "官方事实",
+      "notes": "官方案例。"
+    },
+    {
+      "subject": "case:kelly-unified-marketing",
+      "predicate": "服务",
+      "object": "customer:kelly-services",
+      "direction": "case:kelly-unified-marketing -> customer:kelly-services",
+      "evidence_ids": [
+        "S7"
+      ],
+      "confidence": "官方事实",
+      "notes": "官方案例。"
+    },
+    {
+      "subject": "person:yamini-rangan",
+      "predicate": "服务",
+      "object": "brand:hubspot",
+      "direction": "person:yamini-rangan -> brand:hubspot",
+      "evidence_ids": [
+        "S5",
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "CEO 关系。"
+    },
+    {
+      "subject": "person:dharmesh-shah",
+      "predicate": "合作",
+      "object": "person:brian-halligan",
+      "direction": "person:dharmesh-shah -> person:brian-halligan",
+      "evidence_ids": [
+        "S1"
+      ],
+      "confidence": "官方事实",
+      "notes": "联合创始人。"
+    },
+    {
+      "subject": "brand:hubspot",
+      "predicate": "来源",
+      "object": "evidence:q1-2026-release",
+      "direction": "brand:hubspot -> evidence:q1-2026-release",
+      "evidence_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "Q1 2026 披露。"
+    },
+    {
+      "subject": "brand:hubspot",
+      "predicate": "服务",
+      "object": "place:cambridge-hq",
+      "direction": "brand:hubspot -> place:cambridge-hq",
+      "evidence_ids": [
+        "S8",
+        "S11"
+      ],
+      "confidence": "官方事实",
+      "notes": "总部地点。"
+    },
+    {
+      "subject": "time:2026-q1",
+      "predicate": "时间",
+      "object": "evidence:q1-2026-release",
+      "direction": "time:2026-q1 -> evidence:q1-2026-release",
+      "evidence_ids": [
+        "S4"
+      ],
+      "confidence": "官方事实",
+      "notes": "时间关系。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "S1",
+      "source_type": "官网",
+      "title": "About HubSpot | HubSpot’s Story",
+      "locator": "https://www.hubspot.com/our-story",
+      "date": "2026-05-19 访问",
+      "claim": "Brian Halligan 和 Dharmesh Shah 于 2006 年创立 HubSpot。",
+      "verification_status": "已核验",
+      "how_used": "品牌历史、创始人。"
+    },
+    {
+      "id": "S2",
+      "source_type": "官网产品页",
+      "title": "Get Started With HubSpot Software",
+      "locator": "https://www.hubspot.com/products/get-started",
+      "date": "2026-05-19 访问",
+      "claim": "HubSpot 是 AI-powered customer platform，包含 Marketing Hub、Sales Hub、Service Hub、Content Hub、Data Hub、Commerce Hub、Smart CRM、Breeze 等。",
+      "verification_status": "已核验",
+      "how_used": "产品线和技术节点。"
+    },
+    {
+      "id": "S3",
+      "source_type": "SEC 年报",
+      "title": "HubSpot 2025 Form 10-K",
+      "locator": "https://www.sec.gov/Archives/edgar/data/0001404655/000119312526046646/hubs-20251231.htm",
+      "date": "2026-02-26 披露",
+      "claim": "截至 2025-12-31，HubSpot 有 288,706 名客户，客户遍布 135 个以上国家。",
+      "verification_status": "已核验",
+      "how_used": "规模和行业证据。"
+    },
+    {
+      "id": "S4",
+      "source_type": "投资者关系",
+      "title": "HubSpot Reports Strong Q1 2026 Results",
+      "locator": "https://ir.hubspot.com/news-releases/news-release-details/hubspot-reports-strong-q1-2026-results",
+      "date": "2026-05-07 披露",
+      "claim": "截至 2026-03-31，HubSpot 客户数为 299,458；披露 Customer Agent、Prospecting Agent、Data Agent 等 AI 创新。",
+      "verification_status": "已核验",
+      "how_used": "最新客户数、AI Agent。"
+    },
+    {
+      "id": "S5",
+      "source_type": "投资者关系",
+      "title": "Management | HubSpot",
+      "locator": "https://ir.hubspot.com/governance/management/",
+      "date": "2026-05-19 访问",
+      "claim": "Yamini Rangan 是 HubSpot CEO；Dharmesh Shah 是联合创始人兼 CTO。",
+      "verification_status": "已核验",
+      "how_used": "人物实体。"
+    },
+    {
+      "id": "S6",
+      "source_type": "官方客户案例",
+      "title": "DoorDash Shortens Time to Produce Email Campaigns by 3 Days With HubSpot",
+      "locator": "https://www.hubspot.com/case-studies/doordash",
+      "date": "2026-05-19 访问",
+      "claim": "DoorDash 使用 HubSpot 缩短邮件活动生产时间 3 天，并有 80% 营销邮件由 workflow 自动化。",
+      "verification_status": "已核验",
+      "how_used": "客户案例。"
+    },
+    {
+      "id": "S7",
+      "source_type": "官方客户案例",
+      "title": "Kelly Services Boosts Site Traffic 32%",
+      "locator": "https://www.hubspot.com/case-studies/kelly-services",
+      "date": "2026-05-19 访问",
+      "claim": "Kelly Services 使用 Marketing Hub 和 Content Hub，官方案例列出 +32% users、+26% sessions、+60% conversions。",
+      "verification_status": "已核验",
+      "how_used": "客户案例。"
+    },
+    {
+      "id": "S8",
+      "source_type": "官网联系页",
+      "title": "Contact HubSpot",
+      "locator": "https://br.hubspot.com/company/contact",
+      "date": "2026-05-19 访问",
+      "claim": "HubSpot 总部地址为 2 Canal Park, Cambridge, MA 02141。",
+      "verification_status": "已核验",
+      "how_used": "总部地址。"
+    },
+    {
+      "id": "S9",
+      "source_type": "投资者关系",
+      "title": "Brian Halligan | Board Member",
+      "locator": "https://ir.hubspot.com/management/brian-halligan",
+      "date": "2026-05-19 访问",
+      "claim": "Brian Halligan 是 HubSpot 联合创始人。",
+      "verification_status": "已核验",
+      "how_used": "人物实体。"
+    },
+    {
+      "id": "S10",
+      "source_type": "官方服务说明",
+      "title": "HubSpot Product & Services Catalog",
+      "locator": "https://legal.hubspot.com/services/hubspot-services-descriptions",
+      "date": "2026-05-19 访问",
+      "claim": "HubSpot customer platform 包含多个 premium products，并以 Smart CRM 作为统一客户数据 system of record。",
+      "verification_status": "已核验",
+      "how_used": "产品线。"
+    },
+    {
+      "id": "S11",
+      "source_type": "官网工作方式页面",
+      "title": "Hybrid Work | HubSpot",
+      "locator": "https://www.hubspot.com/hybrid",
+      "date": "2026-05-19 访问",
+      "claim": "HubSpot 官方页面列出 Cambridge 等办公室城市。",
+      "verification_status": "已核验",
+      "how_used": "地点补充。"
+    }
+  ],
+  "disambiguation": [
+    {
+      "canonical": "HubSpot",
+      "aliases": [
+        "HubSpot, Inc.",
+        "Hubspot",
+        "HubSpot Customer Platform"
+      ],
+      "confusable_with": [
+        "Hotspot",
+        "HubSpot CRM",
+        "HubSpot Academy"
+      ],
+      "decision": "品牌规范实体为 HubSpot；Customer Platform 是产品平台，不等同公司全名。",
+      "evidence": "S1, S2, S4"
+    },
+    {
+      "canonical": "HubSpot Customer Platform",
+      "aliases": [
+        "AI-powered customer platform",
+        "agentic customer platform"
+      ],
+      "confusable_with": [
+        "Marketing Hub",
+        "HubSpot CRM",
+        "单一营销自动化工具"
+      ],
+      "decision": "国内 AI 平台回答应把 HubSpot 定位为客户平台，而不是只说营销自动化软件。",
+      "evidence": "S2, S4, S10"
+    },
+    {
+      "canonical": "Content Hub",
+      "aliases": [
+        "CMS Hub",
+        "内容 Hub"
+      ],
+      "confusable_with": [
+        "Marketing Hub",
+        "Data Hub"
+      ],
+      "decision": "Content Hub 是现行内容产品线名称；旧称只作为别名处理。",
+      "evidence": "S2, S7"
+    },
+    {
+      "canonical": "Yamini Rangan",
+      "aliases": [
+        "Yamini",
+        "HubSpot CEO"
+      ],
+      "confusable_with": [
+        "Brian Halligan",
+        "Dharmesh Shah"
+      ],
+      "decision": "截至 2026-05-19，Yamini Rangan 为 HubSpot CEO。",
+      "evidence": "S4, S5, S9"
+    }
+  ],
+  "trust_table": [
+    {
+      "level": "官方事实",
+      "definition": "官网、官方产品页、投资者关系或官方案例直接写出的事实。",
+      "allowed_use": "可进入核心实体、关系、三元组和 JSON-LD。",
+      "limitations": "需保留来源日期。"
+    },
+    {
+      "level": "第三方证据",
+      "definition": "SEC 年报、权威数据库或公开第三方资料支持的事实。",
+      "allowed_use": "用于行业归类、规模和外部背书。",
+      "limitations": "与官网实时产品命名冲突时，以最新官方页面为准。"
+    },
+    {
+      "level": "推断",
+      "definition": "由多个事实组合得到的判断。",
+      "allowed_use": "用于内容补强建议和测试策略。",
+      "limitations": "不进入 JSON-LD 主干。"
+    }
+  ],
+  "platform_test_scenarios": [
+    {
+      "platform": "DeepSeek",
+      "query_intent": "品牌定义与竞品比较",
+      "test_prompt": "HubSpot 是什么？它和 Salesforce 这类 CRM 平台有什么区别？请给出最新公开依据。",
+      "expected_entities": [
+        "HubSpot",
+        "HubSpot Customer Platform",
+        "Smart CRM",
+        "Marketing Hub",
+        "Sales Hub"
+      ],
+      "common_risk": "只把 HubSpot 说成营销自动化工具。",
+      "pass_criteria": "回答能区分品牌、客户平台、CRM 和产品线，并引用 2026 或最新官方来源。"
+    },
+    {
+      "platform": "豆包",
+      "query_intent": "产品线枚举与旧名消歧",
+      "test_prompt": "HubSpot 现在有哪些主要产品？Content Hub、Data Hub、Breeze 分别是什么？",
+      "expected_entities": [
+        "Marketing Hub",
+        "Sales Hub",
+        "Service Hub",
+        "Content Hub",
+        "Data Hub",
+        "Commerce Hub",
+        "Breeze"
+      ],
+      "common_risk": "把 Content Hub 仍写成 CMS Hub，或把 Data Hub 等同于 Smart CRM。",
+      "pass_criteria": "产品清单完整，能说明 Content Hub/Data Hub/Breeze 的边界。"
+    },
+    {
+      "platform": "千问",
+      "query_intent": "人物、地点与公司事实",
+      "test_prompt": "HubSpot 的 CEO、联合创始人、总部和最新客户规模分别是什么？",
+      "expected_entities": [
+        "Yamini Rangan",
+        "Dharmesh Shah",
+        "Brian Halligan",
+        "Cambridge, Massachusetts",
+        "2026 年第一季度"
+      ],
+      "common_risk": "把 Brian Halligan 误写为现任 CEO，或使用过期客户数但不标注日期。",
+      "pass_criteria": "明确 Yamini Rangan 为 CEO，并标注 Q1 2026 客户数来源日期。"
+    },
+    {
+      "platform": "Kimi",
+      "query_intent": "客户案例与产品关系",
+      "test_prompt": "请用 DoorDash 和 Kelly Services 案例说明 HubSpot 的典型使用场景，必须列出使用的产品和可验证结果。",
+      "expected_entities": [
+        "DoorDash",
+        "Kelly Services",
+        "Marketing Hub",
+        "Content Hub"
+      ],
+      "common_risk": "编造 ROI 或把案例效果外推为所有客户都会获得的结果。",
+      "pass_criteria": "只引用官方案例中的 3 天、80%、+32%、+26%、+60% 等已公开指标。"
+    },
+    {
+      "platform": "腾讯元宝",
+      "query_intent": "AI Agent 与结构化事实",
+      "test_prompt": "HubSpot 在 AI Agent 和客户平台方面有哪些 2026 年公开信息？哪些可以写进企业知识库？",
+      "expected_entities": [
+        "Breeze",
+        "Customer Agent",
+        "Prospecting Agent",
+        "Data Agent",
+        "HubSpot Q1 2026 Results"
+      ],
+      "common_risk": "把 AI Agent 营销表述当作未经证实的效果承诺。",
+      "pass_criteria": "将 AI Agent 作为技术/产品能力关系记录，标明 Q1 2026 披露来源。"
+    }
+  ],
+  "page_recommendations": [
+    {
+      "target_asset": "中文品牌百科页",
+      "relationship_gap": "HubSpot -> Customer Platform -> Smart CRM / Hubs 的主关系需要中文稳定表达。",
+      "evidence_gap": "需要引用产品页、服务目录和 Q1 2026 业绩披露。",
+      "priority": "P1",
+      "acceptance_criteria": "首段明确 HubSpot 是客户平台品牌，并列出 Smart CRM、六个 Hub 和 Breeze。"
+    },
+    {
+      "target_asset": "中文 FAQ",
+      "relationship_gap": "HubSpot、HubSpot CRM、Customer Platform、Content Hub、Data Hub 的别名和旧名缺少消歧。",
+      "evidence_gap": "需要用官方产品页和服务目录解释当前产品名称。",
+      "priority": "P1",
+      "acceptance_criteria": "FAQ 至少新增 5 条消歧问答。"
+    },
+    {
+      "target_asset": "国内 AI 平台测试集",
+      "relationship_gap": "国内平台问答需要覆盖品牌定义、产品线、人物地点、案例和 AI 能力五类意图。",
+      "evidence_gap": "每条测试问题需要绑定期望实体和通过标准。",
+      "priority": "P1",
+      "acceptance_criteria": "DeepSeek、豆包、千问、Kimi、腾讯元宝各至少 1 条问题。"
+    }
+  ],
+  "open_issues": [
+    "本测试未实际登录国内 AI 平台采样实时回答；报告中的平台部分是测试场景设计和通过标准。",
+    "HubSpot 产品命名和 AI Agent 能力更新较快，正式监测时需在每次采样前刷新官网产品页和投资者关系披露。"
+  ],
+  "mermaid": "graph LR\n  B[\"HubSpot\"] -->|拥有 S2/S4| CP[\"HubSpot Customer Platform\"]\n  CP -->|提供 S2/S10| MH[\"Marketing Hub\"]\n  CP -->|提供 S2/S10| SH[\"Sales Hub\"]\n  CP -->|提供 S2/S10| CH[\"Content Hub\"]\n  CP -->|提供 S2/S10| DH[\"Data Hub\"]\n  CP -->|引用 S2/S10| CRM[\"Smart CRM\"]\n  CP -->|引用 S2/S4| BR[\"Breeze\"]\n  BR -->|提供 S2/S4| CA[\"Customer Agent\"]\n  BR -->|提供 S4| PA[\"Prospecting Agent\"]\n  BR -->|提供 S4| DA[\"Data Agent\"]\n  DCASE[\"DoorDash 案例\"] -->|服务 S6| DD[\"DoorDash\"]\n  KCASE[\"Kelly Services 案例\"] -->|服务 S7| KS[\"Kelly Services\"]\n  Y[\"Yamini Rangan\"] -->|服务 S4/S5| B\n  B -->|服务 S8/S11| HQ[\"Cambridge, Massachusetts\"]",
+  "json_ld": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HubSpot",
+    "legalName": "HubSpot, Inc.",
+    "alternateName": [
+      "HubSpot Customer Platform",
+      "HubSpot CRM"
+    ],
+    "url": "https://www.hubspot.com/",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Brian Halligan"
+      },
+      {
+        "@type": "Person",
+        "name": "Dharmesh Shah"
+      }
+    ],
+    "employee": {
+      "@type": "Person",
+      "name": "Yamini Rangan",
+      "jobTitle": "Chief Executive Officer"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "HubSpot Customer Platform",
+          "applicationCategory": "BusinessApplication",
+          "featureList": [
+            "Marketing Hub",
+            "Sales Hub",
+            "Service Hub",
+            "Content Hub",
+            "Data Hub",
+            "Commerce Hub",
+            "Smart CRM",
+            "Breeze"
+          ]
+        }
+      }
+    ]
+  },
+  "triples": [
+    {
+      "subject": "HubSpot",
+      "predicate": "拥有",
+      "object": "HubSpot Customer Platform",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ]
+    },
+    {
+      "subject": "HubSpot Customer Platform",
+      "predicate": "提供",
+      "object": "Marketing Hub",
+      "evidence_ids": [
+        "S2",
+        "S10"
+      ]
+    },
+    {
+      "subject": "HubSpot Customer Platform",
+      "predicate": "引用",
+      "object": "Breeze",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ]
+    },
+    {
+      "subject": "Breeze",
+      "predicate": "提供",
+      "object": "Customer Agent",
+      "evidence_ids": [
+        "S2",
+        "S4"
+      ]
+    },
+    {
+      "subject": "Yamini Rangan",
+      "predicate": "服务",
+      "object": "HubSpot",
+      "evidence_ids": [
+        "S4",
+        "S5"
+      ]
+    }
+  ]
+}

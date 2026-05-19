@@ -1,0 +1,44 @@
+id: yao-geo-page-audit
+name: yao-geo-page-audit
+version: 0.2.0
+language: zh-CN
+purpose: >
+  Diagnose target website pages for GEO readiness across crawlability,
+  structure, content evidence, AI extractability, schema consistency,
+  and Word/PDF-safe four-format delivery.
+inputs:
+  required:
+    - target_url
+  recommended:
+    - brand_name
+    - target_keywords
+    - target_questions
+    - competitor_pages
+  optional:
+    - sitemap
+    - robots_txt
+    - structured_data
+    - server_logs
+    - source_html
+    - cms_notes
+outputs:
+  required:
+    - page_geo_audit_report
+    - code_layer_fix_list
+    - content_structure_plan
+    - schema_html_module_recommendations
+    - markdown_report
+    - html_report
+    - docx_report
+    - pdf_report
+    - quality_report
+constraints:
+  - Do not infer log-level crawl behavior without logs.
+  - Distinguish user-visible content, crawler-readable content, and AI-extractable content.
+  - Schema recommendations must be supported by visible page body facts.
+  - Word tables must not exceed five columns.
+  - Visible URL/code tokens in Word must not create right-overflow.
+quality_gates:
+  - references/quality-gates.md
+  - references/output-layout-policy.md
+  - scripts/review_report_layout.py

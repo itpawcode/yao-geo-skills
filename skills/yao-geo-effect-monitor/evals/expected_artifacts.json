@@ -1,0 +1,52 @@
+{
+  "required_files": [
+    "SKILL.md",
+    "agents/interface.yaml",
+    "manifest.json",
+    "templates/brief-template.md",
+    "references/research-basis.md",
+    "references/monitoring-method.md",
+    "references/cn-platform-sampling.md",
+    "references/metrics-attribution.md",
+    "references/correction-loop.md",
+    "references/dashboard-data-model.md",
+    "references/artifact-layout.md",
+    "references/quality-gates.md",
+    "evals/trigger_cases.json",
+    "evals/expected_artifacts.json",
+    "evals/rubric.md",
+    "examples/synthetic-demo/xinglan-effect-monitor-demo.md",
+    "examples/synthetic-demo/xinglan-effect-monitor-demo.html",
+    "examples/synthetic-demo/xinglan-effect-monitor-demo.docx",
+    "examples/synthetic-demo/xinglan-effect-monitor-demo.pdf",
+    "examples/hubspot-cn-signal-monitor/hubspot-cn-effect-monitor.md",
+    "examples/hubspot-cn-signal-monitor/hubspot-cn-effect-monitor.html",
+    "examples/hubspot-cn-signal-monitor/hubspot-cn-effect-monitor.docx",
+    "examples/hubspot-cn-signal-monitor/hubspot-cn-effect-monitor.pdf",
+    "examples/hubspot-cn-signal-monitor/report_input.json",
+    "examples/hubspot-cn-signal-monitor/quality-report.json"
+  ],
+  "report_formats": [
+    "markdown",
+    "html",
+    "docx",
+    "pdf"
+  ],
+  "must_cover": [
+    "five_platform_sampling",
+    "prompt_library",
+    "brand_visibility_metrics",
+    "citation_recall_precision",
+    "answer_stability",
+    "cautious_attribution",
+    "correction_task_table",
+    "alert_rules",
+    "dashboard_fields",
+    "database_tables",
+    "api_draft",
+    "four_format_quality_review",
+    "company_scenario_discovery",
+    "official_fact_source_table",
+    "synthetic_or_live_sampling_disclaimer"
+  ]
+}

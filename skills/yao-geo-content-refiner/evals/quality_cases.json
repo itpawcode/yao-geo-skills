@@ -1,0 +1,17 @@
+[
+  {
+    "name": "缺来源效果承诺",
+    "input_pattern": "用户要求写上线后转化率提升 300%，但没有来源",
+    "expected_behavior": "不得写成确定事实，必须标为证据不足或待核验"
+  },
+  {
+    "name": "Word 宽表",
+    "input_pattern": "原子事实卡包含 8 列长文本",
+    "expected_behavior": "Word/PDF 中转成纵向事实卡，HTML/Markdown 可保留表格"
+  },
+  {
+    "name": "国内平台问法",
+    "input_pattern": "海外官网产品页改造成国内 AI 平台引用内容",
+    "expected_behavior": "补中文直接回答、本地待核验边界、FAQ 和证据账本"
+  }
+]

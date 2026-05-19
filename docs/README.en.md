@@ -1,247 +1,61 @@
 # Yao GEO Skills
 
-Open-source skill library for `GEO` (`Generative Engine Optimization`) workflows.
+Reusable skills for `GEO` (`Generative Engine Optimization`) workflows.
 
-Chinese homepage:
-[README.md](../README.md)
+In this repository, `GEO` means Generative Engine Optimization, not geographic information systems.
 
-Note:
-`GEO` in this repository means generative engine optimization, not geospatial tooling.
+Visual catalog:
+[index.html](../index.html)
 
-## Positioning And Background
+## Current Inventory
 
-`yao-geo-skills` is a repository for reusable GEO skills that can be shared, validated, and maintained over time.
+The repository currently contains `17` GEO-related skills.
 
-This repository is not meant to be a loose prompt collection. It is designed to hold complete skill packages with:
+| Family | Count | Skills |
+|---|---:|---|
+| `geo-operations` | 3 | `yao-geoflow-cli`, `yao-geoflow-template`, `yao-geoflow-design` |
+| `geo-strategy` | 2 | `yao-geo-panorama-audit`, `yao-geo-execution-roadmap` |
+| `geo-page-technical` | 2 | `yao-geo-page-audit`, `yao-geo-page-blueprint` |
+| `geo-content-production` | 5 | `yao-geo-title-optimizer`, `yao-geo-explainer-builder`, `yao-geo-comparison-builder`, `yao-geo-content-refiner`, `yao-geo-ranking-article-builder` |
+| `geo-knowledge-assets` | 2 | `yao-geo-brand-graph`, `yao-geo-knowledge-base-builder` |
+| `geo-measurement` | 2 | `yao-geo-tracking`, `yao-geo-effect-monitor` |
+| `geo-research` | 1 | `yao-geo-intent-miner` |
 
-- a clear `SKILL.md`
-- a stable `agents/interface.yaml`
-- references, scripts, evals, and examples when needed
-- public sample inputs and outputs
+## Skill Catalog
 
-The repository is intended for workflows such as:
+| Skill | Type | What it does | Links |
+|---|---|---|---|
+| `yao-geoflow-cli` | Operations | Operates an existing GEOFlow system through the local CLI or Laravel API fallback. | [Package](../skills/yao-geoflow-cli) / [Guide](skills/yao-geoflow-cli.md) |
+| `yao-geoflow-template` | Operations | Maps a reference URL onto GEOFlow frontend modules and prepares a preview-first theme package plan. | [Package](../skills/yao-geoflow-template) / [Guide](skills/yao-geoflow-template.md) |
+| `yao-geoflow-design` | Operations | Discovers and preview-edits GEOFlow Laravel Blade themes without changing business logic or data contracts. | [Package](../skills/yao-geoflow-design) / [Guide](skills/yao-geoflow-design.md) |
+| `yao-geo-panorama-audit` | Strategy | Builds a brand GEO baseline, AI-answer visibility diagnosis, competitor gap map, and opportunity roadmap. | [Package](../skills/yao-geo-panorama-audit) / [Guide](skills/yao-geo-panorama-audit.md) |
+| `yao-geo-execution-roadmap` | Strategy | Turns GEO diagnosis and opportunity maps into a 30/60/90-day execution plan. | [Package](../skills/yao-geo-execution-roadmap) / [Guide](skills/yao-geo-execution-roadmap.md) |
+| `yao-geo-page-audit` | Page technical | Audits page crawlability, structure, content signals, and AI extractability. | [Package](../skills/yao-geo-page-audit) / [Guide](skills/yao-geo-page-audit.md) |
+| `yao-geo-page-blueprint` | Page technical | Produces GEO-friendly page architecture, semantic HTML, schema, CMS fields, and layout guidance. | [Package](../skills/yao-geo-page-blueprint) / [Guide](skills/yao-geo-page-blueprint.md) |
+| `yao-geo-title-optimizer` | Content production | Generates GEO title candidates, scorecards, compliance checks, and title-to-article mappings. | [Package](../skills/yao-geo-title-optimizer) / [Guide](skills/yao-geo-title-optimizer.md) |
+| `yao-geo-explainer-builder` | Content production | Builds GEO explainers, how-to guides, FAQs, glossaries, and brand insertion guidance. | [Package](../skills/yao-geo-explainer-builder) / [Guide](skills/yao-geo-explainer-builder.md) |
+| `yao-geo-comparison-builder` | Content production | Creates fair, evidence-bound brand comparisons, alternatives pages, and comparison FAQs. | [Package](../skills/yao-geo-comparison-builder) / [Guide](skills/yao-geo-comparison-builder.md) |
+| `yao-geo-content-refiner` | Content production | Refines existing SEO or brand content into structured, verifiable, AI-citable GEO content. | [Package](../skills/yao-geo-content-refiner) / [Guide](skills/yao-geo-content-refiner.md) |
+| `yao-geo-ranking-article-builder` | Content production | Generates evidence-backed ranking and review articles with four-format deliverables. | [Package](../skills/yao-geo-ranking-article-builder) / [Guide](skills/yao-geo-ranking-article-builder.md) |
+| `yao-geo-brand-graph` | Knowledge assets | Turns company materials into auditable brand entity graphs and evidence ledgers. | [Package](../skills/yao-geo-brand-graph) / [Guide](skills/yao-geo-brand-graph.md) |
+| `yao-geo-knowledge-base-builder` | Knowledge assets | Builds GEO brand knowledge bases, fact cards, FAQ, prohibited expressions, and prompt input packs. | [Package](../skills/yao-geo-knowledge-base-builder) / [Guide](skills/yao-geo-knowledge-base-builder.md) |
+| `yao-geo-tracking` | Measurement | Designs company-specific GEO backend tracking and attribution plans. | [Package](../skills/yao-geo-tracking) / [Guide](skills/yao-geo-tracking.md) |
+| `yao-geo-effect-monitor` | Measurement | Designs GEO signal monitoring, AI answer sampling, citation tracking, and monthly reporting loops. | [Package](../skills/yao-geo-effect-monitor) / [Guide](skills/yao-geo-effect-monitor.md) |
+| `yao-geo-intent-miner` | Research | Expands seed terms and business context into AI-search question sets, intent clusters, follow-up chains, and monitoring prompts. | [Package](../skills/yao-geo-intent-miner) / [Guide](skills/yao-geo-intent-miner.md) |
 
-- GEO operations
-- GEO measurement and attribution planning
-- GEO research and evidence collection
-- shared GEO templates, schemas, rubrics, and delivery rules
+## Repository Contract
 
-In short:
-this repository turns repeated GEO work into reusable skill packages.
+Each published skill should include:
 
-## Key Characteristics
+- `SKILL.md`
+- `manifest.json`
+- `templates/brief-template.md`
+- `evals/trigger_cases.json`
+- `evals/expected_artifacts.json`
+- a human-readable guide under `docs/skills/`
 
-- Reusable: each skill should solve a repeatable job, not a one-off request.
-- Verifiable: repository-level and skill-level validation are part of the contract.
-- Bounded: each skill should say what it is for and what it is not for.
-- Open-source safe: public examples must be sanitized and free of private-system dependencies.
-- Deliverable-oriented: some skills generate HTML, DOCX, or other shareable outputs.
-- Method-driven: complex logic is pushed into `references/`, `scripts/`, and `evals/`, not hidden inside a giant prompt.
-
-## Scope
-
-Good fit for:
-
-- teams that want reusable GEO methods instead of rewriting prompts every time
-- people packaging GEO workflows into maintainable skill bundles
-- public-facing GEO assets that need quality control and privacy hygiene
-- repositories that need readable examples, evaluations, and delivery outputs
-
-Not a fit for:
-
-- storing random prompts
-- temporary brainstorming with no packaging intent
-- workflows that only work with private systems, private docs, or private APIs
-- unrelated generic skill collections
-
-## Repository Logic
-
-The repository follows a simple structure:
-
-1. One skill should own one clear job.
-2. `skills/` stores the actual packages.
-3. `docs/skills/` stores human-readable guides.
-4. `registry/skills.json` stores the inventory.
-5. `shared/` stores shared templates, schemas, and conventions.
-6. `scripts/validate_repository.py` runs repository-level validation.
-
-The external-facing contract of the repository is centered on three questions:
-
-- What does this skill do?
-- How is the quality of this skill controlled?
-- Are there public examples that people can inspect?
-
-## Download Options
-
-### Download The Entire Repository
-
-#### Option 1: `git clone`
-
-```bash
-git clone https://github.com/yaojingang/yao-geo-skills.git
-cd yao-geo-skills
-```
-
-#### Option 2: GitHub ZIP
-
-On GitHub, click:
-
-`Code` -> `Download ZIP`
-
-### Download A Single Skill
-
-#### Option 1: Sparse Checkout
-
-```bash
-git clone --filter=blob:none --no-checkout https://github.com/yaojingang/yao-geo-skills.git
-cd yao-geo-skills
-git sparse-checkout init --cone
-git sparse-checkout set skills/yao-geo-tracking docs/skills/yao-geo-tracking.md
-git checkout main
-```
-
-#### Option 2: Manual Download
-
-Open the skill folder in GitHub and download the files you need:
-
-- [skills/yao-geo-tracking](../skills/yao-geo-tracking)
-- [skills/yao-geoflow-cli](../skills/yao-geoflow-cli)
-- [skills/yao-geoflow-template](../skills/yao-geoflow-template)
-- [skills/yao-geoflow-design](../skills/yao-geoflow-design)
-
-## Skill Navigation
-
-The current catalog is grouped into `operations / measurement / research`.
-
-### `operations`
-
-- `yao-geoflow-cli`
-  - Purpose: operate an existing GEOFlow system through the local CLI or Laravel `/api/v1` fallback.
-  - Best for: catalog lookup, task operations, article upload, review, publishing, Docker preflight, and API fallback diagnostics.
-  - Links:
-    - [Guide](skills/yao-geoflow-cli.md)
-    - [Package](../skills/yao-geoflow-cli)
-    - [GEOFlow project](https://github.com/yaojingang/GEOFlow)
-
-- `yao-geoflow-template`
-  - Purpose: map a reference frontend into a GEOFlow-compatible theme package plan with tokens, module mappings, and preview-first structure.
-  - Best for: frontend template cloning, GEOFlow theme planning, reference-site style mapping, and preview-safe theme package preparation.
-  - Links:
-    - [Guide (CN)](skills/yao-geoflow-template.md)
-    - [Guide (EN)](skills/yao-geoflow-template.en.md)
-    - [Package](../skills/yao-geoflow-template)
-    - [GEOFlow project](https://github.com/yaojingang/GEOFlow)
-
-- `yao-geoflow-design`
-  - Purpose: discover current GEOFlow Laravel Blade themes, fork a selected target theme into a preview edit session, and then clone, optimize, or refine the frontend safely.
-  - Best for: target-theme editing, current-template optimization, hybrid reference-plus-optimization jobs, preview-first GEOFlow theme iteration, and publish-as-new or replace-base review flows without breaking SEO/schema, markdown rendering, or fallback contracts.
-  - Links:
-    - [Guide (CN)](skills/yao-geoflow-design.md)
-    - [Guide (EN)](skills/yao-geoflow-design.en.md)
-    - [Package](../skills/yao-geoflow-design)
-    - [GEOFlow project](https://github.com/yaojingang/GEOFlow)
-
-### `measurement`
-
-- `yao-geo-tracking`
-  - Purpose: generate a company-specific GEO backend tracking plan from a company name and supporting context.
-  - Best for: official-site-first retrieval, business recognition, direct-vs-indirect measurement design, HTML and DOCX deliverables.
-  - Public demos:
-    - Overseas demo:
-      - [HubSpot input](../skills/yao-geo-tracking/examples/hubspot-demo/report_input.json)
-      - [HTML](../skills/yao-geo-tracking/examples/hubspot-demo/hubspot-yao-geo-tracking.html)
-      - [DOCX](../skills/yao-geo-tracking/examples/hubspot-demo/hubspot-yao-geo-tracking.docx)
-    - China synthetic demo:
-      - [Lingxu input](../skills/yao-geo-tracking/examples/lingxu-demo/report_input.json)
-      - [HTML](../skills/yao-geo-tracking/examples/lingxu-demo/lingxu-cn-yao-geo-tracking.html)
-      - [DOCX](../skills/yao-geo-tracking/examples/lingxu-demo/lingxu-cn-yao-geo-tracking.docx)
-  - Links:
-    - [Guide](skills/yao-geo-tracking.md)
-    - [Package](../skills/yao-geo-tracking)
-    - [Overseas screenshot](../skills/yao-geo-tracking/assets/screenshots/hubspot-yao-geo-tracking.png)
-    - [China screenshot](../skills/yao-geo-tracking/assets/screenshots/lingxu-cn-yao-geo-tracking.png)
-
-### `research`
-
-- Coming soon
-  - Reserved for GEO keyword discovery, competitor evidence scans, brand fact sheets, and content audit skills.
-
-## Example Outputs
-
-The most complete public examples in the repository currently come from `yao-geo-tracking`:
-
-- public-company overseas demo: HubSpot
-- public synthetic China demo: Lingxu
-- sample deliverables: `report_input.json`, `HTML`, `DOCX`, screenshots
-
-These examples are not published as real operating conclusions. They exist to show:
-
-- how methodology becomes structured input
-- how a skill renders that input into a delivery artifact
-- how China and overseas GEO measurement logic differ
-
-## Directory Guide
-
-```text
-yao-geo-skills/
-├── README.md
-├── LICENSE
-├── .github/
-├── docs/
-│   ├── README.en.md
-│   ├── repository-design.md
-│   ├── input-output-contract.md
-│   ├── naming-conventions.md
-│   ├── eval-policy.md
-│   ├── publishing-rules.md
-│   └── skills/
-├── registry/
-├── scripts/
-├── shared/
-└── skills/
-```
-
-Useful paths:
-
-- [skills/](../skills): actual skill packages
-- [docs/skills/](skills): human-readable guides
-- [registry/skills.json](../registry/skills.json): skill inventory
-- [scripts/validate_repository.py](../scripts/validate_repository.py): repository validator
-- [docs/](.): repository rules and contracts
-
-## Repository Documents
-
-- [Chinese homepage](../README.md)
-- [Changelog](CHANGELOG.en.md)
-- [Repository Design](repository-design.md)
-- [Input And Output Contract](input-output-contract.md)
-- [Naming Conventions](naming-conventions.md)
-- [Eval Policy](eval-policy.md)
-- [Publishing Rules](publishing-rules.md)
-
-## Design Principles
-
-- One skill, one clear job
-- Prefer public, verifiable evidence for factual GEO work
-- Outputs should be readable by humans and checkable by machines
-- Public examples must be sanitized and safe to share
-- Evaluation is expected, not optional
-- Long-term maintainable skill packages matter more than large prompt dumps
-
-## Contribution And Publishing
-
-1. Add or update a skill under `skills/<skill-id>/`.
-2. Add or update the matching guide under `docs/skills/`.
-3. Register the skill in [`registry/skills.json`](../registry/skills.json).
-4. Run validation:
+Run validation before publishing:
 
 ```bash
 python3 scripts/validate_repository.py
 ```
-
-5. Review the diff carefully.
-6. Commit and push.
-7. Use a PR for non-trivial changes.
-
-For more detail, see:
-[publishing-rules.md](publishing-rules.md)

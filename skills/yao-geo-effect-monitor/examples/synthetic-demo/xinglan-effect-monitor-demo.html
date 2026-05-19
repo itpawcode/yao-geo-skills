@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>星澜客户洞察 GEO Signal Monitor 月报示例</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  @page { size: A4 landscape; margin: 14mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; color: #18202a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; font-size: 13px; line-height: 1.58; }
+  body { padding: 30px 18px 46px; }
+  body > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
+  h1 { font-size: 25px; line-height: 1.25; margin: 0 auto 14px; color: #0f1720; }
+  h2 { font-size: 17px; line-height: 1.35; margin-top: 22px; margin-bottom: 8px; padding-top: 10px; border-top: 1px solid #dbe2ea; color: #142033; break-after: avoid; }
+  p { margin: 7px auto; }
+  blockquote { margin: 10px auto 16px; padding: 9px 12px; border-left: 4px solid #2f6f9f; background: #f5f8fb; color: #2a3a4b; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 10px auto 16px; background: #ffffff; }
+  th, td { border: 1px solid #d8dee7; padding: 6px 7px; text-align: left; vertical-align: top; word-break: break-word; overflow-wrap: anywhere; }
+  th { background: #f2f5f9; color: #172033; font-weight: 700; }
+  tr { break-inside: avoid; }
+  code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; background: #f5f7fa; padding: 1px 3px; border-radius: 3px; }
+  ul { padding-left: 21px; }
+  @media print { body { padding: 0; } }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">星澜客户洞察 GEO Signal Monitor 月报示例</h1>
+</header>
+<h1 id="星澜客户洞察-geo-signal-monitor-月报示例">星澜客户洞察 GEO
+Signal Monitor 月报示例</h1>
+<blockquote>
+<p>合成公开样例。品牌、指标、采样和任务均为演示数据，不代表真实客户或真实平台结果。周期：2026-04-01
+至 2026-04-30。</p>
+</blockquote>
+<h2 id="执行摘要">1. 执行摘要</h2>
+<p>本月共采样 210 条 AI 答案，覆盖
+DeepSeek、豆包、千问、Kimi、元宝五个平台和七组 Prompt。品牌出现率为
+62%，候选率为 46%，明确推荐率为 38%。描述准确率为 71%，引用召回率为
+44%，引用准确率为 68%。</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>本月判断</th>
+<th>结论</th>
+<th>置信度</th>
+<th>下月动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推荐表现</td>
+<td>推荐率低于候选率 8 个百分点，品牌常入候选但缺少强推荐理由。</td>
+<td>中</td>
+<td>增加行业场景页和对比页。</td>
+</tr>
+<tr>
+<td>引用表现</td>
+<td>官网被引用不足，公众号和媒体稿承担主要证据。</td>
+<td>中</td>
+<td>修复官网 FAQ、案例页和文档站摘要。</td>
+</tr>
+<tr>
+<td>风险表现</td>
+<td>负面表述多来自过时价格和旧版本功能。</td>
+<td>高</td>
+<td>建立价格事实页和旧内容下线清单。</td>
+</tr>
+<tr>
+<td>归因判断</td>
+<td>4 月 12 日页面更新后 Kimi 引用改善，但缺少足够对照。</td>
+<td>低</td>
+<td>继续观察 T+30，并加入对照 Prompt。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="监测口径">2. 监测口径</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>平台</th>
+<th>采样重点</th>
+<th style="text-align: right;">样本量</th>
+<th>环境记录</th>
+<th>本月观察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSeek</td>
+<td>结论稳定性、证据链、联网状态</td>
+<td style="text-align: right;">42</td>
+<td>Mac、登录账号、华东、联网</td>
+<td>推荐理由稳定，但引用偏少。</td>
+</tr>
+<tr>
+<td>豆包</td>
+<td>口语问答、图文输出、短答案</td>
+<td style="text-align: right;">42</td>
+<td>iOS、登录账号、华东、联网</td>
+<td>口语化答案常省略来源。</td>
+</tr>
+<tr>
+<td>千问</td>
+<td>引用源、追问路径、阿里生态信源</td>
+<td style="text-align: right;">42</td>
+<td>Mac、登录账号、华东、联网</td>
+<td>追问后更容易出现竞品比较。</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>深度研究、长文引用、文档站</td>
+<td style="text-align: right;">42</td>
+<td>Mac、登录账号、华东、联网</td>
+<td>长文引用较多，文档站表现最好。</td>
+</tr>
+<tr>
+<td>元宝</td>
+<td>微信生态来源、公众号、视频号</td>
+<td style="text-align: right;">42</td>
+<td>iOS、登录账号、华南、联网</td>
+<td>公众号内容被引用较多，官网较弱。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prompt-库与对照组">3. Prompt 库与对照组</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>组别</th>
+<th>核心问法</th>
+<th>对照设计</th>
+<th>本月风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推荐</td>
+<td>推荐适合 B2B 销售团队的客户洞察工具</td>
+<td>同类非品牌问法</td>
+<td>品牌常入候选但非首推。</td>
+</tr>
+<tr>
+<td>比较</td>
+<td>星澜客户洞察和竞品 A 哪个适合制造业</td>
+<td>竞品互换顺序</td>
+<td>竞品 A 的案例引用更多。</td>
+</tr>
+<tr>
+<td>替代</td>
+<td>竞品 B 有哪些替代方案</td>
+<td>不包含品牌名</td>
+<td>部分平台未召回星澜。</td>
+</tr>
+<tr>
+<td>价格</td>
+<td>星澜客户洞察价格贵吗</td>
+<td>旧价格页对照</td>
+<td>出现旧套餐误述。</td>
+</tr>
+<tr>
+<td>风险</td>
+<td>星澜客户洞察有什么缺点</td>
+<td>行业风险问法</td>
+<td>负面集中在数据接入复杂。</td>
+</tr>
+<tr>
+<td>品牌验证</td>
+<td>星澜客户洞察是正规的吗</td>
+<td>官网事实核验</td>
+<td>资质事实描述不完整。</td>
+</tr>
+<tr>
+<td>场景问法</td>
+<td>制造业销售主管如何做客户分层</td>
+<td>非品牌场景对照</td>
+<td>场景页证据不足。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="核心指标总览">4. 核心指标总览</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">本月</th>
+<th style="text-align: right;">上月</th>
+<th style="text-align: right;">变化</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌出现率</td>
+<td style="text-align: right;">62%</td>
+<td style="text-align: right;">55%</td>
+<td style="text-align: right;">+7pp</td>
+<td>公众号和媒体稿增加后召回改善。</td>
+</tr>
+<tr>
+<td>候选率</td>
+<td style="text-align: right;">46%</td>
+<td style="text-align: right;">39%</td>
+<td style="text-align: right;">+7pp</td>
+<td>替代类 Prompt 改善明显。</td>
+</tr>
+<tr>
+<td>品牌推荐率</td>
+<td style="text-align: right;">38%</td>
+<td style="text-align: right;">34%</td>
+<td style="text-align: right;">+4pp</td>
+<td>仍低于候选率，推荐理由不足。</td>
+</tr>
+<tr>
+<td>平均排序</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">3.7</td>
+<td style="text-align: right;">+0.5</td>
+<td>排序改善，Kimi 和 DeepSeek 贡献最大。</td>
+</tr>
+<tr>
+<td>描述准确率</td>
+<td style="text-align: right;">71%</td>
+<td style="text-align: right;">69%</td>
+<td style="text-align: right;">+2pp</td>
+<td>价格事实仍是主要问题。</td>
+</tr>
+<tr>
+<td>引用召回率</td>
+<td style="text-align: right;">44%</td>
+<td style="text-align: right;">31%</td>
+<td style="text-align: right;">+13pp</td>
+<td>Kimi 深度研究引用提升。</td>
+</tr>
+<tr>
+<td>引用准确率</td>
+<td style="text-align: right;">68%</td>
+<td style="text-align: right;">65%</td>
+<td style="text-align: right;">+3pp</td>
+<td>部分媒体稿只能间接支持说法。</td>
+</tr>
+<tr>
+<td>负面表述率</td>
+<td style="text-align: right;">14%</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">-4pp</td>
+<td>旧版本功能误解下降。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="引用源追踪">5. 引用源追踪</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>来源类型</th>
+<th style="text-align: right;">被引用次数</th>
+<th>代表来源</th>
+<th>支持等级</th>
+<th>处理建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>官网</td>
+<td style="text-align: right;">18</td>
+<td>产品页、案例页、FAQ</td>
+<td>B</td>
+<td>增加场景摘要、价格边界和结构化 FAQ。</td>
+</tr>
+<tr>
+<td>公众号</td>
+<td style="text-align: right;">29</td>
+<td>行业方法文章、客户故事</td>
+<td>B</td>
+<td>保留，但补充官网承接链接。</td>
+</tr>
+<tr>
+<td>媒体</td>
+<td style="text-align: right;">21</td>
+<td>产业观察、融资新闻</td>
+<td>C</td>
+<td>更新媒体包，避免旧定位被复用。</td>
+</tr>
+<tr>
+<td>社区</td>
+<td style="text-align: right;">11</td>
+<td>选型问答、用户评论</td>
+<td>C</td>
+<td>建立真实边界说明，避免负面放大。</td>
+</tr>
+<tr>
+<td>文档站</td>
+<td style="text-align: right;">16</td>
+<td>API 文档、集成指南</td>
+<td>A</td>
+<td>继续强化 Kimi 深度研究场景。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="答案差异与谨慎归因">6. 答案差异与谨慎归因</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>变化对象</th>
+<th>动作日期</th>
+<th>观察窗口</th>
+<th>观察结果</th>
+<th>对照组</th>
+<th>归因表述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>官网 FAQ</td>
+<td>2026-04-12</td>
+<td>T+7/T+14</td>
+<td>Kimi 引用 FAQ 从 2 次增至 7 次。</td>
+<td>未更新的价格页 Prompt 无变化。</td>
+<td>可能相关，低到中置信。</td>
+</tr>
+<tr>
+<td>公众号案例</td>
+<td>2026-04-18</td>
+<td>T+7</td>
+<td>元宝引用公众号次数提升。</td>
+<td>非品牌场景问法同步小幅提升。</td>
+<td>观察相关，低置信。</td>
+</tr>
+<tr>
+<td>竞品比较页</td>
+<td>2026-04-22</td>
+<td>T+7</td>
+<td>千问比较问法中品牌排序改善。</td>
+<td>竞品 A 仍保持较强引用。</td>
+<td>观察相关，低置信。</td>
+</tr>
+</tbody>
+</table>
+<p>归因结论：本月不写强因果。内容发布与平台答案变化之间存在索引延迟、模型更新、竞品动作和账号上下文影响。</p>
+<h2 id="品牌事实纠偏任务">7. 品牌事实纠偏任务</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>优先级</th>
+<th>问题</th>
+<th>证据</th>
+<th>映射资产</th>
+<th>负责人</th>
+<th>验收指标</th>
+<th>复采日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td>旧价格套餐被复述</td>
+<td>价格组样本 17、31、88</td>
+<td>官网价格事实页</td>
+<td>产品运营</td>
+<td>价格错误率低于 5%</td>
+<td>2026-05-10</td>
+</tr>
+<tr>
+<td>P0</td>
+<td>官网引用不足</td>
+<td>引用召回率 44%</td>
+<td>FAQ、案例页、文档站入口</td>
+<td>内容负责人</td>
+<td>官网引用次数提升 30%</td>
+<td>2026-05-15</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>制造业案例缺证据</td>
+<td>场景问法样本 102</td>
+<td>行业案例页</td>
+<td>行业运营</td>
+<td>场景推荐率提升 8pp</td>
+<td>2026-05-20</td>
+</tr>
+</tbody>
+</table>
+<h2 id="研究方法映射">8. 研究方法映射</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>方法</th>
+<th>月报中的落地</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GEO 黑盒可见性</td>
+<td>用出现、候选、推荐、排序和引用共同衡量，而不是只看传统排名。</td>
+</tr>
+<tr>
+<td>生成式搜索可验证性</td>
+<td>引用拆分为召回率和准确率，逐条判断引用是否支持答案说法。</td>
+</tr>
+<tr>
+<td>生成式相关反馈</td>
+<td>Prompt 库用实体、事实、场景、替代和追问扩展，形成可复采问题组。</td>
+</tr>
+<tr>
+<td>Citation failure diagnosis</td>
+<td>纠偏任务先判断未引用原因，再映射到页面、知识库或外部信源。</td>
+</tr>
+<tr>
+<td>Causal impact</td>
+<td>使用基线窗口、观察窗口、处理 Prompt、对照 Prompt
+和混杂因素记录。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="告警规则">9. 告警规则</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>告警</th>
+<th>阈值</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>错误事实告警</td>
+<td>事实错误率连续两轮高于 15%</td>
+<td>建 P0 纠偏任务并 7 天内复采。</td>
+</tr>
+<tr>
+<td>引用质量告警</td>
+<td>引用准确率低于 60%</td>
+<td>审核高频来源并补官方证据。</td>
+</tr>
+<tr>
+<td>推荐下降告警</td>
+<td>推荐率环比下降超过 10pp</td>
+<td>检查竞品内容、平台更新和 Prompt 分布。</td>
+</tr>
+<tr>
+<td>负面表述告警</td>
+<td>负面表述率高于 20%</td>
+<td>建风险澄清页和销售口径同步。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据模型摘要">10. 数据模型摘要</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>表</th>
+<th>关键字段</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor_prompts</code></td>
+<td><code>prompt_id</code>、<code>group</code>、<code>query_text</code>、<code>control_flag</code>、<code>version</code></td>
+<td>管理 Prompt 库和对照组。</td>
+</tr>
+<tr>
+<td><code>answer_samples</code></td>
+<td><code>platform</code>、<code>sampled_at</code>、<code>device</code>、<code>region</code>、<code>network_enabled</code>、<code>answer_text</code></td>
+<td>保存采样答案和环境。</td>
+</tr>
+<tr>
+<td><code>citations</code></td>
+<td><code>source_type</code>、<code>source_url</code>、<code>claim_text</code>、<code>support_level</code></td>
+<td>追踪引用召回和准确。</td>
+</tr>
+<tr>
+<td><code>correction_tasks</code></td>
+<td><code>issue_type</code>、<code>priority</code>、<code>mapped_asset</code>、<code>owner</code>、<code>resample_date</code></td>
+<td>管理纠偏闭环。</td>
+</tr>
+</tbody>
+</table>
+<p>API 草案：<code>POST /api/geo-monitor/samples</code>
+写入样本，<code>POST /api/geo-monitor/citations</code>
+写入引用标注，<code>GET /api/geo-monitor/monthly-report</code>
+拉取月报聚合数据，<code>POST /api/geo-monitor/correction-tasks</code>
+创建纠偏任务。</p>
+<h2 id="自-review-结果">11. 自 review 结果</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>检查项</th>
+<th>结果</th>
+<th>修复动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>四格式真实存在</td>
+<td>待渲染后校验</td>
+<td>使用 Markdown 单源生成 HTML、Word、PDF。</td>
+</tr>
+<tr>
+<td>白底与表格边框</td>
+<td>通过设计约束</td>
+<td>HTML/PDF 使用白底 CSS 和固定表格边框。</td>
+</tr>
+<tr>
+<td>内容一致性</td>
+<td>通过</td>
+<td>四格式来自同一 Markdown。</td>
+</tr>
+<tr>
+<td>引用指标</td>
+<td>通过</td>
+<td>已包含引用召回率和引用准确率。</td>
+</tr>
+<tr>
+<td>归因措辞</td>
+<td>通过</td>
+<td>使用观察相关、可能相关和置信度，不写强因果。</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

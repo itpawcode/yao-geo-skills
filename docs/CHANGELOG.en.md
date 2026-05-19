@@ -2,6 +2,61 @@
 
 This document tracks public repository releases for the skill catalog. Update this file together with the Chinese version in `CHANGELOG.md` whenever a new skill or a significant repository-level change is pushed.
 
+## 2026-05-19
+
+### `yao-geo-explainer-builder` Initial Release
+
+- Added the content-production skill package: `skills/yao-geo-explainer-builder`.
+- Generates GEO explainers, how-to guides, concept explanations, selection guides, pitfall guides, FAQs, glossaries, and controlled brand-insertion recommendations.
+- Added a research foundation based on GEO, RAG, long-context position bias, and Chain-of-Thought prompting, plus a source ledger and citation-ready information units.
+- The demo now includes real Markdown, HTML, Word, and PDF files, with automated checks for four-format existence, brand-mention limits, source ledger completeness, research grounding, and Word table preservation.
+- Updated `registry/skills.json`, repository navigation, English navigation, and the guide at `docs/skills/yao-geo-explainer-builder.md`.
+
+### `yao-geo-page-audit` Initial Release
+
+- Added the page-technology skill package: `skills/yao-geo-page-audit`.
+- Audits a target URL plus representative level-1 and level-2 pages for crawlability, structure, content signals, and AI extractability.
+- Includes the standard brief, research foundation, page audit method, white-background four-format layout rules, quality gates, and a synthetic demo.
+- The demo now includes real Markdown, HTML, Word, and PDF files, with a link-existence check requirement.
+- Updated `registry/skills.json`, the repository homepage, English navigation, and the guide at `docs/skills/yao-geo-page-audit.md`.
+
+### `yao-geo-ranking-article-builder` Research Upgrade And Example Fix
+
+- Added the content-production skill package: `skills/yao-geo-ranking-article-builder`.
+- Added four real example reports: Markdown, HTML, Word, and PDF, plus an openable `index.html`.
+- Added the EICAS foundation based on GEO, RAG, Generative Relevance Feedback, AutoGEO, and AgenticGEO research.
+- Fixed the delivery pipeline: HTML/PDF now use a custom white-background template, and Word output gets explicit table borders.
+
+### `yao-geo-effect-monitor` Initial Release
+
+- Added the monitoring-loop skill package: `skills/yao-geo-effect-monitor`.
+- The skill designs a GEO Signal Monitor across DeepSeek, Doubao, Qianwen, Kimi, and Yuanbao, covering AI-answer monitoring, citation tracking, brand-fact correction, alerts, monthly reporting, and cautious attribution.
+- Added a standard brief template, five-platform sampling rules, metrics and attribution guidance, correction-task model, dashboard fields, database tables, API draft guidance, and a four-format sample report.
+- Strengthened the method with GEO, generative-search verifiability, generative relevance feedback, AgenticGEO, citation failure diagnosis, and causal impact research, adding citation recall/precision, black-box variation, diversified prompt expansion, and cautious attribution standards.
+- Regenerated the sample report from one Markdown source into Markdown, HTML, Word, and PDF, with real-file and text-extraction checks.
+- Updated `registry/skills.json`, repository navigation, and the human-readable guide at `docs/skills/yao-geo-effect-monitor.md`.
+
+### `yao-geo-brand-graph` Initial Release
+
+- Added the knowledge-assets skill package: `skills/yao-geo-brand-graph`.
+- The skill turns company information into an auditable entity graph across brands, products, people, places, cases, evidence, and scenarios.
+- Added entity/relationship schema guidance, evidence and privacy policy, disambiguation workflow, Mermaid, JSON-LD, RDF-style triples, white-background four-format report layout rules, and a renderer.
+- Added a synthetic demo that generates Markdown, HTML, Word, PDF, and `quality-report.json` from one `report_input.json`.
+
+### `yao-geo-intent-miner` Research Upgrade And Example Fix
+
+- Added the research skill package: `skills/yao-geo-intent-miner`.
+- Added four real example reports: Markdown, HTML, Word, and PDF, plus `quality-report.json`.
+- Updated the method with search intent taxonomy, LLM query expansion, HyDE, conversational query rewriting, TREC CAsT, and BEIR/MS MARCO.
+- Added five-stage query rewriting, evidence-availability constraints, replayable conversational-chain fields, and four-format quality gates.
+
+### `yao-geo-panorama-audit` Initial Release
+
+- Added the strategic diagnosis skill package: `skills/yao-geo-panorama-audit`.
+- Establishes a brand GEO baseline across DeepSeek, Doubao, Qwen, Kimi, and Tencent Yuanbao, covering AI-answer visibility, competitor gaps, content/page gaps, and external source gaps.
+- Includes the standard input brief, China-platform sampling fields, eight-dimensional GEO quality model, quality gates, white-background four-format report layout rules, and a synthetic demo.
+- Updated `registry/skills.json`, the repository homepage, English navigation, and the human-readable guide at `docs/skills/yao-geo-panorama-audit.md`.
+
 ## 2026-04-26
 
 ### `yao-geoflow-cli` Laravel API v1 / Docker alignment

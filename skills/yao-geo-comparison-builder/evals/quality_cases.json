@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "id": "same-scope-comparison",
+      "input": "HubSpot、Salesforce、Zoho CRM、自建 CRM 怎么选？",
+      "must_pass": ["所有方案按同一组字段比较", "自建 CRM 标为方案类型", "目标品牌优势绑定来源 ID"]
+    },
+    {
+      "id": "docx-right-overflow",
+      "input": "生成包含多张 4 列表格的 Word/PDF/HTML/Markdown 对比报告",
+      "must_pass": ["Word 使用显式 A4 页宽和左右页边距", "每张 DOCX 表格 tblGrid 总宽小于等于正文可用宽度", "quality-report.json 记录 docx_layout_profile.right_overflow_detected=false"]
+    }
+  ]
+}

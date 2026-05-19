@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-05-19",
+  "file_existence": {
+    "markdown": true,
+    "html": true,
+    "docx": true,
+    "pdf": true,
+    "sources": true,
+    "report_input": true,
+    "quality_report": true
+  },
+  "docx_zip_valid": true,
+  "pdf_magic_valid": true,
+  "section_consistency": {
+    "markdown_has_all_sections": true,
+    "html_has_all_sections": true,
+    "required_sections": [
+      "直接答案",
+      "测试场景",
+      "比较口径",
+      "能力与落地对比",
+      "证据与权衡对比",
+      "国内 AI 平台适配",
+      "品牌段落",
+      "场景选择建议",
+      "FAQ",
+      "证据锚点表",
+      "来源链接清单",
+      "合规边界",
+      "自检记录"
+    ]
+  },
+  "evidence_check": {
+    "source_ids": [
+      "HS-01",
+      "HS-02",
+      "HS-03",
+      "HS-04",
+      "SF-01",
+      "SF-02",
+      "SF-03",
+      "ZO-01",
+      "ZO-02"
+    ],
+    "all_source_ids_mentioned": true,
+    "official_sources_only_for_brand_facts": true,
+    "self_built_marked_as_solution_type": true
+  },
+  "layout_check": {
+    "max_table_columns": 4,
+    "wide_tables_split": true,
+    "html_white_background": true,
+    "fixed_table_layout": true,
+    "overflow_wrap_enabled": true,
+    "docx_layout_profile": {
+      "page_size": "A4",
+      "page_width_twips": 11906,
+      "usable_width_twips": 10106,
+      "right_margin_twips": 900,
+      "left_margin_twips": 900,
+      "tables": [
+        {
+          "index": 1,
+          "columns": 4,
+          "grid_width_sum_twips": 10100,
+          "usable_width_twips": 10106,
+          "overflows_right": false
+        },
+        {
+          "index": 2,
+          "columns": 4,
+          "grid_width_sum_twips": 10100,
+          "usable_width_twips": 10106,
+          "overflows_right": false
+        },
+        {
+          "index": 3,
+          "columns": 4,
+          "grid_width_sum_twips": 10100,
+          "usable_width_twips": 10106,
+          "overflows_right": false
+        },
+        {
+          "index": 4,
+          "columns": 4,
+          "grid_width_sum_twips": 10100,
+          "usable_width_twips": 10106,
+          "overflows_right": false
+        },
+        {
+          "index": 5,
+          "columns": 4,
+          "grid_width_sum_twips": 10100,
+          "usable_width_twips": 10106,
+          "overflows_right": false
+        },
+        {
+          "index": 6,
+          "columns": 3,
+          "grid_width_sum_twips": 10100,
+          "usable_width_twips": 10106,
+          "overflows_right": false
+        }
+      ],
+      "right_overflow_detected": false
+    },
+    "pdf_layout_profile": {
+      "checked": true,
+      "pdfinfo_page_size": "595.276 x 841.89 pts (A4)",
+      "pages_checked": 9,
+      "pages": [
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 549.76,
+          "right_margin_pt": 45.52,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 539.72,
+          "right_margin_pt": 55.55,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 538.47,
+          "right_margin_pt": 56.8,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 548.51,
+          "right_margin_pt": 46.77,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 549.08,
+          "right_margin_pt": 46.19,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 547.23,
+          "right_margin_pt": 48.05,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 539.77,
+          "right_margin_pt": 55.51,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 546.76,
+          "right_margin_pt": 48.51,
+          "overflows_right": false
+        },
+        {
+          "page_width_pt": 595.28,
+          "page_height_pt": 841.89,
+          "max_text_x_pt": 544.1,
+          "right_margin_pt": 51.17,
+          "overflows_right": false
+        }
+      ],
+      "right_overflow_detected": false
+    }
+  },
+  "risk_check": {
+    "dynamic_price_caveat": true,
+    "china_landing_caveat": true,
+    "no_unverified_market_share_or_customer_count": true
+  },
+  "repair_log": [
+    "四格式由单一内容结构生成。",
+    "长表拆成 4 列以内。",
+    "DOCX 后处理固定 A4 页宽、左右边距、表格总宽、显式列宽、边框和单元格内边距。",
+    "自建 CRM 标为方案类型。",
+    "价格表达改为价格可见性和访问日官方页面口径。"
+  ]
+}

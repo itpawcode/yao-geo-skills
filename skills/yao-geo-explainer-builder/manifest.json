@@ -1,0 +1,19 @@
+{
+  "id": "yao-geo-explainer-builder",
+  "name": "Yao GEO Explainer Builder",
+  "version": "0.2.2",
+  "family": "geo-content-production",
+  "maturity": "beta",
+  "status": "active",
+  "owner": "Yao Team",
+  "requires_web": true,
+  "primary_outputs": [
+    "geo-explainer-article",
+    "how-to-checklist",
+    "faq-and-glossary",
+    "brand-insertion-advice",
+    "four-format-delivery"
+  ],
+  "entrypoint": "SKILL.md",
+  "script": "scripts/render_yao_geo_explainer_builder.py"
+}

@@ -1,0 +1,39 @@
+name: yao-geo-comparison-builder
+version: 0.1.0
+language: zh-Hans
+module: 内容生产
+priority: P0
+inputs:
+  required:
+    - target_brand
+    - target_brand_sources
+    - comparison_scope
+    - user_scenarios
+    - decision_dimensions
+    - allowed_sources
+  optional:
+    - forbidden_terms
+    - compliance_boundaries
+    - target_platforms
+    - preferred_output_formats
+    - docx_layout_constraints
+outputs:
+  - comparison_article_or_page_copy
+  - comparison_dimension_tables
+  - evidence_anchor_table
+  - faq
+  - scenario_selection_advice
+  - domestic_ai_platform_adaptation
+  - four_format_report_pack
+  - sources_json
+  - quality_report_json
+  - docx_layout_profile
+quality_gates:
+  - same_comparison_scope
+  - evidence_bound_advantage
+  - fair_competitor_language
+  - no_unverified_market_share_or_customer_count
+  - four_formats_exist
+  - docx_pdf_html_layout_review
+  - docx_no_right_overflow
+  - sources_quality_report_exist

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEO 全景诊断与机会地图示例报告</title>
+<style>
+:root {
+  color-scheme: light;
+  --ink: #18212f;
+  --muted: #526070;
+  --line: #d8e0e8;
+  --soft: #f5f7fa;
+  --accent: #1d5d8c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.62;
+}
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 42px 36px 56px;
+  background: #ffffff;
+}
+.cover {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+}
+h1, h2, h3 { margin: 0; font-weight: 760; letter-spacing: 0; line-height: 1.25; }
+h1 { font-size: 34px; margin-bottom: 10px; }
+h2 { font-size: 22px; margin-top: 30px; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+p { margin: 0 0 12px; }
+.subtitle { color: var(--muted); font-size: 16px; }
+.notice {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  padding: 12px 14px;
+  margin: 18px 0;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  margin: 14px 0 18px;
+}
+.meta-grid div { padding: 9px 11px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.meta-grid div:nth-child(odd) { background: var(--soft); font-weight: 700; color: #243346; }
+.meta-grid div:nth-last-child(-n+2) { border-bottom: 0; }
+ul, ol { margin-top: 8px; padding-left: 22px; }
+li { margin: 4px 0; }
+.table-wrap { width: 100%; overflow-x: auto; margin: 12px 0 10px; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; background: #ffffff; }
+th, td {
+  border: 1px solid var(--line);
+  padding: 8px 9px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+th { background: var(--soft); color: #1e2b39; font-weight: 730; text-align: left; }
+td.center, th.center { text-align: center; }
+.meaning {
+  color: var(--muted);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  margin: 8px 0 18px;
+}
+.avoid-break { break-inside: avoid; page-break-inside: avoid; }
+@page { size: A4; margin: 16mm 14mm; }
+@media print {
+  html, body, .page { background: #ffffff !important; }
+  body { font-size: 11px; line-height: 1.45; }
+  .page { max-width: none; padding: 0; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 16px; break-after: avoid; page-break-after: avoid; }
+  .table-wrap { overflow: visible; break-inside: auto; page-break-inside: auto; }
+  table { table-layout: fixed; page-break-inside: auto; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  th, td { padding: 5px 6px; }
+}
+</style>
+</head>
+<body><main class="page">
+<section class="cover">
+<h1>GEO 全景诊断与机会地图示例报告</h1>
+<p class="subtitle">岭序商机云｜合成样例，不代表真实商业结论</p>
+</section>
+<p class="notice">本报告为 yao-geo-panorama-audit 的合成示例，用于展示报告结构、字段、证据口径和四格式版式，不代表对任何真实品牌或平台输出的长期判断。</p>
+<h2>诊断元信息</h2>
+<div class="meta-grid">
+<div>品牌</div><div>岭序商机云（合成 B2B 线索管理软件）</div>
+<div>官网</div><div>https://example.com/lingxu</div>
+<div>行业与区域</div><div>企业服务 / 中国大陆</div>
+<div>目标用户</div><div>中小企业销售负责人、市场负责人、增长负责人</div>
+<div>诊断范围</div><div>官网首页、产品页、价格页、帮助中心、公众号、媒体稿、竞品公开页、AI 答案样本</div>
+<div>平台集合</div><div>DeepSeek、豆包、千问、Kimi、腾讯元宝</div>
+<div>采样窗口</div><div>2026-05-12 至 2026-05-18</div>
+<div>账号与地域</div><div>上海地域；未登录新账号与普通登录账号各一轮</div>
+<div>版本日期</div><div>2026-05-19</div>
+</div>
+<h2>执行摘要</h2><ul>
+<li><strong>品牌可见性偏弱</strong>：在高意图推荐题中，岭序商机云只有 2 个平台主动出现，且推荐顺位靠后。</li>
+<li><strong>事实描述不稳定</strong>：AI 答案容易把“线索管理”误写成“通用客户关系管理”，产品边界需要更清晰的公开证据。</li>
+<li><strong>外部信源不足</strong>：元宝更依赖公众号与视频号信源，但当前缺少可引用的案例文章、客户访谈和产品演示视频。</li>
+<li><strong>官网资产可修复空间大</strong>：价格页、行业方案页、常见问题页缺少结构化摘要、对比表、来源说明和原子事实。</li>
+<li><strong>P0 机会集中</strong>：先修复品牌实体页、产品边界说明、客户案例证据和高频问题答案页，能最快改善基线。</li>
+</ul>
+<h2>方法依据与评分口径</h2>
+<div class="table-wrap"><table><thead><tr><th>方法口径</th><th>样本设计</th><th>观测字段</th><th>控制风险</th></tr></thead><tbody><tr><td>黑箱可见性</td><td>同题多平台、多轮采样</td><td>记录出现、显著性、推荐、顺位、引用和事实偏差</td><td>避免把单次回答当长期排名</td></tr><tr><td>实体显著性</td><td>区分出现与核心推荐</td><td>判断品牌是否承担问题解答功能</td><td>避免只看品牌名是否出现</td></tr><tr><td>来源断言匹配</td><td>断言级来源台账</td><td>检查引用是否支持品牌定义、价格、案例和资质</td><td>减少引用错配与事实幻觉</td></tr><tr><td>答案稳定性</td><td>同题多轮与账号状态对照</td><td>记录结论是否漂移、竞品是否替换、描述是否变化</td><td>区分平台波动和资产问题</td></tr></tbody></table></div>
+<p class="meaning">判断含义：本报告把 GEO 诊断视为黑箱采样和断言级核验，不把 SEO 排名、单次 AI 回答或链接数量直接等同于推荐概率。</p>
+<h2>问题样本覆盖矩阵</h2>
+<div class="table-wrap"><table><thead><tr><th>意图类型</th><th>样本数</th><th>平台覆盖</th><th>示例问题</th><th>业务用途</th></tr></thead><tbody><tr><td>推荐</td><td>2</td><td>5 平台</td><td>适合中小企业的线索管理软件有哪些？</td><td>判断品牌能否进入候选集</td></tr><tr><td>比较</td><td>2</td><td>5 平台</td><td>岭序商机云和脉冲 CRM 有什么区别？</td><td>判断差异化与竞品替代关系</td></tr><tr><td>替代</td><td>2</td><td>5 平台</td><td>如果不用岭序商机云，有哪些替代方案？</td><td>判断竞品覆盖和品牌防守空间</td></tr><tr><td>教程</td><td>2</td><td>5 平台</td><td>销售团队如何从表格迁移到线索管理工具？</td><td>判断场景解决能力和可引用教程</td></tr><tr><td>价格</td><td>2</td><td>5 平台</td><td>线索管理系统一般怎么收费？岭序商机云价格是否公开？</td><td>判断价格事实和编造风险</td></tr><tr><td>风险</td><td>2</td><td>5 平台</td><td>中小企业上线线索管理系统有哪些风险？</td><td>判断适用边界和合规说明</td></tr><tr><td>真实性</td><td>2</td><td>5 平台</td><td>岭序商机云是真的吗？有哪些公开案例？</td><td>判断品牌实体和公开证据</td></tr><tr><td>购买决策</td><td>2</td><td>5 平台</td><td>什么情况下应该选择岭序商机云？</td><td>判断推荐理由和采购路径</td></tr><tr><td>场景解决</td><td>2</td><td>5 平台</td><td>教育培训机构如何管理销售线索并提升跟进效率？</td><td>判断行业场景联想能力</td></tr></tbody></table></div>
+<p class="meaning">判断含义：问题样本覆盖推荐、比较、替代、教程、价格、风险、真实性、购买决策和场景解决，正式项目需保留每条 Prompt 的采样上下文。</p>
+<h2>AI 答案可见性与竞品对比</h2>
+<div class="table-wrap"><table><thead><tr><th>平台</th><th>问题类型</th><th>品牌是否出现</th><th>是否被推荐</th><th>引用源</th><th>高频竞品</th><th>事实偏差</th><th>备注</th></tr></thead><tbody><tr><td>DeepSeek</td><td>推荐 / 替代方案</td><td>未出现</td><td>否</td><td>无明确引用</td><td>脉冲 CRM、简道云</td><td>把线索管理场景归入泛客户关系管理</td><td>结论组织清晰，但品牌覆盖不足</td></tr><tr><td>豆包</td><td>购买决策 / 价格</td><td>出现一次</td><td>弱推荐</td><td>未列公开来源</td><td>纷享销客、销售易</td><td>价格区间缺少来源</td><td>答案稳定，但推荐依据较粗</td></tr><tr><td>千问</td><td>比较 / 行业方案</td><td>出现</td><td>第三顺位</td><td>官网首页、帮助中心</td><td>销售易、神策数据</td><td>未提到中小企业定位</td><td>引用意识较强，需补来源质量</td></tr><tr><td>Kimi</td><td>教程 / 风险</td><td>出现</td><td>场景推荐</td><td>官网页、公众号文章</td><td>简道云、明道云</td><td>把私域获客能力描述过宽</td><td>适合追问，需要补多轮问题素材</td></tr><tr><td>腾讯元宝</td><td>真实性 / 案例</td><td>未出现</td><td>否</td><td>公众号、视频号优先</td><td>脉冲 CRM、企微助手</td><td>缺少公众号案例导致缺席</td><td>外部信源缺口最明显</td></tr></tbody></table></div>
+<p class="meaning">判断含义：岭序商机云在推荐题、真实性题和案例题上的公开证据不足，导致品牌出现不稳定，且容易被高频竞品覆盖。</p>
+<h2>竞品推荐差距</h2>
+<div class="table-wrap"><table><thead><tr><th>品牌</th><th>推荐出现率</th><th>被引用次数</th><th>平均顺位</th><th>优势信号</th><th>主要风险</th></tr></thead><tbody><tr><td>脉冲 CRM</td><td>5/5</td><td>8</td><td>1.6</td><td>媒体稿、案例页、百科词条较完整</td><td>答案里被泛化为所有销售场景的默认选择</td></tr><tr><td>销售易</td><td>4/5</td><td>7</td><td>2.1</td><td>客户案例和行业方案丰富</td><td>中小企业轻量化场景不够突出</td></tr><tr><td>简道云</td><td>4/5</td><td>6</td><td>2.4</td><td>教程内容和社区讨论多</td><td>易被推荐到低代码场景而非线索管理</td></tr><tr><td>岭序商机云</td><td>2/5</td><td>3</td><td>3.8</td><td>官网产品说明清楚，部分帮助文档可引用</td><td>品牌实体、案例和公众号信源不足</td></tr></tbody></table></div>
+<p class="meaning">判断含义：竞品优势并不只来自官网页面数量，也来自媒体、百科、案例和社区讨论等外部信源的共同作用。</p>
+<h2>GEO 特征评分</h2>
+<div class="table-wrap"><table><thead><tr><th>特征</th><th>评分</th><th>证据判断</th><th>优先动作</th></tr></thead><tbody><tr><td>语义密度</td><td>2.5/5</td><td>官网反复出现线索、客户、销售，但缺少场景化同义表达</td><td>补行业场景页和问题页</td></tr><tr><td>结构规范性</td><td>2.0/5</td><td>首页和产品页有段落，但缺少摘要、表格、常见问题和定义区</td><td>重构核心页面结构</td></tr><tr><td>可引用性</td><td>1.8/5</td><td>公开来源少，页面缺少可直接引用的短句与数据</td><td>新增事实卡片和来源台账</td></tr><tr><td>权威信号</td><td>1.6/5</td><td>客户案例、资质、媒体报道和第三方评价不足</td><td>补强外部证据</td></tr><tr><td>可读性</td><td>3.2/5</td><td>基础表达清楚，但页面信息层级不够稳定</td><td>压缩长段落并增加表格</td></tr><tr><td>鲁棒性</td><td>2.1/5</td><td>多轮追问时产品边界容易漂移</td><td>建立品牌实体档案</td></tr><tr><td>新颖性</td><td>2.8/5</td><td>有中小企业场景，但差异化表达未形成术语</td><td>定义核心概念</td></tr><tr><td>跨域贡献</td><td>1.5/5</td><td>公众号、视频号、社区、行业报告覆盖不足</td><td>建设外部信源矩阵</td></tr></tbody></table></div>
+<p class="meaning">判断含义：当前最短路径不是扩大泛内容产量，而是先修复可引用事实、品牌实体和核心页面结构。</p>
+<h2>机会地图与优先级矩阵</h2>
+<div class="table-wrap"><table><thead><tr><th>机会类型</th><th>机会</th><th>对应问题</th><th>价值</th><th>工作量</th><th>优先级</th><th>负责人建议</th><th>验收标准</th></tr></thead><tbody><tr><td>快赢修复</td><td>品牌实体页</td><td>AI 不确定品牌边界</td><td>高</td><td>低</td><td>P0</td><td>内容负责人</td><td>5 个平台均能引用品牌定义</td></tr><tr><td>内容补齐</td><td>线索管理常见问题页</td><td>高频问题缺少直接答案</td><td>高</td><td>中</td><td>P0</td><td>GEO 顾问</td><td>覆盖 20 个问题样本并进入站内链接</td></tr><tr><td>页面重构</td><td>产品页与价格页</td><td>缺少对比表和价格说明来源</td><td>高</td><td>中</td><td>P0</td><td>产品市场</td><td>页面包含摘要、表格、限制条件和来源日期</td></tr><tr><td>知识库补强</td><td>客户案例事实库</td><td>AI 无法确认行业案例</td><td>中</td><td>中</td><td>P1</td><td>销售运营</td><td>至少 6 个案例有行业、规模、问题、结果和授权状态</td></tr><tr><td>外部证据建设</td><td>公众号与视频号案例</td><td>元宝信源不足</td><td>中</td><td>中</td><td>P1</td><td>品牌负责人</td><td>发布 4 篇案例文章和 2 条演示视频</td></tr><tr><td>监测闭环</td><td>月度平台采样表</td><td>无法判断波动还是趋势</td><td>中</td><td>低</td><td>P1</td><td>增长负责人</td><td>每月固定 30 题、2 轮、5 平台记录</td></tr></tbody></table></div>
+<p class="meaning">判断含义：P0 机会集中在低成本、高影响的品牌实体、常见问题、产品页和价格页修复，不建议一开始铺开大量长文。</p>
+<h2>页面与内容资产修复清单</h2>
+<div class="table-wrap"><table><thead><tr><th>页面或资产</th><th>主要问题</th><th>修复动作</th><th>事实来源</th><th>验收口径</th></tr></thead><tbody><tr><td>官网首页</td><td>品牌定义没有固定短句</td><td>新增 80 字品牌定义和适用 / 不适用场景</td><td>品牌资料、产品手册</td><td>AI 答案能复述核心定位</td></tr><tr><td>产品页</td><td>功能描述偏营销，缺少结构化事实</td><td>增加功能表、流程图、限制条件和更新时间</td><td>产品文档、帮助中心</td><td>千问与 Kimi 引用该页回答功能题</td></tr><tr><td>价格页</td><td>价格与套餐边界不清</td><td>增加套餐对比表、适用对象和咨询说明</td><td>销售资料、官网价格页</td><td>价格类答案不再编造区间</td></tr><tr><td>帮助中心</td><td>教程分散，缺少入口页</td><td>建立“从线索到成交”教程索引</td><td>帮助文档</td><td>教程类问题能被引用到具体步骤</td></tr><tr><td>公众号</td><td>案例内容少且不可结构化引用</td><td>发布客户案例模板：背景、问题、方案、结果、限制</td><td>客户授权、销售记录</td><td>元宝答案出现品牌案例来源</td></tr></tbody></table></div>
+<section class="avoid-break">
+<h2>来源台账与待确认项</h2>
+<div class="table-wrap"><table><thead><tr><th>事实项</th><th>来源类型</th><th>核验状态</th><th>用途</th><th>备注</th></tr></thead><tbody><tr><td>品牌定义</td><td>官网与产品手册</td><td>待核验</td><td>建立实体档案</td><td>合成样例中仅展示字段结构</td></tr><tr><td>价格与套餐</td><td>销售资料与价格页</td><td>待确认</td><td>修复价格类答案</td><td>正式项目需标注更新时间</td></tr><tr><td>客户案例</td><td>客户授权与销售记录</td><td>待确认</td><td>补强权威信号</td><td>未授权案例不得写成公开事实</td></tr><tr><td>AI 答案样本</td><td>五平台同题多轮采样</td><td>已记录</td><td>判断可见性与波动</td><td>必须保留平台、时间、地域和账号状态</td></tr><tr><td>外部信源</td><td>公众号、媒体、百科、社区、视频号</td><td>缺口明显</td><td>判断跨域贡献</td><td>元宝场景需重点补公众号与视频号</td></tr></tbody></table></div>
+</section>
+<h2>问题样本</h2><ol>
+<li>适合中小企业的线索管理软件有哪些？</li>
+<li>岭序商机云和脉冲 CRM 有什么区别？</li>
+<li>线索管理系统一般怎么收费？</li>
+<li>销售团队如何从表格迁移到线索管理工具？</li>
+<li>岭序商机云是真的吗？有哪些公开案例？</li>
+<li>如果不用岭序商机云，有哪些替代方案？</li>
+<li>中小企业上线线索管理系统有哪些风险？</li>
+<li>什么情况下应该选择岭序商机云？</li>
+<li>教育培训机构如何管理销售线索并提升跟进效率？</li>
+</ol>
+<h2>结论</h2>
+<p>岭序商机云的 GEO 基线问题主要不是“品牌完全没有内容”，而是公开事实不够原子化、外部信源不够稳定、核心页面缺少可引用结构。建议先完成 P0 修复，再用同题多轮采样判断 DeepSeek、豆包、千问、Kimi 和腾讯元宝的变化趋势。</p>
+</main></body></html>

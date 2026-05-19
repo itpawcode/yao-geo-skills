@@ -1,0 +1,47 @@
+{
+  "skill_id": "yao-geo-brand-graph",
+  "generated_at": "2026-05-19T12:34:00",
+  "status": "pass",
+  "issues": [],
+  "warnings": [],
+  "checks": {
+    "entity_count": 27,
+    "relation_count": 21,
+    "evidence_count": 11,
+    "core_entity_types_present": [
+      "产品",
+      "功能",
+      "品牌",
+      "地点",
+      "场景",
+      "技术",
+      "时间",
+      "服务",
+      "案例",
+      "用户",
+      "行业",
+      "证据"
+    ],
+    "platform_test_scenario_count": 5,
+    "four_format_outputs_checked": true,
+    "white_background_profile": "kami-white-background",
+    "docx_profile": {
+      "table_count": 8,
+      "auto_table_count": 0,
+      "max_grid_width": 14400,
+      "content_width": 15398,
+      "layout_safety_margin": 998,
+      "manual_break_count": 272
+    },
+    "pdf_profile": {
+      "pages": 12,
+      "text_chars": 12614
+    },
+    "file_sizes": {
+      "markdown": 19527,
+      "html": 26529,
+      "pdf": 236761,
+      "docx": 12719
+    }
+  }
+}

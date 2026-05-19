@@ -1,0 +1,16 @@
+{
+  "required_artifacts": [
+    "question_bank",
+    "intent_map",
+    "follow_up_chains",
+    "query_rewrite_list",
+    "content_topic_library",
+    "faq_bank",
+    "monitoring_prompt_library",
+    "markdown_report",
+    "html_report",
+    "docx_report",
+    "pdf_report",
+    "quality_report"
+  ]
+}

@@ -1,0 +1,24 @@
+interface:
+  display_name: "Yao GEO 全景诊断"
+  short_description: "建立品牌 GEO 基线，诊断国内 AI 平台可见性、竞品差距、内容页面缺口，并输出机会地图。"
+  default_prompt: "当需要项目启动、季度复盘、竞品追赶或投放前 GEO 全景诊断时，使用 $yao-geo-panorama-audit；默认输出中文简体，并按白底报告版式交付 Word、PDF、HTML、Markdown。"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "claude"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "metadata-adapter"
+    claude: "neutral-source-plus-adapter"
+    generic: "neutral-source"

@@ -1,0 +1,15 @@
+{
+  "id": "yao-geo-ranking-article-builder",
+  "name": "Yao GEO Ranking Article Builder",
+  "version": "0.1.0",
+  "family": "geo-content-production",
+  "maturity": "beta",
+  "status": "active",
+  "owner": "Yao Team",
+  "requires_web": true,
+  "primary_outputs": [
+    "ranking-review-article",
+    "four-format-delivery"
+  ],
+  "entrypoint": "SKILL.md"
+}

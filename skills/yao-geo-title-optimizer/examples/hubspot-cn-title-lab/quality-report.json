@@ -1,0 +1,138 @@
+{
+  "skill_id": "yao-geo-title-optimizer",
+  "checked_at": "2026-05-19T12:42:27",
+  "files": {
+    "markdown": {
+      "path": "skills/yao-geo-title-optimizer/examples/hubspot-cn-title-lab/hubspot-cn-geo-title-lab.md",
+      "exists": true,
+      "size": 9908
+    },
+    "html": {
+      "path": "skills/yao-geo-title-optimizer/examples/hubspot-cn-title-lab/hubspot-cn-geo-title-lab.html",
+      "exists": true,
+      "size": 15665
+    },
+    "docx": {
+      "path": "skills/yao-geo-title-optimizer/examples/hubspot-cn-title-lab/hubspot-cn-geo-title-lab.docx",
+      "exists": true,
+      "size": 8827
+    },
+    "pdf": {
+      "path": "skills/yao-geo-title-optimizer/examples/hubspot-cn-title-lab/hubspot-cn-geo-title-lab.pdf",
+      "exists": true,
+      "size": 211356
+    }
+  },
+  "docx_layout_checks": {
+    "valid": true,
+    "usable_width": 9638,
+    "table_count": 16,
+    "tables": [
+      {
+        "index": 1,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 2,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 3,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 4,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 5,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 6,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 7,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 8,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 9,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 10,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 11,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 12,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 13,
+        "grid_width": 8000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 14,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 15,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      },
+      {
+        "index": 16,
+        "grid_width": 9000,
+        "usable_width": 9638,
+        "overflows": false
+      }
+    ],
+    "issues": []
+  },
+  "pdf_checks": {
+    "valid": true,
+    "pages": 5,
+    "parser": "pypdf",
+    "issues": []
+  },
+  "issues": [],
+  "passed": true
+}
