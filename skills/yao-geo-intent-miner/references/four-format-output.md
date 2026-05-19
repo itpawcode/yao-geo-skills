@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-intent-miner
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 四格式输出与防溢出规范
 
 - Word 使用横向 A4：`w:pgSz w:w="16838" w:h="11906" w:orient="landscape"`。

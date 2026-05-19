@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # HubSpot 页面 GEO 诊断报告
 
 > 测试对象：HubSpot。测试日期：2026-05-19。输出语言：中文简体。测试方式：使用 `yao-geo-page-audit` 对公开前台页面做 GEO Page Audit，不包含服务器日志、CMS 权限、真实 AI 平台排名采样或付费工具数据。

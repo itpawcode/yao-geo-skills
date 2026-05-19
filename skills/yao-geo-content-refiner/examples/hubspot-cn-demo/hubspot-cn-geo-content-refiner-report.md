@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-content-refiner
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # HubSpot CRM 线索管理内容 GEO 改造测试报告
 
 **国内 AI 平台中文简体示例｜Word/PDF 防溢出版**

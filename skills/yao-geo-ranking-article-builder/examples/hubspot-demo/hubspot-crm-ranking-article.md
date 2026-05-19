@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-ranking-article-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 2026 年中小企业客户平台与销售 CRM 榜单：HubSpot 及 5 个替代选择怎么选
 
 核验日期：2026-05-19

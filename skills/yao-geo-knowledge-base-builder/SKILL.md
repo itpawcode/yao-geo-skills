@@ -3,6 +3,14 @@ name: yao-geo-knowledge-base-builder
 description: Build evidence-backed GEO brand knowledge bases from official sites, product pages, help centers, white papers, sales materials, media releases, certifications, and trusted third-party sources. Use when asked to generate reusable brand fact cards, FAQ, prohibited expressions, source indexes, prompt input packs, or Word/PDF/HTML/Markdown four-format Chinese GEO knowledge-base deliverables for Kimi, Qianwen, DeepSeek, Doubao, Yuanbao, content production, monitoring, page design, or customer-service preparation.
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-knowledge-base-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-knowledge-base-builder
 
 把官网、产品页、帮助中心、白皮书、品牌资料、销售材料、媒体稿和资质文件，整理成可审计、可复用的 GEO 品牌知识库。

@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-effect-monitor
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Quality Gates
 
 - `SKILL.md`、`templates/brief-template.md`、`evals/trigger_cases.json`、`evals/expected_artifacts.json` 存在。

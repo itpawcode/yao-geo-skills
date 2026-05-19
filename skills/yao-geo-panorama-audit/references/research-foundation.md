@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-panorama-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # GEO 全景诊断研究依据
 
 本 skill 的底层方法不是把传统 SEO 指标换名为 GEO 指标，而是把生成式答案中的品牌可见性、推荐显著性、来源支撑、事实准确性和跨平台稳定性作为独立观测对象。

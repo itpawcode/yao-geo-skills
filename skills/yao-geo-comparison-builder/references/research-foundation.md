@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-comparison-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 研究基础：GEO-CITER 对比框架
 
 本 skill 使用 `GEO-CITER`：Comparison scope、Information gain、Traceable evidence、Equitable comparison、Repair loop。

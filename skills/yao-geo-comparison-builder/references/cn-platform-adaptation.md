@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-comparison-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 国内 AI 平台适配
 
 - 千问与 Kimi：强化来源台账、长表、字段一致性和证据锚点。

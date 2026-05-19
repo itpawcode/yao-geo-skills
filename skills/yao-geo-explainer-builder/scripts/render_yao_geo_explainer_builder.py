@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# Copyright © 2026 姚金刚. All rights reserved.
+# Project: yao-geo-explainer-builder
+# Created by: 姚金刚
+# Date: 2026-05-16
+# X: https://x.com/yaojingang
+
 """Render yao-geo-explainer-builder reports to Markdown, HTML, DOCX, and PDF."""
 
 from __future__ import annotations

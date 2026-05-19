@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-knowledge-base-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Four-Format Report Layout
 
 This skill produces Markdown, HTML, Word, and PDF reports. The visual formats must be readable as client-facing documents, not raw Markdown exports.

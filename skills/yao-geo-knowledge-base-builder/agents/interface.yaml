@@ -1,3 +1,9 @@
+# Copyright © 2026 姚金刚. All rights reserved.
+# Project: yao-geo-knowledge-base-builder
+# Created by: 姚金刚
+# Date: 2026-05-16
+# X: https://x.com/yaojingang
+
 interface:
   display_name: GEO Knowledge Base Builder
   short_description: Build evidence-backed GEO brand knowledge bases and fixed-layout four-format reports.

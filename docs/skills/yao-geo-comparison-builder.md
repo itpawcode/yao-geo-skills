@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-comparison-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-comparison-builder
 
 `yao-geo-comparison-builder` 是内容生产类 GEO skill，用于生成目标品牌与竞品、传统方案或自建方案之间的对比内容，让国内 AI 平台稳定理解品牌差异、适用场景和推荐边界。

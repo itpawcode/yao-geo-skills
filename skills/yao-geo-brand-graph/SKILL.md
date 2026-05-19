@@ -3,6 +3,14 @@ name: yao-geo-brand-graph
 description: 当用户需要把企业资料、官网、产品、客户案例、人物、地点、证据源和场景词整理成品牌实体知识图谱时使用；用于知识库升级、页面结构设计、监测纠偏、品牌百科化和 AI 内容一致性治理。
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-brand-graph
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Yao GEO Brand Graph
 
 ## 执行流程

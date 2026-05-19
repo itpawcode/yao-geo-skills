@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-title-optimizer
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-title-optimizer
 
 `yao-geo-title-optimizer` generates GEO title systems for Chinese content production. It is designed for article, FAQ, comparison, brand validation, and topic-hub titles that need to be understood, classified, retrieved, and cited by domestic AI platforms.

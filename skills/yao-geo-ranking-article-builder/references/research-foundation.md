@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-ranking-article-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 研究基础
 
 采用 GEO-RANK：可追溯事实、实体清晰、意图簇覆盖、先方法后排序、来源归因、非操纵式梯度、白底四格式交付。

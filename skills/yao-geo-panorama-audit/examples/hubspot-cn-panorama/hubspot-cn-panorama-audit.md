@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-panorama-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # HubSpot GEO 全景诊断与机会地图测试报告
 
 **HubSpot｜国内 AI 平台测试示例，中文简体报告**

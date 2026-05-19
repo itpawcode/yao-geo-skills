@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-comparison-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 评估 Rubric
 
 - 路由准确：用户询问品牌对比、替代方案、选型页或对比 FAQ 时触发。

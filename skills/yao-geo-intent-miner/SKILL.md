@@ -3,6 +3,14 @@ name: yao-geo-intent-miner
 description: Use when a user asks for GEO 意图拓词、AI 搜索意图挖掘、AI 搜索问题集、问题簇、追问链路、查询重写、内容选题库、FAQ 题库、监测 Prompt 库, or AI Intent Miner.
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-intent-miner
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Yao GEO Intent Miner
 
 ## 使用场景

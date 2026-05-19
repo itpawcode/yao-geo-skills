@@ -1,3 +1,9 @@
+# Copyright © 2026 姚金刚. All rights reserved.
+# Project: yao-geo-effect-monitor
+# Created by: 姚金刚
+# Date: 2026-05-16
+# X: https://x.com/yaojingang
+
 interface:
   display_name: "Yao GEO Effect Monitor"
   short_description: "Design a GEO Signal Monitor for AI answer monitoring, citation tracking, correction tasks, alerts, monthly reporting, and cautious attribution."

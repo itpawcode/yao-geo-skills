@@ -3,6 +3,14 @@ name: yao-geo-effect-monitor
 description: Use when designing a GEO Signal Monitor, AI answer monitoring system, citation tracking plan, brand-fact correction loop, GEO monthly report, alert rules, dashboard fields, or cautious attribution framework for DeepSeek, Doubao, Qianwen, Kimi, Tencent Yuanbao, and similar answer engines.
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-effect-monitor
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Yao GEO Effect Monitor
 
 ## When To Use

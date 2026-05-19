@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-blueprint
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 国内 AI 平台适配
 
 | 平台 | 页面结构重点 | 内容表达重点 |

@@ -9,6 +9,14 @@ metadata:
   default_outputs: Word, PDF, HTML, Markdown
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-blueprint
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Yao GEO Page Blueprint
 
 ## 使用场景

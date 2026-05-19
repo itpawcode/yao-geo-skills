@@ -3,6 +3,14 @@ name: yao-geo-title-optimizer
 description: Use when Chinese content teams need GEO title candidates, scoring, compliance review, or title-to-article mapping for articles, pages, FAQs, comparisons, and topic hubs.
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-title-optimizer
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-title-optimizer
 
 Use this skill when the user needs GEO title generation, title optimization, title scoring, title compliance checks, or title-to-article-structure mapping for Chinese content production.

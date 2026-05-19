@@ -9,6 +9,14 @@ metadata:
   default_outputs: Word, PDF, HTML, Markdown
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-page-audit
 
 Use this skill when the user wants a GEO Page Audit, website/page GEO diagnosis, page technical audit, AI extractability audit, schema/HTML module advice, or code/content repair list for a URL.

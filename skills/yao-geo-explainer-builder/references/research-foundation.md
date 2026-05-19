@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-explainer-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 研究基础
 
 本 skill 采用 GEO-EXPLAIN 框架：上下文无关摘要、实体清晰、来源可追溯、步骤可复用、长上下文抗丢失、推理结构显性化、品牌非操纵式植入。

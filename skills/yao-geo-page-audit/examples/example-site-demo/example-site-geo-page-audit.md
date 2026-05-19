@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 示例站点页面 GEO 诊断报告
 
 > 公开合成示例。品牌：示例云服。站点：[示例官网](https://www.example.com/)。分析日期：2026-05-19。生成方式：`yao-geo-page-audit`。

@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-effect-monitor
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 星澜客户洞察 GEO Signal Monitor 月报示例
 
 > 合成公开样例。品牌、指标、采样和任务均为演示数据，不代表真实客户或真实平台结果。周期：2026-04-01 至 2026-04-30。

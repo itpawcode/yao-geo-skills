@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-effect-monitor
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # HubSpot 国内 AI 平台 GEO Signal Monitor 测试报告
 
 > 中文简体测试样例。资料核验日期：2026-05-19。HubSpot 官方事实来自公开网页；国内 AI 平台结果为用于测试 `yao-geo-effect-monitor` 输出链路的合成采样回放，不代表真实登录采样或平台立场。

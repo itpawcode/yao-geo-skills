@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-panorama-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 示例说明
 
 本目录存放 `yao-geo-panorama-audit` 的可复核执行示例；示例可以是真实公开品牌测试，也可以是明确标注的合成样例。

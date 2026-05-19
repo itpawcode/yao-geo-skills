@@ -3,6 +3,14 @@ name: yao-geo-explainer-builder
 description: 当用户需要生成 GEO 科普文章、How-to 教程、概念解释、购买/选择指南、避坑清单、FAQ、术语表、品牌自然植入建议，并交付 Word、PDF、HTML 包和 Markdown 四格式文件时使用；适配 Kimi、千问、豆包、DeepSeek、元宝等国内 AI 搜索/问答平台；不用于榜单排行、整站诊断、页面审计、标题生成或无证据品牌软文。
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-explainer-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Yao GEO Explainer Builder
 
 ## 执行流程

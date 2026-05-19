@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-content-refiner
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 研究支撑框架
 
 本 skill 的理论基础是把旧内容改造成更容易被生成式引擎检索、理解、引用和核验的知识资产。

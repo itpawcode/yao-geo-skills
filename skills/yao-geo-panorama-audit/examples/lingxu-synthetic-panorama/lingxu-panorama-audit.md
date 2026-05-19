@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-panorama-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # GEO 全景诊断与机会地图示例报告
 
 **岭序商机云｜合成样例，不代表真实商业结论**

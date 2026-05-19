@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-ranking-article-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 四格式报告版式
 
 - Markdown 是内容母版，HTML、PDF、Word 必须从同一母版生成。

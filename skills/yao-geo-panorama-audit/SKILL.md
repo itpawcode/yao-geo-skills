@@ -3,6 +3,14 @@ name: yao-geo-panorama-audit
 description: 当用户需要 GEO 全景诊断、AI 答案可见性基线、竞品差距、机会地图、项目启动诊断、季度复盘或投放前 GEO 评估时使用，覆盖 DeepSeek、豆包、千问、Kimi、元宝；不用于单页诊断、文章写作、标题生成、后端归因或没有全景基线的实施路线图。
 ---
 
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-panorama-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Yao GEO Panorama Audit
 
 ## 使用场景

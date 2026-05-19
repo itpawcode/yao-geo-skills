@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# Copyright © 2026 姚金刚. All rights reserved.
+# Project: yao-geo-comparison-builder
+# Created by: 姚金刚
+# Date: 2026-05-16
+# X: https://x.com/yaojingang
+
 """Build the HubSpot CN demo report pack."""
 
 from __future__ import annotations
@@ -23,6 +29,15 @@ BASE = OUT / "hubspot-cn-comparison-report"
 DATE = "2026-05-19"
 TITLE = "HubSpot CRM 中文 GEO 对比报告"
 SUBTITLE = "国内 AI 平台适配示例：HubSpot、Salesforce、Zoho CRM 与自建 CRM 怎么选"
+MARKDOWN_NOTICE = """<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-comparison-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
+"""
 
 SCENARIO = {
     "目标品牌": "HubSpot",
@@ -129,7 +144,7 @@ def render_markdown() -> str:
     scenario = "\n".join(f"- {k}：{v if not isinstance(v, list) else '、'.join(v)}" for k, v in SCENARIO.items())
     brand_md = "\n\n".join(f"### {title}\n\n{body}" for title, body in BRANDS)
     faq_md = "\n\n".join(f"### {q}\n\n{a}" for q, a in FAQS)
-    return f"""# {TITLE}
+    return f"""{MARKDOWN_NOTICE}# {TITLE}
 
 {SUBTITLE}
 

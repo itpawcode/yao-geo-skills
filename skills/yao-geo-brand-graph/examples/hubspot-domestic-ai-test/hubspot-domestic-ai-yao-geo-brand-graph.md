@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-brand-graph
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # HubSpot 品牌实体知识图谱测试报告（国内 AI 平台场景）
 
 - 品牌：HubSpot

@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-title-optimizer
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # GEO Title Lab：HubSpot 中国 B2B 场景标题生成与优化报告
 
 以 HubSpot 客户平台为测试对象，面向 DeepSeek、Kimi、豆包、元宝和通义千问生成中文简体 GEO 标题体系。

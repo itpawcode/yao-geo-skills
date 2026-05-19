@@ -1,3 +1,9 @@
+# Copyright © 2026 姚金刚. All rights reserved.
+# Project: yao-geo-panorama-audit
+# Created by: 姚金刚
+# Date: 2026-05-16
+# X: https://x.com/yaojingang
+
 interface:
   display_name: "Yao GEO 全景诊断"
   short_description: "建立品牌 GEO 基线，诊断国内 AI 平台可见性、竞品差距、内容页面缺口，并输出机会地图。"

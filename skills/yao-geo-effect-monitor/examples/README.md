@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-effect-monitor
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # Examples
 
 `synthetic-demo` 是完全合成的中文客户月报样例，用于验证 `yao-geo-effect-monitor` 的四格式输出能力。示例不包含真实客户、真实 CRM 数据或未公开平台采样结果。

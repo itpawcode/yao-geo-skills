@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-explainer-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 如何选择适合自己的睡眠监测设备：GEO 科普与 How-to 指南
 
 - 技能 ID：`yao-geo-explainer-builder`

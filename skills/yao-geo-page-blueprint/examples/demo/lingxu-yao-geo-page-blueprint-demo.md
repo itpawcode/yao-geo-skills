@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-blueprint
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # GEO 友好产品页设计方案示例
 
 面向国内 AI 平台答案抽取、用户决策和官网转化的页面蓝图。

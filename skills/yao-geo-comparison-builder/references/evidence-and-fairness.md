@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-comparison-builder
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 证据、公平表达与合规边界
 
 - 不能通过贬损竞品突出目标品牌；差异必须回到事实和场景。

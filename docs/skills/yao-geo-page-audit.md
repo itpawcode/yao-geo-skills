@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-audit
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-page-audit
 
 `yao-geo-page-audit` 是页面技术类 GEO skill，用于输入网址后诊断首页、代表性一级页和二级页，输出代码层与内容层优化建议，并默认支持 Word、PDF、HTML、Markdown 四件套交付。

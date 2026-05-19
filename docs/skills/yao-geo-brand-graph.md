@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-brand-graph
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-brand-graph
 
 `yao-geo-brand-graph` 是知识资产类 GEO skill，用于把企业资料转换为可审计的品牌实体知识图谱。

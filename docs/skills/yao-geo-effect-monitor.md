@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-effect-monitor
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # yao-geo-effect-monitor
 
 `yao-geo-effect-monitor` 是一个监测闭环类 GEO skill，用于设计 GEO Signal Monitor：长期采样 AI 答案、追踪引用来源、纠偏品牌事实、输出客户月报、设置告警规则，并对内容发布、页面修复和外部信源建设后的变化做谨慎归因。

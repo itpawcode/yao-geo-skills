@@ -1,3 +1,11 @@
+<!--
+Copyright © 2026 姚金刚. All rights reserved.
+Project: yao-geo-page-blueprint
+Created by: 姚金刚
+Date: 2026-05-16
+X: https://x.com/yaojingang
+-->
+
 # 页面蓝图报告版式
 
 - 借鉴 `kami` 的专业文档纪律：清晰层级、紧凑信息密度、表格节奏、留白克制、证据优先。
