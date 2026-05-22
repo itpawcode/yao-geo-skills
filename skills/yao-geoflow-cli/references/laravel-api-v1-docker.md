@@ -8,7 +8,7 @@ X: https://x.com/yaojingang
 
 # Laravel API v1 and Docker Fallback
 
-Use this reference when the target GEOFlow workspace is the Laravel rewrite and no `bin/geoflow` wrapper is available yet.
+Use this reference when the target GEOFlow workspace is the Laravel rewrite and no `bin/geoflow` wrapper is available. In the current Laravel 2.0.x public repository, this is the normal scriptable operations path.
 
 ## Detection
 
@@ -19,7 +19,7 @@ A Laravel GEOFlow workspace should contain:
 - `app/Http/Controllers/Api/V1`
 - `docker-compose.yml` or `compose.yml` when deployed through Docker
 
-Do not assume the old root-level PHP entrypoints exist.
+Do not assume old root-level PHP entrypoints exist.
 
 ## API Base URL
 
@@ -55,6 +55,8 @@ The token must allow the scopes needed for the requested operation:
 - `articles:read`
 - `articles:write`
 - `articles:publish`
+- `materials:read`
+- `materials:write`
 
 If no token exists, obtain one through the authenticated admin API:
 
@@ -66,7 +68,7 @@ curl -sS -X POST \
   "$GEOFLOW_BASE_URL/api/v1/auth/login"
 ```
 
-Do not print the full token in user-facing output.
+The current login endpoint returns a token with all available API v1 scopes for the authenticated admin. Do not print the full token in user-facing output.
 
 ## Docker Checks
 
@@ -80,11 +82,19 @@ docker compose exec app php artisan about
 
 If the PHP service name is not `app`, inspect `docker compose ps` and use the actual service name.
 
-For database host issues, remember:
+For production compose, the app may run behind an Nginx `web` service and PHP-FPM `app` service. Browser/API access should use the exposed web port, not the internal PHP-FPM port.
+
+For database host issues:
 
 - inside Docker Compose, `DB_HOST=postgres` is usually correct when the service is named `postgres`
 - outside Docker Compose, `postgres` will not resolve unless DNS/hosts provides it
 - browser access should use the exposed host port, for example `127.0.0.1:18080`
+
+For queue behavior:
+
+- generation jobs use the `geoflow` queue
+- distribution jobs use the `distribution` queue
+- current API v1 does not manage distribution channels, target packages, or Analytics
 
 ## Preflight
 
@@ -94,7 +104,13 @@ Run:
 skills/yao-geoflow-cli/scripts/geoflow_preflight.sh "/path/to/GEOFlow"
 ```
 
-Preflight is successful only when an authenticated `GET /api/v1/catalog` returns JSON.
+For material work:
+
+```bash
+skills/yao-geoflow-cli/scripts/geoflow_preflight.sh "/path/to/GEOFlow" "" catalog,materials
+```
+
+Preflight is successful only when authenticated API reads return JSON. A public homepage check is not sufficient.
 
 ## Non-JSON Response Diagnosis
 
@@ -116,7 +132,7 @@ Correct the URL, proxy, container, or Laravel route setup before retrying busine
 
 ## Current API Surface
 
-The Laravel rewrite exposes these API v1 paths:
+The Laravel API v1 paths are:
 
 - `POST /api/v1/auth/login`
 - `GET /api/v1/catalog`
@@ -124,11 +140,21 @@ The Laravel rewrite exposes these API v1 paths:
 - `POST /api/v1/tasks`
 - `GET /api/v1/tasks/{id}`
 - `PATCH /api/v1/tasks/{id}`
+- `DELETE /api/v1/tasks/{id}`
 - `POST /api/v1/tasks/{id}/start`
 - `POST /api/v1/tasks/{id}/stop`
 - `POST /api/v1/tasks/{id}/enqueue`
 - `GET /api/v1/tasks/{id}/jobs`
 - `GET /api/v1/jobs/{id}`
+- `GET /api/v1/materials`
+- `GET /api/v1/materials/{type}`
+- `POST /api/v1/materials/{type}`
+- `GET /api/v1/materials/{type}/{id}`
+- `PATCH /api/v1/materials/{type}/{id}`
+- `DELETE /api/v1/materials/{type}/{id}`
+- `GET /api/v1/materials/{type}/{id}/items`
+- `POST /api/v1/materials/{type}/{id}/items`
+- `DELETE /api/v1/materials/{type}/{id}/items`
 - `GET /api/v1/articles`
 - `POST /api/v1/articles`
 - `GET /api/v1/articles/{id}`
@@ -138,3 +164,51 @@ The Laravel rewrite exposes these API v1 paths:
 - `POST /api/v1/articles/{id}/trash`
 
 Mutating endpoints should use `X-Idempotency-Key`.
+
+## Material Types and Payload Notes
+
+Material types:
+
+- `categories`: `name`, optional `slug`, `description`, `sort_order`
+- `authors`: `name`, optional `email`, `bio`, `avatar`, `website`, `social_links`
+- `keyword-libraries`: `name`, optional `description`
+- `title-libraries`: `name`, optional `description`
+- `image-libraries`: `name`, optional `description`
+- `knowledge-bases`: `name`, `content`, optional `description`, `file_type`, `file_path`
+
+Writable item endpoints:
+
+- `keyword-libraries/{id}/items`: create with `keyword`
+- `title-libraries/{id}/items`: create with `title`, optional `keyword`
+- `image-libraries/{id}/items`: create with `file_path`, optional file metadata
+
+Knowledge-base item listings expose chunks; chunk writes happen by updating the parent knowledge-base content.
+
+## Task Payload Notes
+
+Required on create:
+
+- `name`
+- `title_library_id`
+- `prompt_id`
+- `ai_model_id`
+
+Common optional fields:
+
+- `author_id`
+- `image_library_id`
+- `knowledge_base_id`
+- `fixed_category_id`
+- `category_mode`: `smart` or `fixed`
+- `model_selection_mode`: `fixed` or `smart_failover`
+- `status`: `active` or `paused`
+- `publish_scope`: `local_and_distribution`, `distribution_only`, or `local_only`
+- `draft_limit`, `article_limit`, `publish_interval`
+
+Optional material fields may be omitted and will be persisted as `null` on create.
+
+## Distribution Boundary
+
+GEOFlow 2.0.1 has Distribution Management in the admin UI, including channels, target-site packages, target settings sync, logs, queue retry, and static target-site generation. These are not part of the current `/api/v1` operations surface.
+
+Use API v1 only for the exposed task/article/material operations. When an operation requires distribution channel setup, secret rotation, target-site package download, Analytics, or remote article management, report that it is a web-admin operation unless the specific target workspace exposes a newer API route.

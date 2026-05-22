@@ -17,8 +17,10 @@ Public project repository:
 ## Primary Use
 
 - first-time login with GEOFlow admin credentials
-- inspect catalog IDs
+- inspect catalog and material IDs
+- create, update, delete, and inspect material libraries and supported material items
 - create, start, stop, or enqueue tasks
+- delete tasks through API v1 when supported
 - inspect jobs
 - upload article drafts
 - review and publish articles
@@ -27,7 +29,9 @@ Public project repository:
 
 ## Boundary
 
-This skill does not implement GEOFlow backend code and does not write directly to the database. It prefers `bin/geoflow` when present. If the current Laravel rewrite has no CLI wrapper, it may operate through `/api/v1` with bearer auth and idempotency keys. First-time access should use `geoflow login` when the CLI exists, or `/api/v1/auth/login` when using API fallback.
+This skill does not implement GEOFlow backend code and does not write directly to the database. It prefers `bin/geoflow` only when present and when `--help` confirms the requested action. If the current Laravel rewrite has no CLI wrapper, it operates through `/api/v1` with bearer auth and idempotency keys. First-time access should use `geoflow login` when the CLI exists, or `/api/v1/auth/login` when using API fallback.
+
+GEOFlow 2.0.1 Distribution Management, target-site package download, Analytics, URL import, and async title generation are admin/web flows unless the target workspace exposes a matching API route. This skill may set task `publish_scope`, but it should not claim to configure distribution channels through API v1.
 
 ## Package Map
 

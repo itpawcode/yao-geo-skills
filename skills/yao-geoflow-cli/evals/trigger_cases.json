@@ -21,8 +21,24 @@
       "family": "catalog_lookup"
     },
     {
+      "text": "用 GEOFlow API 查一下素材库，再创建一个关键词库并添加几个关键词。",
+      "family": "material_ops"
+    },
+    {
+      "text": "Laravel 版 GEOFlow 没有 CLI，用 /api/v1/materials 帮我新增一个标题库和标题条目。",
+      "family": "laravel_material_api_ops"
+    },
+    {
       "text": "我想批量用本地命令去管理 GEOFlow 的任务和文章。",
       "family": "bulk_cli_ops"
+    },
+    {
+      "text": "用 API 删除这个 GEOFlow 任务，确认关联任务已经不存在。",
+      "family": "task_delete_api"
+    },
+    {
+      "text": "创建一个 publish_scope=distribution_only 的 GEOFlow 任务，但不要直接改数据库。",
+      "family": "task_publish_scope"
     },
     {
       "text": "用 geoflow 命令检查这个任务的 job 状态，看看是不是 worker 执行失败。",
@@ -47,6 +63,10 @@
     {
       "text": "调用 GEOFlow API 返回 <!doctype html>，帮我判断是不是 base url 或代理路由配置错了。",
       "family": "non_json_api_response_diagnosis"
+    },
+    {
+      "text": "先检查 catalog 和 materials 两个 API 读接口，再批量写入素材。",
+      "family": "material_preflight"
     }
   ],
   "should_not_trigger": [
@@ -65,6 +85,14 @@
     {
       "text": "只帮我读一下这篇文章，不要操作系统。",
       "family": "read_only_unrelated"
+    },
+    {
+      "text": "帮我在后台创建 GEOFlow 分发渠道并下载目标站点包。",
+      "family": "admin_distribution_web_flow"
+    },
+    {
+      "text": "打开 GEOFlow 数据分析页看一下访问趋势。",
+      "family": "admin_analytics_web_flow"
     }
   ],
   "near_neighbor": [
@@ -79,6 +107,10 @@
     {
       "text": "直接改数据库，把文章状态改成 published。",
       "family": "db_shortcut_vs_supported_ops"
+    },
+    {
+      "text": "通过 API v1 配置分发渠道和轮换密钥。",
+      "family": "distribution_api_not_exposed"
     }
   ]
 }

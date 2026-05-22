@@ -13,7 +13,7 @@ X: https://x.com/yaojingang
 - `config_path`:
 - `base_url`:
 - `username`:
-- `operation_type`: `catalog` | `task` | `job` | `article` | `login`
+- `operation_type`: `catalog` | `material` | `task` | `job` | `article` | `login`
 - `target_ids`:
 - `json_payload_path`:
 - `content_file_path`:

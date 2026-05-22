@@ -1,8 +1,8 @@
 {
   "name": "yao-geoflow-cli",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "owner": "yaojingang",
-  "updated_at": "2026-04-26",
+  "updated_at": "2026-05-22",
   "status": "active",
   "maturity_tier": "production",
   "lifecycle_stage": "active",

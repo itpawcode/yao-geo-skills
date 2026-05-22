@@ -6,5 +6,5 @@
 
 interface:
   display_name: "Yao GEOFlow CLI"
-  short_description: "Operate an existing GEOFlow instance from the local geoflow CLI or Laravel API v1 fallback"
-  default_prompt: "Inspect GEOFlow resources and perform task or article operations through the local geoflow CLI or Laravel API v1 fallback, including Docker/API preflight checks."
+  short_description: "Operate an existing GEOFlow instance from the local geoflow CLI or Laravel API v1"
+  default_prompt: "Inspect GEOFlow catalog/material resources and perform material, task, job, or article operations through the local geoflow CLI or Laravel API v1, including Docker/API preflight checks."

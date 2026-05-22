@@ -9,6 +9,7 @@ set -euo pipefail
 
 workspace="${1:-}"
 config_path="${2:-}"
+preflight_checks="${3:-${GEOFLOW_PREFLIGHT_CHECKS:-catalog}}"
 
 if [[ -z "$workspace" ]]; then
   echo "Usage: geoflow_preflight.sh <workspace> [config]" >&2
@@ -32,7 +33,7 @@ Docker Compose workspace detected. For Laravel API fallback:
   1. confirm containers are running: docker compose ps
   2. confirm API routes: docker compose exec app php artisan route:list --path=api/v1
   3. set GEOFLOW_BASE_URL to the exposed web root, e.g. http://127.0.0.1:18080
-  4. set GEOFLOW_API_TOKEN to a token with catalog/tasks/articles/jobs scopes
+  4. set GEOFLOW_API_TOKEN to a token with the needed catalog/tasks/articles/jobs/materials scopes
 EOF
   fi
 }
@@ -66,31 +67,67 @@ if [[ ! -f "$cli_path" ]]; then
       exit 1
     fi
 
-    catalog_url="${api_base_url%/}/api/v1/catalog"
-    catalog_tmp="$(mktemp)"
-    trap 'rm -f "$catalog_tmp"' EXIT
-    if ! curl -sS --max-time 20 -H "Authorization: Bearer $api_token" -H "Accept: application/json" "$catalog_url" -o "$catalog_tmp"; then
-      cat "$catalog_tmp" >&2 || true
-      echo "Preflight failed. Could not reach API fallback catalog: $catalog_url" >&2
-      exit 3
-    fi
-    catalog_output="$(cat "$catalog_tmp")"
+    tmp_files=()
+    trap 'rm -f "${tmp_files[@]}"' EXIT
+    IFS=',' read -r -a check_names <<< "$preflight_checks"
 
-    if ! is_jsonish "$catalog_tmp"; then
-      print_body_excerpt "$catalog_tmp" >&2
-      echo "Preflight failed. API fallback returned non-JSON. Check that GEOFLOW_BASE_URL points to the GEOFlow public web root and that /api/v1/catalog is routed to Laravel API, not a proxy/login/HTML page." >&2
-      docker_hint
-      exit 3
-    fi
+    ran_check=0
+    for raw_check in "${check_names[@]}"; do
+      check="$(printf '%s' "$raw_check" | tr -d '[:space:]')"
+      [[ -z "$check" ]] && continue
+      ran_check=1
 
-    if printf '%s' "$catalog_output" | grep -Eqi '"success"[[:space:]]*:[[:space:]]*false|token-invalid|invalid token|401|403|unauthorized|forbidden|未授权|无效或已过期'; then
-      printf '%s\n' "$catalog_output" >&2
-      echo "Preflight failed. API fallback token authentication failed." >&2
-      exit 3
-    fi
+      case "$check" in
+        catalog)
+          endpoint_path="/api/v1/catalog"
+          ;;
+        materials|material)
+          endpoint_path="/api/v1/materials"
+          ;;
+        tasks|task)
+          endpoint_path="/api/v1/tasks?per_page=1"
+          ;;
+        articles|article)
+          endpoint_path="/api/v1/articles?per_page=1"
+          ;;
+        *)
+          echo "Unsupported preflight check: $check" >&2
+          echo "Supported checks: catalog, materials, tasks, articles" >&2
+          exit 1
+          ;;
+      esac
 
-    echo "API fallback preflight OK: $catalog_url"
-    printf '%s\n' "$catalog_output"
+      check_url="${api_base_url%/}${endpoint_path}"
+      check_tmp="$(mktemp)"
+      tmp_files+=("$check_tmp")
+      if ! curl -sS --max-time 20 -H "Authorization: Bearer $api_token" -H "Accept: application/json" "$check_url" -o "$check_tmp"; then
+        cat "$check_tmp" >&2 || true
+        echo "Preflight failed. Could not reach API fallback endpoint: $check_url" >&2
+        exit 3
+      fi
+      check_output="$(cat "$check_tmp")"
+
+      if ! is_jsonish "$check_tmp"; then
+        print_body_excerpt "$check_tmp" >&2
+        echo "Preflight failed. API fallback returned non-JSON. Check that GEOFLOW_BASE_URL points to the GEOFlow public web root and that /api/v1 routes are routed to Laravel API, not a proxy/login/HTML page." >&2
+        docker_hint
+        exit 3
+      fi
+
+      if printf '%s' "$check_output" | grep -Eqi '"success"[[:space:]]*:[[:space:]]*false|token-invalid|invalid token|401|403|unauthorized|forbidden|未授权|无效或已过期'; then
+        printf '%s\n' "$check_output" >&2
+        echo "Preflight failed. API fallback token authentication or scope check failed for: $check_url" >&2
+        exit 3
+      fi
+
+      echo "API fallback preflight OK: $check_url"
+      printf '%s\n' "$check_output"
+    done
+
+    if [[ "$ran_check" -eq 0 ]]; then
+      echo "Preflight failed. No valid API fallback checks requested." >&2
+      exit 1
+    fi
     exit 0
   fi
 
